@@ -1,9 +1,11 @@
 //
-// Sequential code of the first SPM Assignment a.a. 23/24.
+// Sequential and Parallel code of the first SPM Assignment
+//		with Wavefront computation
 //
 // compile:
 // g++ -std=c++20 -O3 -march=native -Iinclude UTWavefront.cpp -o UTW
 //
+
 #include <iostream>
 #include <vector>
 #include <thread>

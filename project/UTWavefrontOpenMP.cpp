@@ -1,7 +1,7 @@
 //
 // Sequential and Parallel code of the first SPM Assignment
-// 		with Wavefront computation
-//		FastFlow version
+//		with Wavefront computation
+//		OpenMP version
 //
 // compile:
 // g++ -std=c++20 -O3 -march=native -Iinclude UTWavefront.cpp -o UTW
@@ -11,15 +11,10 @@
 #include <vector>
 #include <random>
 #include <cassert>
-#include <ff/ff.hpp>
-#include <ff/parallel_for.hpp>
-#include <ff/pipeline.hpp>
-#include <ff/farm.hpp>
 #include <fstream>
 #include <numeric>
 #include <iomanip>
-
-using namespace ff;
+#include <omp.h>
 
 #ifndef PRINT_MESSAGE
 	#define PRINT_MESSAGE 0
@@ -29,13 +24,14 @@ using namespace ff;
 	#define PRINT_MATRIX 1
 #endif
 
-#define DEFAULT_DIM 3         // default size of the matrix (NxN)
-#define DEFAULT_NTHREADS 2    // default number of threads
-#define DEFAULT_LOG_FILE "wavefront_results.csv"    // default log file name
+#define DEFAULT_DIM 3 		// default size of the matrix (NxN)
+#define DEFAULT_NTHREADS 2	// default number of threads
+#define DEFAULT_LOG_FILE "wavefront_results.csv"	// default log file name
+
 
 // Calculate dot product of two vectors
 double dot_product(const std::vector<double>& v1, const std::vector<double>& v2) {
-    return std::inner_product(v1.begin(), v1.end(), v2.begin(), 0.0);
+    return std::inner_product(v1.begin(), v2.end(), v2.begin(), 0.0);
 }
 
 // Calculate and update matrix element with dot product of two vectors
@@ -64,7 +60,6 @@ void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
     }
 }
 
-
 // wavefront (sequential version)
 void wavefront_sequential(std::vector<std::vector<double>> &M, const uint64_t &N) {
     for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
@@ -74,28 +69,25 @@ void wavefront_sequential(std::vector<std::vector<double>> &M, const uint64_t &N
     }
 }
 
+// wavefront (parallel version with static scheduling using OpenMP)
+void wavefront_parallel_static(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
 
-// wavefront (parallel version with static scheduling using FastFlow)
-void wavefront_parallel_static_ff(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
-    ParallelFor pf(T);
-    
-	for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
-        pf.parallel_for(0, N-k, 1, 0, [&](const long i) {
-            compute_diagonal_element(M, N, i, k);
-        });
+    #pragma omp parallel for num_threads(T) schedule(static)
+    for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
+        for (uint64_t m=0; m<(N-k); ++m) { // for each element in the diagonal
+            compute_diagonal_element(M, N, m, k);
+        }
     }
 }
 
-// wavefront (parallel version with dynamic scheduling using FastFlow)
-void wavefront_parallel_dynamic_ff(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
-    ff::ParallelForReduce pf(T);
-    
-	for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
-        pf.parallel_reduce(0, N-k, [&](const long i) {
-            compute_diagonal_element(M, N, i, k);
-        }, [&](const long i, const long j) {
-            // No reduction operation needed here, as the task is independent.
-        });
+// wavefront (parallel version with dynamic scheduling using OpenMP)
+void wavefront_parallel_dynamic(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
+
+    #pragma omp parallel for num_threads(T) schedule(dynamic)
+    for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
+        for (uint64_t m=0; m<(N-k); ++m) { // for each element in the diagonal
+            compute_diagonal_element(M, N, m, k);
+        }
     }
 }
 
@@ -135,37 +127,37 @@ int main(int argc, char *argv[]) {
 
     // sequential
     double sequential_time=-1;
-	if (PRINT_MESSAGE) std::printf("------ Sequential Execution ------\n");
+    if (PRINT_MESSAGE) std::printf("------ Sequential Execution ------\n");
     TIMERSTART(wavefront_sequential);
     wavefront_sequential(M, N); 
     TIMERSTOP(wavefront_sequential, sequential_time);
-
-	if (PRINT_MATRIX) print_matrix(M,N);
+    
+    if (PRINT_MATRIX) print_matrix(M,N);
 
     // parallel static
     double parallel_static_time=-1;
-	if (PRINT_MESSAGE) std::printf("------ Parallel Static Execution ------\n");
-    TIMERSTART(wavefront_parallel_static_ff);
-    wavefront_parallel_static_ff(M, N, T); 
-    TIMERSTOP(wavefront_parallel_static_ff, parallel_static_time);
+    if (PRINT_MESSAGE) std::printf("------ Parallel Static Execution ------\n");
+    TIMERSTART(wavefront_parallel_static);
+    wavefront_parallel_static(M, N, T); 
+    TIMERSTOP(wavefront_parallel_static, parallel_static_time);
 
-	if (PRINT_MATRIX) print_matrix(M,N);
+    if (PRINT_MATRIX) print_matrix(M,N);
 
     // parallel dynamic
     double parallel_dynamic_time=-1;
-	if (PRINT_MESSAGE) std::printf("------ Parallel Dynamic Execution ------\n");
-    TIMERSTART(wavefront_parallel_dynamic_ff);
-    wavefront_parallel_dynamic_ff(M, N, T); 
-    TIMERSTOP(wavefront_parallel_dynamic_ff, parallel_dynamic_time);
+    if (PRINT_MESSAGE) std::printf("------ Parallel Dynamic Execution ------\n");
+    TIMERSTART(wavefront_parallel_dynamic);
+    wavefront_parallel_dynamic(M, N, T); 
+    TIMERSTOP(wavefront_parallel_dynamic, parallel_dynamic_time);
 
-	if (PRINT_MATRIX) print_matrix(M,N);
+    if (PRINT_MATRIX) print_matrix(M,N);
 
     // write the execution times to a file
     std::ofstream file;
     file.open(log_file_name, std::ios_base::app);
     file << N << "," << T << ","
-         << expected_totaltime/1000000 << "," << sequential_time << ","
-         << parallel_dynamic_time << "," << parallel_static_time << "\n";
+        << expected_totaltime/1000000 << "," << sequential_time << ","
+        << parallel_dynamic_time << "," << parallel_static_time << "\n";
     file.close();
 
     return 0;
