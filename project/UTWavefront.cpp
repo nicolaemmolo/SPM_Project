@@ -209,6 +209,7 @@ int main(int argc, char *argv[]) {
 
 	if (PRINT_MATRIX) print_matrix(M,N);
 
+	
 	// write the execution times to a file
 	std::ofstream file;
 	file.open(log_file_name, std::ios_base::app);
