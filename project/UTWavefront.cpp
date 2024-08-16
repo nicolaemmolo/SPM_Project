@@ -28,6 +28,7 @@
 
 #define DEFAULT_DIM 3 		// default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2	// default number of threads
+#define DEFAULT_MODE "s" 	// default execution mode
 #define DEFAULT_LOG_FILE "wavefront_results.csv"	// default log file name
 
 
@@ -145,13 +146,15 @@ void wavefront_parallel_dynamic(std::vector<std::vector<double>> &M, const uint6
 int main(int argc, char *argv[]) {
 	uint64_t N                = DEFAULT_DIM;
 	uint32_t T                = DEFAULT_NTHREADS;
+	std::string mode          = DEFAULT_MODE;
 	std::string log_file_name = DEFAULT_LOG_FILE;
 
 	// Verify the correct number of args
-    if (argc != 1 && argc != 2 && argc != 4 && argc != 5) {
-        std::printf("use: %s [N] [T]\n", argv[0]);
-        std::printf("     N size of the square matrix\n");
-        std::printf("     T number of threads\n");
+    if (argc != 1 && argc != 2 && argc != 3 && argc != 4) {
+        std::printf("use: %s [N] [T] [mode]\n", argv[0]);
+        std::printf("     N    : size of the square matrix\n");
+        std::printf("     T    : number of threads\n");
+        std::printf("     mode : execution mode ('s' for sequential, 'ps' for parallel static, 'pd' for parallel dynamic)\n");
         return -1;
     }
 
@@ -160,14 +163,15 @@ int main(int argc, char *argv[]) {
         N = std::stol(argv[1]);
         if (argc > 2) {
             T = std::stol(argv[2]);
+            if (argc > 3) {
+                mode = argv[3];
+            }
         }
     }
 
 	// allocate the matrix
 	std::vector<std::vector<double>> M(N, std::vector<double>(N, 0.0));
 
-
-	uint64_t expected_totaltime=0;
 	// init function
 	auto init=[&]() {
 		for (uint64_t m=0; m<N; ++m) {
@@ -177,39 +181,38 @@ int main(int argc, char *argv[]) {
 	
 	init();
 
+	double execution_time=-1;
+
 	// sequential
-	double sequential_time=-1;
-	if (PRINT_MESSAGE) std::printf("------ Sequential Execution ------\n");
-	TIMERSTART(wavefront_sequential);
-	wavefront_sequential(M, N); 
-	TIMERSTOP(wavefront_sequential, sequential_time);
+	if (mode == "s") {
+		if (PRINT_MESSAGE) std::printf("------ Sequential Execution ------\n");
+		TIMERSTART(wavefront_sequential);
+		wavefront_sequential(M, N); 
+		TIMERSTOP(wavefront_sequential, execution_time);
+	}
 	
-	if (PRINT_MATRIX) print_matrix(M,N);
-
 	// parallel static
-	double parallel_static_time=-1;
-	if (PRINT_MESSAGE) std::printf("------ Parallel Static Execution ------\n");
-	TIMERSTART(wavefront_parallel_static);
-	wavefront_parallel_static(M, N, T); 
-	TIMERSTOP(wavefront_parallel_static, parallel_static_time);
-
-	if (PRINT_MATRIX) print_matrix(M,N);
+	if (mode == "ps") {
+		if (PRINT_MESSAGE) std::printf("------ Parallel Static Execution ------\n");
+		TIMERSTART(wavefront_parallel_static);
+		wavefront_parallel_static(M, N, T); 
+		TIMERSTOP(wavefront_parallel_static, execution_time);
+	}
 
 	// parallel dynamic
-	double parallel_dynamic_time=-1;
-	if (PRINT_MESSAGE) std::printf("------ Parallel Dynamic Execution ------\n");
-	TIMERSTART(wavefront_parallel_dynamic);
-	wavefront_parallel_dynamic(M, N, T); 
-	TIMERSTOP(wavefront_parallel_dynamic, parallel_dynamic_time);
+	if (mode == "pd") {
+		if (PRINT_MESSAGE) std::printf("------ Parallel Dynamic Execution ------\n");
+		TIMERSTART(wavefront_parallel_dynamic);
+		wavefront_parallel_dynamic(M, N, T); 
+		TIMERSTOP(wavefront_parallel_dynamic, execution_time);
+	}
 
 	if (PRINT_MATRIX) print_matrix(M,N);
 
 	// write the execution times to a file
 	std::ofstream file;
 	file.open(log_file_name, std::ios_base::app);
-	file << N << "," << T << ","
-		<< expected_totaltime/1000000 << "," << sequential_time << ","
-		<< parallel_dynamic_time << "," << parallel_static_time << "\n";
+	file << N << "," << T << "," << mode << "," << execution_time << "\n";
 	file.close();
 
 	return 0;

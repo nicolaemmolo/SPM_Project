@@ -97,7 +97,7 @@ int main(int argc, char *argv[]) {
     std::string log_file_name = DEFAULT_LOG_FILE;
 
     // Verify the correct number of args
-    if (argc != 1 && argc != 2 && argc != 4 && argc != 5) {
+    if (argc != 1 && argc != 2) {
         std::printf("use: %s [N] [T]\n", argv[0]);
         std::printf("     N size of the square matrix\n");
         std::printf("     T number of threads\n");
