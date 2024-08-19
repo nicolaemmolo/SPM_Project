@@ -4,7 +4,7 @@
 //		OpenMP version
 //
 // compile:
-// g++ -std=c++20 -O3 -march=native -Iinclude UTWavefront.cpp -o UTW
+// g++ -std=c++20 -O3 -march=native -Iinclude UTWavefrontOpenMP.cpp -o UTWOMP
 //
 
 #include <iostream>
@@ -15,6 +15,7 @@
 #include <numeric>
 #include <iomanip>
 #include <omp.h>
+#include <hpc_helpers.hpp>
 
 #ifndef PRINT_MESSAGE
 	#define PRINT_MESSAGE 0
@@ -146,9 +147,7 @@ int main(int argc, char *argv[]) {
     // write the execution times to a file
     std::ofstream file;
     file.open(log_file_name, std::ios_base::app);
-    file << N << "," << T << ","
-        << expected_totaltime/1000000 << "," << sequential_time << ","
-        << parallel_dynamic_time << "," << parallel_static_time << "\n";
+    file << N << "," << T << "," << mode << "," << execution_time << "\n";
     file.close();
 
     return 0;

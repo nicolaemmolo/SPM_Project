@@ -4,7 +4,7 @@
 //		FastFlow version
 //
 // compile:
-// g++ -std=c++20 -O3 -march=native -Iinclude UTWavefront.cpp -o UTW
+// g++ -std=c++20 -O3 -march=native -Iinclude -Iinclude/fastflow-master UTWavefrontFastFlow.cpp -o UTWFF
 //
 
 #include <iostream>
@@ -18,6 +18,7 @@
 #include <fstream>
 #include <numeric>
 #include <iomanip>
+#include <hpc_helpers.hpp>
 
 using namespace ff;
 
@@ -31,7 +32,7 @@ using namespace ff;
 
 #define DEFAULT_DIM 3         // default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2    // default number of threads
-#define DEFAULT_MODE "ps" 	// default execution mode
+#define DEFAULT_MODE "pd" 	// default execution mode
 #define DEFAULT_LOG_FILE "wavefront_results.csv"    // default log file name
 
 // Calculate dot product of two vectors
@@ -52,6 +53,7 @@ void compute_diagonal_element(std::vector<std::vector<double>> &M, const uint64_
     
     // Compute the dot product
     M[m][m+k] = dot_product(row_vector, col_vector);
+    std::printf("compute\n");
 }
 
 // Print matrix
@@ -79,15 +81,34 @@ void wavefront_parallel_static_ff(std::vector<std::vector<double>> &M, const uin
 
 // wavefront (parallel version with dynamic scheduling using FastFlow)
 void wavefront_parallel_dynamic_ff(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
-    ff::ParallelForReduce pf(T);
+    ParallelFor pf(T);
     
 	for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
-        pf.parallel_reduce(0, N-k, [&](const long i) {
+        pf.parallel_for(0, N-k, [&](const long i) {
             compute_diagonal_element(M, N, i, k);
-        }, [&](const long i, const long j) {
-            // No reduction operation needed here, as the task is independent.
         });
     }
+
+    /*
+    ParallelFor pf(T);
+    
+    for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
+        pf.parallel_for(0, N-k, [&](const long i) {
+            // Calculate the indices corresponding to the element
+            uint64_t index = i * N + (i+k);
+            uint64_t m = index / N;
+            uint64_t n = index % N - m;
+            
+            compute_diagonal_element(M, N, m, n);
+
+            if (i >= (N-k-T) || (N-k) < T) {
+                pf.parallel_for(0, 1, [&](const long) {
+                    // Barrier synchronization point (dummy operation for waiting)
+                    std::vector<double> dummy(1000000, 0.0);
+                });
+            }
+        });
+    }*/
 }
 
 int main(int argc, char *argv[]) {
@@ -152,9 +173,7 @@ int main(int argc, char *argv[]) {
     // write the execution times to a file
     std::ofstream file;
     file.open(log_file_name, std::ios_base::app);
-    file << N << "," << T << ","
-         << expected_totaltime/1000000 << "," << sequential_time << ","
-         << parallel_dynamic_time << "," << parallel_static_time << "\n";
+    file << N << "," << T << "," << mode << "," << execution_time << "\n";
     file.close();
 
     return 0;
