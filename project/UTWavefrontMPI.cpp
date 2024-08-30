@@ -4,16 +4,6 @@
 //
 // compile:
 // mpicxx -std=c++20 -O3 -march=native -I -Iinclude UTWavefrontMPI.cpp -o UTWMPI
-// g++ -std=c++20 -O3 -march=native \
-    -I/usr/lib/x86_64-linux-gnu/openmpi/include \
-    -L/usr/lib/x86_64-linux-gnu/openmpi/lib \
-    -Iinclude UTWavefrontMPI.cpp -o UTWMPI -lmpi
-// g++ -o UTWavefront \
-    /home/n.emmolo/SPM_Project/project/UTWavefront.cpp \
-    -I/home/n.emmolo/SPM_Project/project/include \
-    -I/usr/lib/x86_64-linux-gnu/openmpi/include \
-    -L/usr/lib/x86_64-linux-gnu/openmpi/lib \
-    -lmpi
 //
 
 #include <iostream>
@@ -23,7 +13,7 @@
 #include <fstream>
 #include <iomanip>
 #include <cassert>
-#include "mpi.h"
+#include <mpi.h>
 
 
 #define DEFAULT_DIM 3 		// default size of the matrix (NxN)
