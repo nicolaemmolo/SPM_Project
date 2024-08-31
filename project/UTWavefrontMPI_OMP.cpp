@@ -74,8 +74,8 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    uint64_t N = DEFAULT_DIM;
-    int nthreads = DEFAULT_NTHREADS;
+    uint64_t N                = DEFAULT_DIM;
+    int nthreads              = DEFAULT_NTHREADS;
     std::string log_file_name = DEFAULT_LOG_FILE;
 
     // Verify the correct number of args
