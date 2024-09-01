@@ -27,7 +27,7 @@ using namespace ff;
 #endif
 
 #ifndef PRINT_MATRIX
-	#define PRINT_MATRIX 1
+	#define PRINT_MATRIX 0
 #endif
 
 #define DEFAULT_DIM 3       // Default size of the matrix (NxN)
@@ -79,7 +79,11 @@ void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
 }
 
 
-// Wavefront (parallel version with static scheduling using FastFlow)
+/* Wavefront (parallel version with static scheduling using FastFlow)
+ * @param M: matrix
+ * @param N: size of the matrix
+ * @param T: number of threads
+ */
 void wavefront_parallel_static_ff(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
     ParallelFor pf(T);
     
@@ -90,7 +94,11 @@ void wavefront_parallel_static_ff(std::vector<std::vector<double>> &M, const uin
     }
 }
 
-// Wavefront (parallel version with dynamic scheduling using FastFlow)
+/* Wavefront (parallel version with dynamic scheduling using FastFlow)
+ * @param M: matrix
+ * @param N: size of the matrix
+ * @param T: number of threads
+ */
 void wavefront_parallel_dynamic_ff(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
     ParallelFor pf(T);
     
@@ -101,6 +109,12 @@ void wavefront_parallel_dynamic_ff(std::vector<std::vector<double>> &M, const ui
     }
 }
 
+
+/* Main function
+ * @param argc: number of arguments
+ * @param argv: arguments
+ * @return: 0 if successful
+ */
 int main(int argc, char *argv[]) {
     uint64_t N                = DEFAULT_DIM;
     uint32_t T                = DEFAULT_NTHREADS;

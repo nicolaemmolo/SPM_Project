@@ -30,7 +30,7 @@
 #define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2	// Default number of threads
 #define DEFAULT_MODE "s" 	// Default execution mode
-#define DEFAULT_LOG_FILE "wavefront_results_UTW.csv"	// Default log file name
+#define DEFAULT_LOG_FILE "wavefront_results.csv"	// Default log file name
 
 
 /* Calculate dot product of two vectors
@@ -126,33 +126,6 @@ void wavefront_parallel_static(std::vector<std::vector<double>> &M, const uint64
  * @param T: number of threads
  */
 void wavefront_parallel_dynamic(std::vector<std::vector<double>> &M, const uint64_t &N, const uint64_t &T) {
-    /*
-	ThreadPool pool(T);
-
-    for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
-        uint64_t active_threads = std::min(T, N-k); // Calculate the active threads for this diagonal
-        std::barrier barrier(active_threads); // Create a new barrier for this iteration
-
-        if ((N-k) < T) { // If the diagonal is smaller than the number of threads
-            for (uint64_t i=(N-k); i<T; ++i) { // For each extra thread
-                pool.enqueue([&barrier]() {
-                    barrier.arrive_and_wait();
-                });
-            }
-        }
-
-        for (uint64_t i=0; i<(N-k); ++i) { // For each element in the diagonal
-            bool block = (i >= (N-k-T) || (N-k) < T);
-            pool.enqueue([&barrier, i, k, &M, N, block]() { 
-                compute_diagonal_element(M, N, i, k);
-                if (block) { // If the thread should wait
-                    barrier.arrive_and_wait();
-                }
-            });
-        }
-    } */
-
-
 	std::barrier bar(T);
 
 	auto process_element = [&](uint64_t index, bool block) {
@@ -181,6 +154,7 @@ void wavefront_parallel_dynamic(std::vector<std::vector<double>> &M, const uint6
 		}
 	}
 }
+
 
 /* Main function
  * @param argc: number of arguments
@@ -235,7 +209,7 @@ int main(int argc, char *argv[]) {
 	if (mode == "s") {
 		if (PRINT_MESSAGE) std::printf("------ Sequential Execution ------\n");
 		TIMERSTART(wavefront_sequential);
-		wavefront_sequential(M, N); 
+		wavefront_sequential(M, N);
 		TIMERSTOP(wavefront_sequential, execution_time);
 	}
 	
@@ -243,7 +217,7 @@ int main(int argc, char *argv[]) {
 	if (mode == "ps") {
 		if (PRINT_MESSAGE) std::printf("------ Parallel Static Execution ------\n");
 		TIMERSTART(wavefront_parallel_static);
-		wavefront_parallel_static(M, N, T); 
+		wavefront_parallel_static(M, N, T);
 		TIMERSTOP(wavefront_parallel_static, execution_time);
 	}
 
@@ -251,7 +225,7 @@ int main(int argc, char *argv[]) {
 	if (mode == "pd") {
 		if (PRINT_MESSAGE) std::printf("------ Parallel Dynamic Execution ------\n");
 		TIMERSTART(wavefront_parallel_dynamic);
-		wavefront_parallel_dynamic(M, N, T); 
+		wavefront_parallel_dynamic(M, N, T);
 		TIMERSTOP(wavefront_parallel_dynamic, execution_time);
 	}
 
