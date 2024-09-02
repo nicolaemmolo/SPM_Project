@@ -9,16 +9,13 @@
 
 #include <iostream>
 #include <vector>
-#include <random>
-#include <cassert>
 #include <ff/ff.hpp>
 #include <ff/parallel_for.hpp>
-#include <ff/pipeline.hpp>
-#include <ff/farm.hpp>
 #include <fstream>
 #include <numeric>
 #include <iomanip>
 #include <hpc_helpers.hpp>
+
 
 using namespace ff;
 
@@ -34,6 +31,7 @@ using namespace ff;
 #define DEFAULT_NTHREADS 2  // Default number of threads
 #define DEFAULT_MODE "ps"   // Default execution mode
 #define DEFAULT_LOG_FILE "wavefront_results.csv"    // Default log file name
+
 
 /* Calculate dot product of two vectors
  * @param v1: first vector
@@ -93,6 +91,7 @@ void wavefront_parallel_static_ff(std::vector<std::vector<double>> &M, const uin
         });
     }
 }
+
 
 /* Wavefront (parallel version with dynamic scheduling using FastFlow)
  * @param M: matrix

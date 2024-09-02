@@ -9,12 +9,8 @@
 #include <mpi.h>
 #include <iostream>
 #include <vector>
-#include <random>
-#include <cassert>
 #include <ff/ff.hpp>
 #include <ff/parallel_for.hpp>
-#include <ff/pipeline.hpp>
-#include <ff/farm.hpp>
 #include <fstream>
 #include <numeric>
 #include <iomanip>

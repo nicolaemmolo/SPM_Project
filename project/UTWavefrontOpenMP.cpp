@@ -9,13 +9,12 @@
 
 #include <iostream>
 #include <vector>
-#include <random>
-#include <cassert>
 #include <fstream>
 #include <numeric>
 #include <iomanip>
 #include <omp.h>
 #include <hpc_helpers.hpp>
+
 
 #ifndef PRINT_MESSAGE
 	#define PRINT_MESSAGE 0
@@ -82,12 +81,13 @@ void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
  */
 void wavefront_parallel_static_omp(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
     #pragma omp parallel for num_threads(T) schedule(static)
-    for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
-        for (uint64_t m=0; m<(N-k); ++m) { // for each element in the diagonal
+    for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
+        for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
             compute_diagonal_element(M, N, m, k);
         }
     }
 }
+
 
 /* Wavefront (parallel version with dynamic scheduling using OpenMP)
  * @param M: matrix
@@ -96,12 +96,13 @@ void wavefront_parallel_static_omp(std::vector<std::vector<double>> &M, const ui
  */
 void wavefront_parallel_dynamic_omp(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
     #pragma omp parallel for num_threads(T) schedule(dynamic)
-    for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
-        for (uint64_t m=0; m<(N-k); ++m) { // for each element in the diagonal
+    for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
+        for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
             compute_diagonal_element(M, N, m, k);
         }
     }
 }
+
 
 /* Main function
  * @param argc: number of arguments

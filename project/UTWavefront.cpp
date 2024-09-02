@@ -10,14 +10,13 @@
 #include <iostream>
 #include <vector>
 #include <thread>
-#include <random>
-#include <cassert>
 #include <barrier>
 #include <fstream>
 #include <numeric>
 #include <iomanip>
 #include <hpc_helpers.hpp>
 #include <threadPool.hpp>
+
 
 #ifndef PRINT_MESSAGE
 	#define PRINT_MESSAGE 0
@@ -98,7 +97,7 @@ void wavefront_sequential(std::vector<std::vector<double>> &M, const uint64_t &N
 void wavefront_parallel_static(std::vector<std::vector<double>> &M, const uint64_t &N, const uint64_t &T) {
 	std::barrier barrier(T);
 
-	auto static_task = [&] (const uint64_t id) -> void {
+	auto task = [&] (const uint64_t id) -> void {
 		for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
 			if (id >= N-k) { // If the thread is not needed
 				barrier.arrive_and_drop();
@@ -113,7 +112,7 @@ void wavefront_parallel_static(std::vector<std::vector<double>> &M, const uint64
 
 	std::vector<std::thread> threads;
 	for (uint64_t id=0; id<T; ++id)
-		threads.emplace_back(static_task, id);
+		threads.emplace_back(task, id);
 
 	for (auto &thread : threads)
 		thread.join();
@@ -121,14 +120,14 @@ void wavefront_parallel_static(std::vector<std::vector<double>> &M, const uint64
 
 
 /* Wavefront (parallel version with dynamic scheduling)
- * @param M: matrix
+ * @param M: matrix 
  * @param N: size of the matrix
  * @param T: number of threads
  */
 void wavefront_parallel_dynamic(std::vector<std::vector<double>> &M, const uint64_t &N, const uint64_t &T) {
 	std::barrier bar(T);
 
-	auto process_element = [&](uint64_t index, bool block) {
+	auto task = [&](uint64_t index, bool block) {
 		uint64_t i = index / N;
 		uint64_t k = index % N - i;
 		compute_diagonal_element(M, N, i, k);
@@ -150,7 +149,7 @@ void wavefront_parallel_dynamic(std::vector<std::vector<double>> &M, const uint6
 		}
 		for (uint64_t i=0; i<(N-k); ++i) { // For each element in the diagonal
 			bool block = (i>=(N-k-T) || (N-k)<T) ? true : false;
-			TP.enqueue(process_element, i*N+(i+k), block);
+			TP.enqueue(task, i*N+(i+k), block);
 		}
 	}
 }
