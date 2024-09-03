@@ -1,102 +1,52 @@
 #!/bin/bash
 
-THREADS_STEP=2
-MAX_THREADS=40
+# Parametri di test
+NODES_LIST=(1 2 4 6 8)
 REPETITIONS=10
 
+# Funzione per sottomettere un lavoro SLURM
+submit_job() {
+    local NODES=$1
+    local EXECUTABLE=$2
+    local MODE=$3
+    local OUTPUT_FILE=$4
 
-# Testing Sequential Execution
-seq_execution() {
-    for N in 128 256 512 1024 2048 4096; do
-        echo "N=$N T=1 s results_UTW_seq.csv"
-        for rep in $(seq 1 $REPETITIONS); do
-            ./UTW $N 1 s results_UTW.csv
-        done
-    done
+    cat <<EOF | sbatch
+#!/bin/bash
+#SBATCH --job-name=${EXECUTABLE}_${MODE}_N${NODES}         # Nome del lavoro
+#SBATCH --nodes=${NODES}                                 # Numero di nodi
+#SBATCH --ntasks-per-node=8                              # Numero di task per nodo
+#SBATCH --time=02:00:00                                 # Tempo massimo di esecuzione (HH:MM:SS)
+#SBATCH --output=${OUTPUT_FILE}_%j.out                   # File di output
+#SBATCH --error=${OUTPUT_FILE}_%j.err                    # File di errori
+
+module load mpi                                        # Carica il modulo MPI
+mpirun -n $(($NODES * 8)) ./${EXECUTABLE} 1000 ${MODE} ${OUTPUT_FILE}.csv   # Esegui il programma MPI
+EOF
 }
 
-# Testing Parallel Static Execution
-par_static_execution() {
-    for T in $(seq 1 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048 4096; do
-            echo "N=$N T=$T ps results_UTW_static.csv"
-            for rep in $(seq 1 $REPETITIONS); do
-                ./UTW $N $T ps results_UTW_static.csv
-            done
-        done
+# Test per UTWavefrontMPI
+for NODES in "${NODES_LIST[@]}"; do
+    for ((rep=1; rep<=REPETITIONS; rep++)); do
+        echo "Testing UTWavefrontMPI with ${NODES} nodes, repetition ${rep}"
+        submit_job ${NODES} UTWavefrontMPI s results_UTWavefrontMPI
     done
-}
+done
 
-# Testing Parallel Dynamic Execution
-par_dynamic_execution() {
-    for T in $(seq 1 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048; do
-            echo "N=$N T=$T pd results_UTW_dynamic.csv"
-            for rep in $(seq 1 $REPETITIONS); do
-                ./UTW $N $T pd results_UTW_dynamic.csv
-            done
-        done
+# Test per UTWavefrontMPI_FF
+for NODES in "${NODES_LIST[@]}"; do
+    for ((rep=1; rep<=REPETITIONS; rep++)); do
+        echo "Testing UTWavefrontMPI_FF with ${NODES} nodes, repetition ${rep}"
+        submit_job ${NODES} UTWavefrontMPI_FF ps results_UTWavefrontMPI_FF_static
+        submit_job ${NODES} UTWavefrontMPI_FF pd results_UTWavefrontMPI_FF_dynamic
     done
-}
+done
 
-# Testing FastFlow Parallel Static Execution
-par_static_fastflow_execution() {
-    for T in $(seq 1 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048; do
-            echo "N=$N T=$T ps results_UTWFF_static.csv"
-            for rep in $(seq 1 $REPETITIONS); do
-                ./UTWFF $N $T ps results_UTWFF_static.csv
-            done
-        done
+# Test per UTWavefrontMPI_OMP
+for NODES in "${NODES_LIST[@]}"; do
+    for ((rep=1; rep<=REPETITIONS; rep++)); do
+        echo "Testing UTWavefrontMPI_OMP with ${NODES} nodes, repetition ${rep}"
+        submit_job ${NODES} UTWavefrontMPI_OMP ps results_UTWavefrontMPI_OMP_static
+        submit_job ${NODES} UTWavefrontMPI_OMP pd results_UTWavefrontMPI_OMP_dynamic
     done
-}
-
-# Testing FastFlow Parallel Dynamic Execution
-par_dynamic_fastflow_execution() {
-    for T in $(seq 1 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048; do
-            echo "N=$N T=$T pd results_UTWFF_dynamic.csv"
-            for rep in $(seq 1 $REPETITIONS); do
-                ./UTWFF $N $T pd results_UTWFF_dynamic.csv
-            done
-        done
-    done
-}
-
-# Testing OpenMP Parallel Static Execution
-par_static_openmp_execution() {
-    for T in $(seq 1 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048; do
-            echo "N=$N T=$T ps results_UTWOMP_static.csv"
-            for rep in $(seq 1 $REPETITIONS); do
-                ./UTWOMP $N $T ps results_UTWOMP_static.csv
-            done
-        done
-    done
-}
-
-# Testing OpenMP Parallel Dynamic Execution
-par_dynamic_openmp_execution() {
-    for T in $(seq 1 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048; do
-            echo "N=$N T=$T pd results_UTWOMP_dynamic.csv"
-            for rep in $(seq 1 $REPETITIONS); do
-                ./UTWOMP $N $T pd results_UTWOMP_dynamic.csv
-            done
-        done
-    done
-}
-
-
-# C++ Thread Execution
-#seq_execution
-#par_static_execution
-#par_dynamic_execution
-
-# FastFlow Execution
-#par_static_fastflow_execution
-#par_dynamic_fastflow_execution
-
-# OpenMP Execution
-#par_static_openmp_execution
-#par_dynamic_openmp_execution
+done

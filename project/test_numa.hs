@@ -53,7 +53,7 @@ par_static_fastflow_execution() {
 
 # Testing FastFlow Parallel Dynamic Execution
 par_dynamic_fastflow_execution() {
-    for T in $(seq 22 $THREADS_STEP $MAX_THREADS); do
+    for T in 1 $(seq 2 $THREADS_STEP $MAX_THREADS); do
         for N in 128 256 512 1024 2048 4096; do
             echo "N=$N T=$T pd results_UTWFF_dynamic.csv"
             for rep in $(seq 1 $REPETITIONS); do
@@ -95,8 +95,8 @@ par_dynamic_openmp_execution() {
 
 # FastFlow Execution
 #par_static_fastflow_execution
-par_dynamic_fastflow_execution
+#par_dynamic_fastflow_execution
 
 # OpenMP Execution
 #par_static_openmp_execution
-#par_dynamic_openmp_execution
+par_dynamic_openmp_execution
