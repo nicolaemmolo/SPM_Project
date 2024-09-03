@@ -4,7 +4,7 @@
 //		OpenMP version
 //
 // compile:
-// g++ -std=c++20 -O3 -march=native -Iinclude UTWavefrontOpenMP.cpp -o UTWOMP
+// g++ -std=c++20 -O3 -march=native -Iinclude -fopenmp UTWavefrontOpenMP.cpp -o UTWOMP
 //
 
 #include <iostream>
