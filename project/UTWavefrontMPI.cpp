@@ -1,9 +1,10 @@
 //
 // Sequential and Parallel code of the first SPM Assignment
 //		with Wavefront computation
+//      MPI version
 //
 // compile:
-// mpicxx -std=c++20 -O3 -march=native -I -Iinclude UTWavefrontMPI.cpp -o UTWMPI
+// mpicxx -std=c++20 -O3 -I -Iinclude UTWavefrontMPI.cpp -o UTWMPI
 //
 
 #include <iostream>

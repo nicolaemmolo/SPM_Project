@@ -24,6 +24,7 @@
 	#define PRINT_MATRIX 0
 #endif
 
+
 #define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2	// Default number of threads
 #define DEFAULT_MODE "ps" 	// Default execution mode

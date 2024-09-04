@@ -3,26 +3,40 @@
 //		with Wavefront computation
 //
 // compile:
-// g++ -std=c++20 -O3 -march=native -Iinclude UTWavefrontMPI_OMP.cpp -o UTWMPIOMP
+// mpicxx -std=c++20 -O3 -I -Iinclude UTWavefrontMPI_OMP.cpp -o UTWMPIOMP
 //
 
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include <numeric>
 #include <iomanip>
-#include <mpi.h>
 #include <omp.h>
+#include <mpi.h>
 
-#define DEFAULT_DIM 3         // default size of the matrix (NxN)
-#define DEFAULT_NTHREADS 2    // default number of OpenMP threads
-#define DEFAULT_LOG_FILE "wavefront_results.csv"    // default log file name
 
-// Calculate dot product of two vectors
+#define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
+#define DEFAULT_NTHREADS 2	// Default number of threads
+#define DEFAULT_NODES 1     // Default number of nodes
+#define DEFAULT_MODE "ps" 	// Default execution mode
+#define DEFAULT_LOG_FILE "wavefront_results.csv"	// Default log file name
+
+
+/* Calculate dot product of two vectors
+ * @param v1: first vector
+ * @param v2: second vector
+ * @return: dot product of the two vectors
+ */
 double dot_product(const std::vector<double>& v1, const std::vector<double>& v2) {
     return std::inner_product(v1.begin(), v1.end(), v2.begin(), 0.0);
 }
 
-// Calculate and update matrix element with dot product of two vectors
+/* Calculate and update a matrix element using the dot product of two vectors
+ * @param M: matrix
+ * @param N: size of the matrix
+ * @param m: row index
+ * @param k: column index
+ */
 void compute_diagonal_element(std::vector<std::vector<double>> &M, const uint64_t &N, const uint64_t &m, const uint64_t &k) {
     std::vector<double> row_vector(k);
     std::vector<double> col_vector(k);
@@ -37,7 +51,10 @@ void compute_diagonal_element(std::vector<std::vector<double>> &M, const uint64_
     M[m][m+k] = dot_product(row_vector, col_vector);
 }
 
-// Print matrix
+/* Print matrix
+ * @param M: matrix
+ * @param N: size of the matrix
+ */
 void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
     std::cout << std::fixed << std::setprecision(2);
     for (uint64_t i=0; i<N; ++i) {
@@ -48,42 +65,68 @@ void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
     }
 }
 
-// Main wavefront function with MPI and OpenMP
-void wavefront_mpi_omp(std::vector<std::vector<double>> &M, const uint64_t &N, const int &rank, const int &size, const int &nthreads) {
 
-    for (uint64_t k=1; k<N; ++k) { // for each upper diagonal
-        #pragma omp parallel for num_threads(nthreads) schedule(static)
-        for (uint64_t m=rank; m<(N-k); m+=size) { // distribute work among processes
-            compute_diagonal_element(M, N, m, k);
+/* Wavefront (parallel version with static scheduling using OpenMP and MPI)
+ * @param M: matrix
+ * @param N: size of the matrix
+ * @param T: number of threads
+ * @param rank: MPI rank
+ * @param size: number of MPI processes
+ */
+void wavefront_parallel_static_omp_mpi(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T, const int &rank, const int &size) {
+    #pragma omp parallel for num_threads(T) schedule(static)
+    for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
+        for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
+            if (m % size == rank) { // Assign work based on rank
+                compute_diagonal_element(M, N, m, k);
+            }
         }
+        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes
+    }
+}
 
-        // Synchronize all processes at the end of each diagonal step
-        MPI_Barrier(MPI_COMM_WORLD);
-
-        // Broadcast the matrix to ensure all processes have updated data
-        for (uint64_t i = 0; i < N; ++i) {
-            MPI_Bcast(&M[i][0], N, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+/* Wavefront (parallel version with dynamic scheduling using OpenMP and MPI)
+ * @param M: matrix
+ * @param N: size of the matrix
+ * @param T: number of threads
+ * @param rank: MPI rank
+ * @param size: number of MPI processes
+ */
+void wavefront_parallel_dynamic_omp_mpi(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T, const int &rank, const int &size) {
+    #pragma omp parallel for num_threads(T) schedule(dynamic)
+    for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
+        for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
+            if (m % size == rank) { // Assign work based on rank
+                compute_diagonal_element(M, N, m, k);
+            }
         }
+        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes
     }
 }
 
 int main(int argc, char *argv[]) {
+    uint64_t N                = DEFAULT_DIM;
+    uint32_t T                = DEFAULT_NTHREADS;
+    std::string mode          = "ps"; // Default mode
+    std::string log_file_name = DEFAULT_LOG_FILE;
+    uint64_t nodes            = DEFAULT_NODES;
+
+    # Initialize MPI
     MPI_Init(&argc, &argv);
 
     int rank, size;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    uint64_t N                = DEFAULT_DIM;
-    int nthreads              = DEFAULT_NTHREADS;
-    std::string log_file_name = DEFAULT_LOG_FILE;
-
     // Verify the correct number of args
-    if (argc != 1 && argc != 2 && argc != 3) {
+    if (argc != 1 && argc != 2 && argc != 3 && argc != 4 && argc != 5) {
         if (rank == 0) {
-            std::printf("use: %s [N] [nthreads]\n", argv[0]);
-            std::printf("     N        : size of the square matrix\n");
-            std::printf("     nthreads : number of OpenMP threads per process\n");
+            std::printf("use: %s [N] [T] [mode] [log_file_name] [nodes]\n", argv[0]);
+            std::printf("     N    : size of the square matrix\n");
+            std::printf("     T    : number of threads\n");
+            std::printf("     mode : execution mode ('ps' for parallel static, 'pd' for parallel dynamic)\n");
+            std::printf("     log_file_name : name of the log file\n");
+            std::printf("     nodes: number of nodes\n");
         }
         MPI_Finalize();
         return -1;
@@ -93,14 +136,23 @@ int main(int argc, char *argv[]) {
     if (argc > 1) {
         N = std::stol(argv[1]);
         if (argc > 2) {
-            nthreads = std::stoi(argv[2]);
+            T = std::stol(argv[2]);
+            if (argc > 3) {
+                mode = argv[3];
+                if (argc > 4) {
+                    log_file_name = argv[4];
+                    if (argc > 5) {
+                        nodes = std::stol(argv[5]);
+                    }
+                }
+            }
         }
     }
 
-    // allocate the matrix
+    // Allocate the matrix
     std::vector<std::vector<double>> M(N, std::vector<double>(N, 0.0));
-
-    // init function
+    
+    // Init function
     auto init = [&]() {
         for (uint64_t m = 0; m < N; ++m) {
             M[m][m] = static_cast<double>(m + 1) / static_cast<double>(N);
@@ -111,24 +163,38 @@ int main(int argc, char *argv[]) {
 
     double execution_time = -1;
 
-    if (rank == 0) std::printf("------ MPI + OpenMP Execution ------\n");
+    // Parallel static
+    if (mode == "ps") {
+        if (rank == 0 && PRINT_MESSAGE) std::printf("------ Parallel Static Execution ------\n");
+        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes before timing
+        double start_time = MPI_Wtime();
+        wavefront_parallel_static_omp_mpi(M, N, T, rank, size);
+        double end_time = MPI_Wtime();
+        execution_time = end_time - start_time;
+    }
 
-    double start_time = MPI_Wtime();
-    wavefront_mpi_omp(M, N, rank, size, nthreads);
-    double end_time = MPI_Wtime();
+    // Parallel dynamic
+    if (mode == "pd") {
+        if (rank == 0 && PRINT_MESSAGE) std::printf("------ Parallel Dynamic Execution ------\n");
+        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes before timing
+        double start_time = MPI_Wtime();
+        wavefront_parallel_dynamic_omp_mpi(M, N, T, rank, size);
+        double end_time = MPI_Wtime();
+        execution_time = end_time - start_time;
+    }
 
-    execution_time = end_time - start_time;
 
-    if (rank == 0 && PRINT_MATRIX) print_matrix(M, N);
-
+    // Write the execution times to a file
     if (rank == 0) {
-        // write the execution times to a file
+        if (PRINT_MATRIX) print_matrix(M, N);
+
         std::ofstream file;
         file.open(log_file_name, std::ios_base::app);
-        file << N << "," << size << "," << nthreads << "," << "mpi_omp" << "," << execution_time << "\n";
+        file << N << "," << T << "," << nodes << "," << mode << "," << execution_time << "\n";
         file.close();
     }
 
+    // Finalize MPI
     MPI_Finalize();
     return 0;
 }

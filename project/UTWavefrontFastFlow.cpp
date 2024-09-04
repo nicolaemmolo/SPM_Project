@@ -4,7 +4,7 @@
 //		FastFlow version
 //
 // compile:
-// g++ -std=c++20 -O3 -march=native -Iinclude -Iinclude/fastflow-master UTWavefrontFastFlow.cpp -o UTWFF
+// mpicxx -std=c++20 -O3 -march=native -I -Iinclude UTWavefrontMPI.cpp -o UTWMPI
 //
 
 #include <iostream>
