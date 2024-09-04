@@ -3,7 +3,7 @@
 //		with Wavefront computation
 //
 // compile:
-// mpicxx -std=c++20 -O3 -I -Iinclude UTWavefrontMPI_OMP.cpp -o UTWMPIOMP
+// mpicxx -std=c++20 -O3 -I -Iinclude -fopenmp UTWavefrontMPI_OMP.cpp -o UTWMPIOMP
 //
 
 #include <iostream>
@@ -15,11 +15,20 @@
 #include <mpi.h>
 
 
-#define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
+#ifndef PRINT_MESSAGE
+	#define PRINT_MESSAGE 0
+#endif
+
+#ifndef PRINT_MATRIX
+	#define PRINT_MATRIX 0
+#endif
+
+
+#define DEFAULT_DIM 3		// Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2	// Default number of threads
 #define DEFAULT_NODES 1     // Default number of nodes
 #define DEFAULT_MODE "ps" 	// Default execution mode
-#define DEFAULT_LOG_FILE "wavefront_results.csv"	// Default log file name
+#define DEFAULT_LOG_FILE "wavefront_results_MPI.csv"	// Default log file name
 
 
 /* Calculate dot product of two vectors
@@ -74,8 +83,8 @@ void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
  * @param size: number of MPI processes
  */
 void wavefront_parallel_static_omp_mpi(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T, const int &rank, const int &size) {
-    #pragma omp parallel for num_threads(T) schedule(static)
     for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
+        #pragma omp parallel for num_threads(T) schedule(static)
         for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
             if (m % size == rank) { // Assign work based on rank
                 compute_diagonal_element(M, N, m, k);
@@ -93,8 +102,8 @@ void wavefront_parallel_static_omp_mpi(std::vector<std::vector<double>> &M, cons
  * @param size: number of MPI processes
  */
 void wavefront_parallel_dynamic_omp_mpi(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T, const int &rank, const int &size) {
-    #pragma omp parallel for num_threads(T) schedule(dynamic)
     for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
+        #pragma omp parallel for num_threads(T) schedule(dynamic)
         for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
             if (m % size == rank) { // Assign work based on rank
                 compute_diagonal_element(M, N, m, k);
@@ -111,7 +120,7 @@ int main(int argc, char *argv[]) {
     std::string log_file_name = DEFAULT_LOG_FILE;
     uint64_t nodes            = DEFAULT_NODES;
 
-    # Initialize MPI
+    // Initialize MPI
     MPI_Init(&argc, &argv);
 
     int rank, size;
@@ -119,7 +128,7 @@ int main(int argc, char *argv[]) {
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
     // Verify the correct number of args
-    if (argc != 1 && argc != 2 && argc != 3 && argc != 4 && argc != 5) {
+    if (argc != 1 && argc != 2 && argc != 3 && argc != 4 && argc != 5 && argc != 6) {
         if (rank == 0) {
             std::printf("use: %s [N] [T] [mode] [log_file_name] [nodes]\n", argv[0]);
             std::printf("     N    : size of the square matrix\n");

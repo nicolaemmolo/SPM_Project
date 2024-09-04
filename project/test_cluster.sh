@@ -7,37 +7,56 @@
 #SBATCH --time=00:10:00            # Tempo massimo di esecuzione (hh:mm:ss)
 #SBATCH --partition=normal         # Partizione o coda da usare (sostituisci con la partizione corretta del tuo cluster)
 
-#module load mpi                    # Carica il modulo MPI, se necessario
-
-mpirun ./UTWMPI 3 wavefront_results_MPI.csv 2
-
+mpirun -n 1 ./UTWMPI 128 wavefront_results_MPI.csv 2
+mpirun -n 1 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 2
 
 # Parametri di test
+DIMENSIONS_LIST=(128 256 512 1024 2048 4096)
 NODES_LIST=(1 2 4 6 8)
+THREADS_LIST=(1 2 4 8 16 32)
 REPETITIONS=10
-A = '
-# Test per UTWavefrontMPI
-for NODES in "${NODES_LIST[@]}"; do
-    for ((rep=1; rep<=REPETITIONS; rep++)); do
-        echo "Testing UTWavefrontMPI with ${NODES} nodes, repetition ${rep}"
-        submit_job ${NODES} UTWavefrontMPI s results_UTWavefrontMPI
-    done
-done
 
-# Test per UTWavefrontMPI_FF
-for NODES in "${NODES_LIST[@]}"; do
-    for ((rep=1; rep<=REPETITIONS; rep++)); do
-        echo "Testing UTWavefrontMPI_FF with ${NODES} nodes, repetition ${rep}"
-        submit_job ${NODES} UTWavefrontMPI_FF ps results_UTWavefrontMPI_FF_static
-        submit_job ${NODES} UTWavefrontMPI_FF pd results_UTWavefrontMPI_FF_dynamic
+mpi_execution() { 
+    for nodes in $($NODES_LIST); do
+        for N in $($DIMENSIONS_LIST); do
+            echo "N=$N results_UTWMPI.csv nodes=$nodes"
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun -n $nodes ./UTWMPI $N results_UTWMPI.csv $nodes
+            done
+        done
     done
-done
+}
 
-# Test per UTWavefrontMPI_OMP
-for NODES in "${NODES_LIST[@]}"; do
-    for ((rep=1; rep<=REPETITIONS; rep++)); do
-        echo "Testing UTWavefrontMPI_OMP with ${NODES} nodes, repetition ${rep}"
-        submit_job ${NODES} UTWavefrontMPI_OMP ps results_UTWavefrontMPI_OMP_static
-        submit_job ${NODES} UTWavefrontMPI_OMP pd results_UTWavefrontMPI_OMP_dynamic
+mpi_omp_static_execution() {
+    for nodes in $($NODES_LIST); do
+        for N in $($DIMENSIONS_LIST); do
+            for T in $($THREADS_LIST); do
+                echo "N=$N T=$T ps results_UTWMPI_OMP_static.csv nodes=$nodes"
+                for rep in $(seq 1 $REPETITIONS); do
+                    mpirun -n $nodes ./UTWMPI_OMP $N $T ps results_UTWMPI_OMP_static.csv $nodes
+                done
+            done
+        done
     done
-done'
+}
+
+mpi_omp_dynamic_execution() {
+    for nodes in $($NODES_LIST); do
+        for N in $($DIMENSIONS_LIST); do
+            for T in $($THREADS_LIST); do
+                echo "N=$N T=$T pd results_UTWMPI_OMP_dynamic.csv nodes=$nodes"
+                for rep in $(seq 1 $REPETITIONS); do
+                    mpirun -n $nodes ./UTWMPI_OMP $N $T pd results_UTWMPI_OMP_dynamic.csv $nodes
+                done
+            done
+        done
+    done
+}
+
+
+# MPI execution
+#mpi_execution
+
+# MPI + OpenMP execution
+#mpi_omp_static_execution
+#mpi_omp_dynamic_execution
