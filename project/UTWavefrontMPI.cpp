@@ -19,10 +19,11 @@
 #endif
 
 #ifndef PRINT_MATRIX
-    #define PRINT_MATRIX 0
+    #define PRINT_MATRIX 1
 #endif
 
 #define DEFAULT_DIM 3       // Default size of the matrix (NxN)
+#define DEFAULT_NODES 2     // Default number of threads
 #define DEFAULT_LOG_FILE "wavefront_results_MPI.csv" // Default log file name
 
 
@@ -98,6 +99,7 @@ void wavefront_parallel_mpi(std::vector<std::vector<double>> &M, const uint64_t 
 int main(int argc, char *argv[]) {
     uint64_t N                = DEFAULT_DIM;
     std::string log_file_name = DEFAULT_LOG_FILE;
+    uint64_t nodes            = DEFAULT_NODES;
 
     // Initialize MPI
     MPI_Init(&argc, &argv);
@@ -106,11 +108,12 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     
     // Verify the correct number of args
-    if (argc != 1 && argc != 2 && argc != 3) {
+    if (argc != 1 && argc != 2 && argc != 3 && argc != 4) {
         if (rank == 0) {
-            std::printf("use: %s [N] [log_file_name]\n", argv[0]);
+            std::printf("use: %s [N] [log_file_name] [nodes]\n", argv[0]);
             std::printf("     N    : size of the square matrix\n");
             std::printf("     log_file_name : name of the log file\n");
+            std::printf("     nodes: number of nodes\n");
         }
         MPI_Finalize();
         return -1;
@@ -120,7 +123,10 @@ int main(int argc, char *argv[]) {
     if (argc > 1) {
         N = std::stol(argv[1]);
         if (argc > 2) {
-            log_file_name = argv[3];
+            log_file_name = argv[2];
+            if (argc > 3) {
+                nodes = std::stol(argv[3]);
+            }
         }
     }
 
@@ -139,14 +145,12 @@ int main(int argc, char *argv[]) {
     double execution_time = -1;
 
     // Parallel MPI
-    if (mode == "mp") {
-        if (rank == 0 && PRINT_MESSAGE) std::printf("------ Parallel MPI Execution ------\n");
-        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes before timing
-        double start_time = MPI_Wtime();
-        wavefront_parallel_mpi(M, N);
-        double end_time = MPI_Wtime();
-        execution_time = end_time - start_time;
-    }
+    if (rank == 0 && PRINT_MESSAGE) std::printf("------ Parallel MPI Execution ------\n");
+    MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes before timing
+    double start_time = MPI_Wtime();
+    wavefront_parallel_mpi(M, N);
+    double end_time = MPI_Wtime();
+    execution_time = end_time - start_time;
 
     if (rank == 0) {
         if (PRINT_MATRIX) print_matrix(M, N);
@@ -154,7 +158,7 @@ int main(int argc, char *argv[]) {
         // Write the execution times to a file
         std::ofstream file;
         file.open(log_file_name, std::ios_base::app);
-        file << N << "," << MPI_COMM_WORLD << "," << execution_time << "\n";
+        file << N << "," << nodes <<"," << execution_time << "\n";
         file.close();
     }
 

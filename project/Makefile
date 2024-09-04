@@ -1,37 +1,46 @@
-# Variabili di compilazione
+# Compilation variables
 CXX = g++
 CXXFLAGS = -std=c++20 -O3 -march=native -Iinclude
 
-# Nomi degli eseguibili
+MPI_CXX = mpicxx
+MPI_CXXFLAGS = -std=c++20 -O3 -I -Iinclude
+
+# Executable names
 EXEC_UTW = UTW
 EXEC_UTWFF = UTWFF
 EXEC_UTWOMP = UTWOMP
+EXEC_UTWMPI = UTWMPI
 
-# File sorgente
+# Source files
 SRC_UTW = UTWavefront.cpp
 SRC_UTWFF = UTWavefrontFastFlow.cpp
 SRC_UTWOMP = UTWavefrontOpenMP.cpp
+SRC_UTWMPI = UTWavefrontMPI.cpp
 
-# Regola di default: compila tutti gli eseguibili
-all: $(EXEC_UTW) $(EXEC_UTWFF) $(EXEC_UTWOMP)
+# Default rule: compile all executables
+all: $(EXEC_UTW) $(EXEC_UTWFF) $(EXEC_UTWOMP) $(EXEC_UTWMPI)
 
-# Compilazione dell'eseguibile UTW
+# Compile the UTW executable
 $(EXEC_UTW): $(SRC_UTW)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
-# Compilazione dell'eseguibile UTWFF
+# Compile the UTWFF executable
 $(EXEC_UTWFF): $(SRC_UTWFF)
 	$(CXX) $(CXXFLAGS) -Iinclude/fastflow-master $< -o $@
 
-# Compilazione dell'eseguibile UTWOMP
+# Compile the UTWOMP executable
 $(EXEC_UTWOMP): $(SRC_UTWOMP)
 	$(CXX) $(CXXFLAGS) -fopenmp $< -o $@
 
-# Regola per pulire gli eseguibili e i file oggetto
-clean:
-	rm -f $(EXEC_UTW) $(EXEC_UTWFF) $(EXEC_UTWOMP)
+# Compile the UTWMPI executable
+$(EXEC_UTWMPI): $(SRC_UTWMPI)
+	$(MPI_CXX) $(MPI_CXXFLAGS) $< -o $@
 
-# Aggiungi altre regole se necessario
-# esempio: test, install, ecc.
+# Rule to clean up executables and object files
+clean:
+	rm -f $(EXEC_UTW) $(EXEC_UTWFF) $(EXEC_UTWOMP) $(EXEC_UTWMPI)
+
+# Add other rules if necessary
+# example: test, install, etc.
 
 .PHONY: all clean
