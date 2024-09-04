@@ -3,12 +3,41 @@
 #SBATCH --output=output.txt        # Nome del file di output
 #SBATCH --error=error.txt          # Nome del file di errore
 #SBATCH --ntasks=8                 # Numero totale di task MPI
-#SBATCH --nodes=2                  # Numero di nodi richiesti
+#SBATCH --nodes=8                  # Numero di nodi richiesti
 #SBATCH --time=00:10:00            # Tempo massimo di esecuzione (hh:mm:ss)
 #SBATCH --partition=normal         # Partizione o coda da usare (sostituisci con la partizione corretta del tuo cluster)
 
-mpirun -n 1 ./UTWMPI 128 wavefront_results_MPI.csv 2
-mpirun -n 1 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 2
+mpirun -n 1 ./UTWMPI 128 wavefront_results_MPI.csv 1
+mpirun -n 1 ./UTWMPI 128 wavefront_results_MPI.csv 1
+mpirun -n 1 ./UTWMPI 128 wavefront_results_MPI.csv 1
+mpirun -n 2 ./UTWMPI 128 wavefront_results_MPI.csv 2
+mpirun -n 2 ./UTWMPI 128 wavefront_results_MPI.csv 2
+mpirun -n 2 ./UTWMPI 128 wavefront_results_MPI.csv 2
+mpirun -n 4 ./UTWMPI 128 wavefront_results_MPI.csv 4
+mpirun -n 4 ./UTWMPI 128 wavefront_results_MPI.csv 4
+mpirun -n 4 ./UTWMPI 128 wavefront_results_MPI.csv 4
+
+mpirun -n 1 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 1
+mpirun -n 1 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 1
+mpirun -n 1 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 1
+mpirun -n 2 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 2
+mpirun -n 2 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 2
+mpirun -n 2 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 2
+mpirun -n 4 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 4
+mpirun -n 4 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 4
+mpirun -n 4 ./UTWMPIOMP 128 2 ps wavefront_results_MPI.csv 4
+
+mpirun -n 1 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 1
+mpirun -n 1 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 1
+mpirun -n 1 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 1
+mpirun -n 2 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 2
+mpirun -n 2 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 2
+mpirun -n 2 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 2
+mpirun -n 4 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 4
+mpirun -n 4 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 4
+mpirun -n 4 ./UTWMPIOMP 128 2 pd wavefront_results_MPI.csv 4
+
+
 
 # Parametri di test
 DIMENSIONS_LIST=(128 256 512 1024 2048 4096)
