@@ -86,8 +86,8 @@ void wavefront_parallel_mpi(std::vector<std::vector<double>> &M, const uint64_t 
             if (m % size == rank) { // Assign work based on rank
                 compute_diagonal_element(M, N, m, k);
             }
-            MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes
         }
+        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes
     }
 }
 
@@ -161,6 +161,7 @@ int main(int argc, char *argv[]) {
         file.open(log_file_name, std::ios_base::app);
         file << N << "," << nodes <<"," << execution_time << "\n";
         file.close();
+        std::printf("Execution time: %f\n", execution_time);
     }
 
     // Finalize MPI

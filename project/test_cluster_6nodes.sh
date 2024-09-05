@@ -1,19 +1,17 @@
 #!/bin/bash
 #SBATCH --job-name=wavefront_mpi    # Name of the job
-#SBATCH --output=output6.txt         # Name of output file
-#SBATCH --error=error6.txt           # Name of error file
+#SBATCH --output=output6.txt        # Name of output file
+#SBATCH --error=error6.txt          # Name of error file
 #SBATCH --nodes=6                   # Number of computational nodes to be used
 #SBATCH --ntasks-per-node=1         # Number of tasks per node
 #SBATCH --time=00:10:00             # Maximum time requested for job execution (format HH:MM:SS)
 
 
-# Parametri di test
-DIMENSIONS_LIST=(128 256 512 1024 2048 4096)
-THREADS_LIST=(1 2 4 8 16 32)
+# Test parameters
 REPETITIONS=3
 
 mpi_execution() {
-    for N in $($DIMENSIONS_LIST); do
+    for N in 128 256 512 1024 2048 4096; do
         for rep in $(seq 1 $REPETITIONS); do
             mpirun ./UTWMPI $N results_UTWMPI_6.csv $nodes
         done
@@ -21,8 +19,8 @@ mpi_execution() {
 }
 
 mpi_omp_static_execution() {
-    for N in $($DIMENSIONS_LIST); do
-        for T in $($THREADS_LIST); do
+    for N in 128 256 512 1024 2048 4096; do
+        for T in 1 2 4 8 16 32; do
             for rep in $(seq 1 $REPETITIONS); do
                 mpirun ./UTWMPI_OMP $N $T ps results_UTWMPI_OMP_static_6.csv $nodes
             done
@@ -31,8 +29,8 @@ mpi_omp_static_execution() {
 }
 
 mpi_omp_dynamic_execution() {
-    for N in $($DIMENSIONS_LIST); do
-        for T in $($THREADS_LIST); do
+    for N in 128 256 512 1024 2048 4096; do
+        for T in 1 2 4 8 16 32; do
             for rep in $(seq 1 $REPETITIONS); do
                 mpirun ./UTWMPI_OMP $N $T pd results_UTWMPI_OMP_dynamic_6.csv $nodes
             done
