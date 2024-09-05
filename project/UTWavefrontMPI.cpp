@@ -20,7 +20,7 @@
 #endif
 
 #ifndef PRINT_MATRIX
-    #define PRINT_MATRIX 1
+    #define PRINT_MATRIX 0
 #endif
 
 #define DEFAULT_DIM 3       // Default size of the matrix (NxN)
