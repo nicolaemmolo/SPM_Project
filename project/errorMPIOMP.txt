@@ -1,644 +1,1284 @@
 terminate called after throwing an instance of 'std::invalid_argument'
+terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287847] *** Process received signal ***
-[node01:2287847] Signal: Aborted (6)
-[node01:2287847] Signal code:  (-6)
+[node01:2290366] *** Process received signal ***
+[node01:2290366] Signal: Aborted (6)
+[node01:2290366] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287867] *** Process received signal ***
-[node01:2287867] Signal: Aborted (6)
-[node01:2287867] Signal code:  (-6)
+[node01:2290351] *** Process received signal ***
+[node01:2290351] Signal: Aborted (6)
+[node01:2290351] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287859] *** Process received signal ***
-[node01:2287859] Signal: Aborted (6)
-[node01:2287859] Signal code:  (-6)
+[node01:2290348] *** Process received signal ***
+[node01:2290348] Signal: Aborted (6)
+[node01:2290348] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287857] *** Process received signal ***
-[node01:2287857] Signal: Aborted (6)
-[node01:2287857] Signal code:  (-6)
+[node01:2290379] *** Process received signal ***
+[node01:2290379] Signal: Aborted (6)
+[node01:2290379] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287858] *** Process received signal ***
-[node01:2287858] Signal: Aborted (6)
-[node01:2287858] Signal code:  (-6)
-[node01:2287858] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287864] *** Process received signal ***
-[node01:2287864] Signal: Aborted (6)
-[node01:2287864] Signal code:  (-6)
-[node01:2287864] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287856] *** Process received signal ***
-[node01:2287856] Signal: Aborted (6)
-[node01:2287856] Signal code:  (-6)
-[node01:2287856] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287848] *** Process received signal ***
-[node01:2287848] Signal: Aborted (6)
-[node01:2287848] Signal code:  (-6)
-[node01:2287848] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287839] *** Process received signal ***
-[node01:2287839] Signal: Aborted (6)
-[node01:2287839] Signal code:  (-6)
-[node01:2287839] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f8f58c87db0]
-[node01:2287839] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287861] *** Process received signal ***
-[node01:2287861] Signal: Aborted (6)
-[node01:2287861] Signal code:  (-6)
+[node01:2290370] *** Process received signal ***
+[node01:2290370] Signal: Aborted (6)
+[node01:2290370] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287849] *** Process received signal ***
-[node01:2287849] Signal: Aborted (6)
-[node01:2287849] Signal code:  (-6)
-[node01:2287849] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fa1075eedb0]
-[node01:2287849] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa10763b54c]
-[node01:2287849] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287862] *** Process received signal ***
-[node01:2287862] Signal: Aborted (6)
-[node01:2287862] Signal code:  (-6)
-[node01:2287862] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f85ffb29db0]
-[node01:2287862] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287854] *** Process received signal ***
-[node01:2287854] Signal: Aborted (6)
-[node01:2287854] Signal code:  (-6)
-[node01:2287854] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f51ad0e4db0]
-[node01:2287854] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287842] *** Process received signal ***
-[node01:2287842] Signal: Aborted (6)
-[node01:2287842] Signal code:  (-6)
-[node01:2287842] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f20024c4db0]
-[node01:2287842] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f200251154c]
-[node01:2287842] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287868] *** Process received signal ***
-[node01:2287868] Signal: Aborted (6)
-[node01:2287868] Signal code:  (-6)
+[node01:2290373] *** Process received signal ***
+[node01:2290373] Signal: Aborted (6)
+[node01:2290373] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287851] *** Process received signal ***
-[node01:2287851] Signal: Aborted (6)
-[node01:2287851] Signal code:  (-6)
-[node01:2287851] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fda60499db0]
-[node01:2287851] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fda604e654c]
-[node01:2287851] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287871] *** Process received signal ***
-[node01:2287871] Signal: Aborted (6)
-[node01:2287871] Signal code:  (-6)
-[node01:2287871] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fec662fcdb0]
-[node01:2287871] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fec6634954c]
-[node01:2287871] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fec662fcd06]
-[node01:2287871] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287863] *** Process received signal ***
-[node01:2287863] Signal: Aborted (6)
-[node01:2287863] Signal code:  (-6)
-[node01:2287863] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f3433134db0]
-[node01:2287863] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f343318154c]
-[node01:2287863] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f3433134d06]
-[node01:2287863] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287845] *** Process received signal ***
-[node01:2287845] Signal: Aborted (6)
-[node01:2287845] Signal code:  (-6)
-[node01:2287845] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fa75b84fdb0]
-[node01:2287845] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa75b89c54c]
-[node01:2287845] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fa75b84fd06]
-[node01:2287845] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287855] *** Process received signal ***
-[node01:2287855] Signal: Aborted (6)
-[node01:2287855] Signal code:  (-6)
-[node01:2287855] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f5116465db0]
-[node01:2287855] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f51164b254c]
-[node01:2287855] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f5116465d06]
-[node01:2287855] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287870] *** Process received signal ***
-[node01:2287870] Signal: Aborted (6)
-[node01:2287870] Signal code:  (-6)
-[node01:2287870] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f0b361eadb0]
-[node01:2287870] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f0b3623754c]
-[node01:2287870] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f0b361ead06]
-[node01:2287870] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287852] *** Process received signal ***
-[node01:2287852] Signal: Aborted (6)
-[node01:2287852] Signal code:  (-6)
-[node01:2287852] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f32c580fdb0]
-[node01:2287852] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f32c585c54c]
-[node01:2287852] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f32c580fd06]
-[node01:2287852] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f32c57e37f3]
-[node01:2287852] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287843] *** Process received signal ***
-[node01:2287843] Signal: Aborted (6)
-[node01:2287843] Signal code:  (-6)
-[node01:2287843] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f333064cdb0]
-[node01:2287843] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f333069954c]
-[node01:2287843] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f333064cd06]
-[node01:2287843] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f33306207f3]
-[node01:2287843] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287869] *** Process received signal ***
-[node01:2287869] Signal: Aborted (6)
-[node01:2287869] Signal code:  (-6)
-[node01:2287869] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f8d32b72db0]
-[node01:2287869] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f8d32bbf54c]
-[node01:2287869] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f8d32b72d06]
-[node01:2287869] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f8d32b467f3]
-[node01:2287869] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287841] *** Process received signal ***
-[node01:2287841] Signal: Aborted (6)
-[node01:2287841] Signal code:  (-6)
-[node01:2287841] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fb69031ddb0]
-[node01:2287841] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fb69036a54c]
-[node01:2287841] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fb69031dd06]
-[node01:2287841] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fb6902f17f3]
-[node01:2287841] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287844] *** Process received signal ***
-[node01:2287844] Signal: Aborted (6)
-[node01:2287844] Signal code:  (-6)
-[node01:2287844] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fae17e56db0]
-[node01:2287844] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fae17ea354c]
-[node01:2287844] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fae17e56d06]
-[node01:2287844] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fae17e2a7f3]
-[node01:2287844] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287866] *** Process received signal ***
-[node01:2287866] Signal: Aborted (6)
-[node01:2287866] Signal code:  (-6)
-[node01:2287866] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f95d4bdcdb0]
-[node01:2287866] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f95d4c2954c]
-[node01:2287866] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f95d4bdcd06]
-[node01:2287866] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f95d4bb07f3]
-[node01:2287866] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f95d4f87c19]
-[node01:2287866] [ 5] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287872] *** Process received signal ***
-[node01:2287872] Signal: Aborted (6)
-[node01:2287872] Signal code:  (-6)
-[node01:2287872] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fe219d4cdb0]
-[node01:2287872] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fe219d9954c]
-[node01:2287872] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fe219d4cd06]
-[node01:2287872] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fe219d207f3]
-[node01:2287872] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fe21a0f7c19]
-[node01:2287872] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fe21a10309a]
-[node01:2287872] [ 6] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287850] *** Process received signal ***
-[node01:2287850] Signal: Aborted (6)
-[node01:2287850] Signal code:  (-6)
-[node01:2287850] [ 0] /lib64/libc.so.6(+0x54db0)[0x7ff7593e9db0]
-[node01:2287850] [ 1] /lib64/libc.so.6(+0xa154c)[0x7ff75943654c]
-[node01:2287850] [ 2] /lib64/libc.so.6(raise+0x16)[0x7ff7593e9d06]
-[node01:2287850] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7ff7593bd7f3]
-[node01:2287850] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7ff759794c19]
-[node01:2287850] [ 5] [node01:2287838] *** Process received signal ***
-[node01:2287838] Signal: Aborted (6)
-[node01:2287838] Signal code:  (-6)
-[node01:2287838] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fe7b99a3db0]
-[node01:2287838] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fe7b99f054c]
-[node01:2287838] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fe7b99a3d06]
-[node01:2287838] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fe7b99777f3]
-[node01:2287838] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fe7b9d4ec19]
-[node01:2287838] [ 5] [node01:2287859] [ 0] /lib64/libc.so.6(+0x54db0)[0x7efe5d1a7db0]
-[node01:2287859] [ 1] /lib64/libc.so.6(+0xa154c)[0x7efe5d1f454c]
-[node01:2287859] [ 2] /lib64/libc.so.6(raise+0x16)[0x7efe5d1a7d06]
-[node01:2287859] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7efe5d17b7f3]
-[node01:2287859] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7efe5d552c19]
-[node01:2287859] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7efe5d55e09a]
-[node01:2287859] [ 6] [node01:2287847] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f9fdc245db0]
-[node01:2287847] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f9fdc29254c]
-[node01:2287847] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f9fdc245d06]
-[node01:2287847] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f9fdc2197f3]
-[node01:2287847] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f9fdc5f0c19]
-[node01:2287847] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f9fdc5fc09a]
-[node01:2287847] [ 6] [node01:2287857] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f288ac48db0]
-[node01:2287857] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f288ac9554c]
-[node01:2287857] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f288ac48d06]
-[node01:2287857] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f288ac1c7f3]
-[node01:2287857] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f288aff3c19]
-[node01:2287857] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f288afff09a]
-[node01:2287857] [ 6] [node01:2287867] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f9997c67db0]
-[node01:2287867] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f9997cb454c]
-[node01:2287867] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f9997c67d06]
-[node01:2287867] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f9997c3b7f3]
-[node01:2287867] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f9998012c19]
-[node01:2287867] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f999801e09a]
-[node01:2287867] [ 6] terminate called after throwing an instance of 'std::invalid_argument'
-  what():  stol
-[node01:2287860] *** Process received signal ***
-[node01:2287860] Signal: Aborted (6)
-[node01:2287860] Signal code:  (-6)
-[node01:2287860] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f49a3fbfdb0]
-[node01:2287860] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f49a400c54c]
-[node01:2287860] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f49a3fbfd06]
-[node01:2287860] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f49a3f937f3]
-[node01:2287860] [ 4] /lib64/libc.so.6(+0x54db0)[0x7fa84281fdb0]
-[node01:2287858] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa84286c54c]
-[node01:2287858] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fa84281fd06]
-[node01:2287858] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fa8427f37f3]
-[node01:2287858] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa842bcac19]
-[node01:2287858] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa842bd609a]
-[node01:2287858] [ 6] /lib64/libc.so.6(+0x54db0)[0x7f3550bf6db0]
-[node01:2287864] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f3550c4354c]
-[node01:2287864] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f3550bf6d06]
-[node01:2287864] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f3550bca7f3]
-[node01:2287864] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f3550fa1c19]
-[node01:2287864] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f3550fad09a]
-[node01:2287864] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f3550fad105]
-[node01:2287864] [ 7] /lib64/libc.so.6(+0x54db0)[0x7faa80d36db0]
-[node01:2287856] [ 1] /lib64/libc.so.6(+0xa154c)[0x7faa80d8354c]
-[node01:2287856] [ 2] /lib64/libc.so.6(raise+0x16)[0x7faa80d36d06]
-[node01:2287856] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7faa80d0a7f3]
-[node01:2287856] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7faa810e1c19]
-[node01:2287856] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7faa810ed09a]
-[node01:2287856] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7faa810ed105]
-[node01:2287856] [ 7] /lib64/libc.so.6(+0x54db0)[0x7fa5eddd9db0]
-[node01:2287848] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa5ede2654c]
-[node01:2287848] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fa5eddd9d06]
-[node01:2287848] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fa5eddad7f3]
-[node01:2287848] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa5ee184c19]
-[node01:2287848] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa5ee19009a]
-[node01:2287848] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa5ee190105]
-[node01:2287848] [ 7] /lib64/libc.so.6(+0xa154c)[0x7f8f58cd454c]
-[node01:2287839] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f8f58c87d06]
-[node01:2287839] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f8f58c5b7f3]
-[node01:2287839] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f8f59032c19]
-[node01:2287839] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f8f5903e09a]
-[node01:2287839] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f8f5903e105]
-[node01:2287839] [ 7] /lib64/libc.so.6(+0xa154c)[0x7f85ffb7654c]
-[node01:2287862] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f85ffb29d06]
-[node01:2287862] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f85ffafd7f3]
-[node01:2287862] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f85ffed4c19]
-[node01:2287862] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f85ffee009a]
-[node01:2287862] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f85ffee0105]
-[node01:2287862] [ 7] /lib64/libc.so.6(+0xa154c)[0x7f51ad13154c]
-[node01:2287854] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f51ad0e4d06]
-[node01:2287854] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f51ad0b87f3]
-[node01:2287854] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f51ad48fc19]
-[node01:2287854] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f51ad49b09a]
-[node01:2287854] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f51ad49b105]
-[node01:2287854] [ 7] /lib64/libc.so.6(raise+0x16)[0x7fa1075eed06]
-[node01:2287849] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fa1075c27f3]
-[node01:2287849] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa107999c19]
-[node01:2287849] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa1079a509a]
-[node01:2287849] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa1079a5105]
-[node01:2287849] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa1079a5358]
-[node01:2287849] [ 8] /lib64/libc.so.6(raise+0x16)[0x7fda60499d06]
-[node01:2287851] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fda6046d7f3]
-[node01:2287851] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fda60844c19]
-[node01:2287851] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fda6085009a]
-[node01:2287851] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fda60850105]
-[node01:2287851] [ 7] /lib64/libc.so.6(raise+0x16)[0x7f20024c4d06]
-[node01:2287842] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f20024987f3]
-[node01:2287842] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f200286fc19]
-[node01:2287842] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f200287b09a]
-[node01:2287842] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f200287b105]
-[node01:2287842] [ 7] /lib64/libc.so.6(abort+0xd3)[0x7f34331087f3]
-[node01:2287863] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f34334dfc19]
-[node01:2287863] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f34334eb09a]
-[node01:2287863] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f34334eb105]
-[node01:2287863] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f34334eb358]
-[node01:2287863] [ 8] /lib64/libc.so.6(abort+0xd3)[0x7fec662d07f3]
-[node01:2287871] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fec666a7c19]
-[node01:2287871] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fec666b309a]
-[node01:2287871] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fec666b3105]
-[node01:2287871] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fec666b3358]
-[node01:2287871] [ 8] /lib64/libc.so.6(abort+0xd3)[0x7fa75b8237f3]
-[node01:2287845] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa75bbfac19]
-[node01:2287845] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa75bc0609a]
-[node01:2287845] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa75bc06105]
-[node01:2287845] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa75bc06358]
-[node01:2287845] [ 8] /lib64/libc.so.6(abort+0xd3)[0x7f51164397f3]
-[node01:2287855] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f5116810c19]
-[node01:2287855] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f511681c09a]
-[node01:2287855] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f511681c105]
-[node01:2287855] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f511681c358]
-[node01:2287855] [ 8] /lib64/libc.so.6(abort+0xd3)[0x7f0b361be7f3]
-[node01:2287870] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f0b36595c19]
-[node01:2287870] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f0b365a109a]
-[node01:2287870] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f0b365a1105]
-[node01:2287870] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f0b365a1358]
-[node01:2287870] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fb6906c8c19]
-[node01:2287841] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fb6906d409a]
-[node01:2287841] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fb6906d4105]
-[node01:2287841] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fb6906d4358]
-[node01:2287841] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f32c5bbac19]
-[node01:2287852] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f32c5bc609a]
-[node01:2287852] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f32c5bc6105]
-[node01:2287852] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f32c5bc6358]
-[node01:2287852] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f33309f7c19]
-[node01:2287843] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f3330a0309a]
-[node01:2287843] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f3330a03105]
-[node01:2287843] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f3330a03358]
-[node01:2287843] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f33309fa492]
-[node01:2287843] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287843] [10] ./UTWMPIOMP[0x402803]
-[node01:2287843] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fae18201c19]
-[node01:2287844] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fae1820d09a]
-[node01:2287844] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fae1820d105]
-[node01:2287844] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fae1820d358]
-[node01:2287844] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fae18204492]
-[node01:2287844] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287844] [10] ./UTWMPIOMP[0x402803]
-[node01:2287844] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f8d32f1dc19]
-[node01:2287869] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f8d32f2909a]
-[node01:2287869] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f8d32f29105]
-[node01:2287869] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f8d32f29358]
-[node01:2287869] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f8d32f20492]
-[node01:2287869] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287869] [10] ./UTWMPIOMP[0x402803]
-[node01:2287869] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fe21a103105]
-[node01:2287872] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fe21a103358]
-[node01:2287872] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fe21a0fa492]
-[node01:2287872] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287872] [10] ./UTWMPIOMP[0x402803]
-[node01:2287872] [11] /lib64/libc.so.6(+0x3feb0)[0x7fe219d37eb0]
-[node01:2287872] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fe219d37f60]
-[node01:2287872] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287872] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fe7b9d5a09a]
-[node01:2287838] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fe7b9d5a105]
-[node01:2287838] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fe7b9d5a358]
-[node01:2287838] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fe7b9d51492]
-[node01:2287838] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287838] [10] ./UTWMPIOMP[0x402803]
-[node01:2287838] [11] /lib64/libc.so.6(+0x3feb0)[0x7fe7b998eeb0]
-[node01:2287838] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fe7b998ef60]
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f95d4f9309a]
-[node01:2287866] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f95d4f93105]
-[node01:2287866] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f95d4f93358]
-[node01:2287866] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f95d4f8a492]
-[node01:2287866] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287866] [10] ./UTWMPIOMP[0x402803]
-[node01:2287866] [11] /lib64/libc.so.6(+0x3feb0)[0x7f95d4bc7eb0]
-[node01:2287866] [12] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7ff7597a009a]
-[node01:2287850] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7ff7597a0105]
-[node01:2287850] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7ff7597a0358]
-[node01:2287850] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7ff759797492]
-[node01:2287850] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287850] [10] ./UTWMPIOMP[0x402803]
-[node01:2287850] [11] /lib64/libc.so.6(+0x3feb0)[0x7ff7593d4eb0]
-[node01:2287850] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7ff7593d4f60]
-[node01:2287850] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287850] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f49a436ac19]
-[node01:2287860] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f49a437609a]
-[node01:2287860] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f49a4376105]
-[node01:2287860] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f49a4376358]
-[node01:2287860] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f49a436d492]
-[node01:2287860] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287860] [10] ./UTWMPIOMP[0x402803]
-[node01:2287860] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f9fdc5fc105]
-[node01:2287847] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f9fdc5fc358]
-[node01:2287847] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f9fdc5f3492]
-[node01:2287847] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287847] [10] ./UTWMPIOMP[0x402803]
-[node01:2287847] [11] /lib64/libc.so.6(+0x3feb0)[0x7f9fdc230eb0]
-[node01:2287847] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f9fdc230f60]
-[node01:2287847] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287847] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7efe5d55e105]
-[node01:2287859] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7efe5d55e358]
-[node01:2287859] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7efe5d555492]
-[node01:2287859] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287859] [10] ./UTWMPIOMP[0x402803]
-[node01:2287859] [11] /lib64/libc.so.6(+0x3feb0)[0x7efe5d192eb0]
-[node01:2287859] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7efe5d192f60]
-[node01:2287859] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287859] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f288afff105]
-[node01:2287857] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f288afff358]
-[node01:2287857] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f288aff6492]
-[node01:2287857] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287857] [10] ./UTWMPIOMP[0x402803]
-[node01:2287857] [11] /lib64/libc.so.6(+0x3feb0)[0x7f288ac33eb0]
-[node01:2287857] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f288ac33f60]
-[node01:2287857] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287857] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa842bd6105]
-[node01:2287858] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa842bd6358]
-[node01:2287858] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa842bcd492]
-[node01:2287858] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287858] [10] ./UTWMPIOMP[0x402803]
-[node01:2287858] [11] /lib64/libc.so.6(+0x3feb0)[0x7fa84280aeb0]
-[node01:2287858] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa84280af60]
-[node01:2287858] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287858] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f999801e105]
-[node01:2287867] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f999801e358]
-[node01:2287867] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f9998015492]
-[node01:2287867] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287867] [10] ./UTWMPIOMP[0x402803]
-[node01:2287867] [11] /lib64/libc.so.6(+0x3feb0)[0x7f9997c52eb0]
-[node01:2287867] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f9997c52f60]
-[node01:2287867] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287867] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f3550fad358]
-[node01:2287864] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f3550fa4492]
-[node01:2287864] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287864] [10] ./UTWMPIOMP[0x402803]
-[node01:2287864] [11] /lib64/libc.so.6(+0x3feb0)[0x7f3550be1eb0]
-[node01:2287864] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f3550be1f60]
-[node01:2287864] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287864] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fda60850358]
-[node01:2287851] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fda60847492]
-[node01:2287851] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287851] [10] ./UTWMPIOMP[0x402803]
-[node01:2287851] [11] /lib64/libc.so.6(+0x3feb0)[0x7fda60484eb0]
-[node01:2287851] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fda60484f60]
-[node01:2287851] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287851] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f8f5903e358]
-[node01:2287839] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f8f59035492]
-[node01:2287839] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287839] [10] ./UTWMPIOMP[0x402803]
-[node01:2287839] [11] /lib64/libc.so.6(+0x3feb0)[0x7f8f58c72eb0]
-[node01:2287839] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f8f58c72f60]
-[node01:2287839] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287839] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7faa810ed358]
-[node01:2287856] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7faa810e4492]
-[node01:2287856] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287856] [10] ./UTWMPIOMP[0x402803]
-[node01:2287856] [11] /lib64/libc.so.6(+0x3feb0)[0x7faa80d21eb0]
-[node01:2287856] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7faa80d21f60]
-[node01:2287856] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287856] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f85ffee0358]
-[node01:2287862] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f85ffed7492]
-[node01:2287862] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287862] [10] ./UTWMPIOMP[0x402803]
-[node01:2287862] [11] /lib64/libc.so.6(+0x3feb0)[0x7f85ffb14eb0]
-[node01:2287862] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f85ffb14f60]
-[node01:2287862] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287862] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa5ee190358]
-[node01:2287848] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa5ee187492]
-[node01:2287848] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287848] [10] ./UTWMPIOMP[0x402803]
-[node01:2287848] [11] /lib64/libc.so.6(+0x3feb0)[0x7fa5eddc4eb0]
-[node01:2287848] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa5eddc4f60]
-[node01:2287848] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287848] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f200287b358]
-[node01:2287842] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f2002872492]
-[node01:2287842] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287842] [10] ./UTWMPIOMP[0x402803]
-[node01:2287842] [11] /lib64/libc.so.6(+0x3feb0)[0x7f20024afeb0]
-[node01:2287842] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f20024aff60]
-[node01:2287842] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287842] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f51ad49b358]
-[node01:2287854] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f51ad492492]
-[node01:2287854] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287854] [10] ./UTWMPIOMP[0x402803]
-[node01:2287854] [11] /lib64/libc.so.6(+0x3feb0)[0x7f51ad0cfeb0]
-[node01:2287854] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f51ad0cff60]
-[node01:2287854] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287854] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa10799c492]
-[node01:2287849] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287849] [10] ./UTWMPIOMP[0x402803]
-[node01:2287849] [11] /lib64/libc.so.6(+0x3feb0)[0x7fa1075d9eb0]
-[node01:2287849] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa1075d9f60]
-[node01:2287849] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287849] *** End of error message ***
-[node01:2287868] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f6ff1956db0]
-[node01:2287868] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f6ff19a354c]
-[node01:2287868] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f6ff1956d06]
-[node01:2287868] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f6ff192a7f3]
-[node01:2287868] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f6ff1d01c19]
-[node01:2287868] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f34334e2492]
-[node01:2287863] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287863] [10] ./UTWMPIOMP[0x402803]
-[node01:2287863] [11] /lib64/libc.so.6(+0x3feb0)[0x7f343311feb0]
-[node01:2287863] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f343311ff60]
-[node01:2287863] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287863] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fb6906cb492]
-[node01:2287841] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287841] [10] ./UTWMPIOMP[0x402803]
-[node01:2287841] [11] /lib64/libc.so.6(+0x3feb0)[0x7fb690308eb0]
-[node01:2287841] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fb690308f60]
-[node01:2287841] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287841] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa75bbfd492]
-[node01:2287845] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287845] [10] ./UTWMPIOMP[0x402803]
-[node01:2287845] [11] /lib64/libc.so.6(+0x3feb0)[0x7fa75b83aeb0]
-[node01:2287845] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa75b83af60]
-[node01:2287845] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287845] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fec666aa492]
-[node01:2287871] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287871] [10] ./UTWMPIOMP[0x402803]
-[node01:2287871] [11] /lib64/libc.so.6(+0x3feb0)[0x7fec662e7eb0]
-[node01:2287871] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fec662e7f60]
-[node01:2287871] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287871] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f5116813492]
-[node01:2287855] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287855] [10] ./UTWMPIOMP[0x402803]
-[node01:2287855] [11] /lib64/libc.so.6(+0x3feb0)[0x7f5116450eb0]
-[node01:2287855] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f5116450f60]
-[node01:2287855] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287855] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f0b36598492]
-[node01:2287870] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287870] [10] ./UTWMPIOMP[0x402803]
-[node01:2287870] [11] /lib64/libc.so.6(+0x3feb0)[0x7f0b361d5eb0]
-[node01:2287870] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f0b361d5f60]
-[node01:2287870] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287870] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f32c5bbd492]
-[node01:2287852] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287852] [10] ./UTWMPIOMP[0x402803]
-[node01:2287852] [11] /lib64/libc.so.6(+0x3feb0)[0x7f32c57faeb0]
-[node01:2287852] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f32c57faf60]
-[node01:2287852] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287852] *** End of error message ***
-/lib64/libc.so.6(+0x3feb0)[0x7f8d32b5deb0]
-[node01:2287869] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f8d32b5df60]
-[node01:2287869] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287869] *** End of error message ***
-/lib64/libc.so.6(+0x3feb0)[0x7f3330637eb0]
-[node01:2287843] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f3330637f60]
-[node01:2287843] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287843] *** End of error message ***
-/lib64/libc.so.6(+0x3feb0)[0x7fae17e41eb0]
-[node01:2287844] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fae17e41f60]
-[node01:2287844] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287844] *** End of error message ***
-[node01:2287838] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287838] *** End of error message ***
-/lib64/libc.so.6(__libc_start_main+0x80)[0x7f95d4bc7f60]
-[node01:2287866] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287866] *** End of error message ***
-/lib64/libc.so.6(+0x3feb0)[0x7f49a3faaeb0]
-[node01:2287860] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f49a3faaf60]
-[node01:2287860] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287860] *** End of error message ***
+[node01:2290367] *** Process received signal ***
+[node01:2290367] Signal: Aborted (6)
+[node01:2290367] Signal code:  (-6)
 terminate called after throwing an instance of 'std::invalid_argument'
   what():  stol
-[node01:2287840] *** Process received signal ***
-[node01:2287840] Signal: Aborted (6)
-[node01:2287840] Signal code:  (-6)
-[node01:2287840] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f1d5f359db0]
-[node01:2287840] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f1d5f3a654c]
-[node01:2287840] [ 2] [node01:2287861] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f53680b5db0]
-[node01:2287861] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f536810254c]
-[node01:2287861] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f53680b5d06]
-[node01:2287861] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f53680897f3]
-[node01:2287861] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f6ff1d0d09a]
-[node01:2287868] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f6ff1d0d105]
-[node01:2287868] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f6ff1d0d358]
-[node01:2287868] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f6ff1d04492]
-[node01:2287868] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287868] [10] ./UTWMPIOMP[0x402803]
-[node01:2287868] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f5368460c19]
-[node01:2287861] [ 5] /lib64/libc.so.6(+0x3feb0)[0x7f6ff1941eb0]
-[node01:2287868] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f6ff1941f60]
-[node01:2287868] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287868] *** End of error message ***
-/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f536846c09a]
-[node01:2287861] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f536846c105]
-[node01:2287861] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f536846c358]
-[node01:2287861] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f5368463492]
-[node01:2287861] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287861] [10] ./UTWMPIOMP[0x402803]
-[node01:2287861] [11] /lib64/libc.so.6(+0x3feb0)[0x7f53680a0eb0]
-[node01:2287861] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f53680a0f60]
-[node01:2287861] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287861] *** End of error message ***
-/lib64/libc.so.6(raise+0x16)[0x7f1d5f359d06]
-[node01:2287840] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f1d5f32d7f3]
-[node01:2287840] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f1d5f704c19]
-[node01:2287840] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f1d5f71009a]
-[node01:2287840] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f1d5f710105]
-[node01:2287840] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f1d5f710358]
-[node01:2287840] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f1d5f707492]
-[node01:2287840] [ 9] ./UTWMPIOMP[0x4036d5]
-[node01:2287840] [10] ./UTWMPIOMP[0x402803]
-[node01:2287840] [11] /lib64/libc.so.6(+0x3feb0)[0x7f1d5f344eb0]
-[node01:2287840] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f1d5f344f60]
-[node01:2287840] [13] ./UTWMPIOMP[0x402ac5]
-[node01:2287840] *** End of error message ***
+[node01:2290377] *** Process received signal ***
+[node01:2290377] Signal: Aborted (6)
+[node01:2290377] Signal code:  (-6)
+[node01:2290377] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290375] *** Process received signal ***
+[node01:2290375] Signal: Aborted (6)
+[node01:2290375] Signal code:  (-6)
+  what():  stol
+[node01:2290349] *** Process received signal ***
+[node01:2290349] Signal: Aborted (6)
+[node01:2290349] Signal code:  (-6)
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290346] *** Process received signal ***
+[node01:2290346] Signal: Aborted (6)
+[node01:2290346] Signal code:  (-6)
+[node01:2290346] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290360] *** Process received signal ***
+[node01:2290360] Signal: Aborted (6)
+[node01:2290360] Signal code:  (-6)
+[node01:2290360] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290372] *** Process received signal ***
+[node01:2290372] Signal: Aborted (6)
+[node01:2290372] Signal code:  (-6)
+[node01:2290372] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290355] *** Process received signal ***
+[node01:2290355] Signal: Aborted (6)
+[node01:2290355] Signal code:  (-6)
+[node01:2290355] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f3cd088adb0]
+[node01:2290355] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290357] *** Process received signal ***
+[node01:2290357] Signal: Aborted (6)
+[node01:2290357] Signal code:  (-6)
+[node01:2290357] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fc5131cedb0]
+[node01:2290357] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290371] *** Process received signal ***
+[node01:2290371] Signal: Aborted (6)
+[node01:2290371] Signal code:  (-6)
+[node01:2290371] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f7013edddb0]
+[node01:2290371] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290347] *** Process received signal ***
+[node01:2290347] Signal: Aborted (6)
+[node01:2290347] Signal code:  (-6)
+[node01:2290347] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f2523ba3db0]
+[node01:2290347] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290376] *** Process received signal ***
+[node01:2290376] Signal: Aborted (6)
+[node01:2290376] Signal code:  (-6)
+[node01:2290376] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fbe4ee64db0]
+[node01:2290376] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290352] *** Process received signal ***
+[node01:2290352] Signal: Aborted (6)
+[node01:2290352] Signal code:  (-6)
+[node01:2290352] [ 0] /lib64/libc.so.6(+0x54db0)[0x7ff5a962cdb0]
+[node01:2290352] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290362] *** Process received signal ***
+[node01:2290362] Signal: Aborted (6)
+[node01:2290362] Signal code:  (-6)
+[node01:2290362] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f28962c2db0]
+[node01:2290362] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f289630f54c]
+[node01:2290362] [node01:2290344] *** Process received signal ***
+[node01:2290344] Signal: Aborted (6)
+[node01:2290344] Signal code:  (-6)
+[node01:2290344] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f329fbe6db0]
+[node01:2290344] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f329fc3354c]
+[node01:2290344] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290354] *** Process received signal ***
+[node01:2290354] Signal: Aborted (6)
+[node01:2290354] Signal code:  (-6)
+[node01:2290354] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f87d3babdb0]
+[node01:2290354] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f87d3bf854c]
+[node01:2290354] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290364] *** Process received signal ***
+[node01:2290364] Signal: Aborted (6)
+[node01:2290364] Signal code:  (-6)
+[node01:2290364] [ 0] /lib64/libc.so.6(+0x54db0)[0x7faf19d2edb0]
+[node01:2290364] [ 1] /lib64/libc.so.6(+0xa154c)[0x7faf19d7b54c]
+[node01:2290364] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290369] *** Process received signal ***
+[node01:2290369] Signal: Aborted (6)
+[node01:2290369] Signal code:  (-6)
+[node01:2290369] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f0f6847edb0]
+[node01:2290369] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f0f684cb54c]
+[node01:2290369] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f0f6847ed06]
+[node01:2290369] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290356] *** Process received signal ***
+[node01:2290356] Signal: Aborted (6)
+[node01:2290356] Signal code:  (-6)
+[node01:2290356] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f8129fc9db0]
+[node01:2290356] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f812a01654c]
+[node01:2290356] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290368] *** Process received signal ***
+[node01:2290368] Signal: Aborted (6)
+[node01:2290368] Signal code:  (-6)
+[node01:2290368] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fef794cadb0]
+[node01:2290368] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fef7951754c]
+[node01:2290368] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fef794cad06]
+[node01:2290368] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290378] *** Process received signal ***
+[node01:2290378] Signal: Aborted (6)
+[node01:2290378] Signal code:  (-6)
+[node01:2290378] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f899c443db0]
+[node01:2290378] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f899c49054c]
+[node01:2290378] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f899c443d06]
+[node01:2290378] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290361] *** Process received signal ***
+[node01:2290361] Signal: Aborted (6)
+[node01:2290361] Signal code:  (-6)
+[node01:2290361] [ 0] /lib64/libc.so.6(+0x54db0)[0x7ff47039fdb0]
+[node01:2290361] [ 1] /lib64/libc.so.6(+0xa154c)[0x7ff4703ec54c]
+[node01:2290361] [ 2] /lib64/libc.so.6(raise+0x16)[0x7ff47039fd06]
+[node01:2290361] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290345] *** Process received signal ***
+[node01:2290345] Signal: Aborted (6)
+[node01:2290345] Signal code:  (-6)
+[node01:2290345] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fef29f43db0]
+[node01:2290345] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fef29f9054c]
+[node01:2290345] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fef29f43d06]
+[node01:2290345] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290374] *** Process received signal ***
+[node01:2290374] Signal: Aborted (6)
+[node01:2290374] Signal code:  (-6)
+[node01:2290374] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f669f12fdb0]
+[node01:2290374] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f669f17c54c]
+[node01:2290374] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f669f12fd06]
+[node01:2290374] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f669f1037f3]
+[node01:2290374] [ 4] [node01:2290370] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f5bcb2fcdb0]
+[node01:2290370] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f5bcb34954c]
+[node01:2290370] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f5bcb2fcd06]
+[node01:2290370] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f5bcb2d07f3]
+[node01:2290370] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f5bcb6a7c19]
+[node01:2290370] [ 5] [node01:2290348] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f8a5359fdb0]
+[node01:2290348] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f8a535ec54c]
+[node01:2290348] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f8a5359fd06]
+[node01:2290348] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f8a535737f3]
+[node01:2290348] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f8a5394ac19]
+[node01:2290348] [ 5] [node01:2290373] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f4501d32db0]
+[node01:2290373] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f4501d7f54c]
+[node01:2290373] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f4501d32d06]
+[node01:2290373] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f4501d067f3]
+[node01:2290373] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f45020ddc19]
+[node01:2290373] [ 5] [node01:2290366] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fa71a205db0]
+[node01:2290366] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa71a25254c]
+[node01:2290366] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fa71a205d06]
+[node01:2290366] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fa71a1d97f3]
+[node01:2290366] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa71a5b0c19]
+[node01:2290366] [ 5] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290359] *** Process received signal ***
+[node01:2290359] Signal: Aborted (6)
+[node01:2290359] Signal code:  (-6)
+[node01:2290359] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fab913cedb0]
+[node01:2290359] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fab9141b54c]
+[node01:2290359] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fab913ced06]
+[node01:2290359] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fab913a27f3]
+[node01:2290359] [ 4] [node01:2290351] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fdbd7d31db0]
+[node01:2290351] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fdbd7d7e54c]
+[node01:2290351] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fdbd7d31d06]
+[node01:2290351] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fdbd7d057f3]
+[node01:2290351] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fdbd80dcc19]
+[node01:2290351] [ 5] [node01:2290375] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fba6e023db0]
+[node01:2290375] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fba6e07054c]
+[node01:2290375] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fba6e023d06]
+[node01:2290375] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fba6dff77f3]
+[node01:2290375] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fba6e3cec19]
+[node01:2290375] [ 5] [node01:2290379] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f6b66181db0]
+[node01:2290379] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f6b661ce54c]
+[node01:2290379] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f6b66181d06]
+[node01:2290379] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f6b661557f3]
+[node01:2290379] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f6b6652cc19]
+[node01:2290379] [ 5] /lib64/libc.so.6(+0x54db0)[0x7f9d99544db0]
+[node01:2290377] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f9d9959154c]
+[node01:2290377] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f9d99544d06]
+[node01:2290377] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f9d995187f3]
+[node01:2290377] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f9d998efc19]
+[node01:2290377] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f9d998fb09a]
+[node01:2290377] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f9d998fb105]
+[node01:2290377] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f9d998fb358]
+[node01:2290377] [ 8] [node01:2290367] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fe49ab47db0]
+[node01:2290367] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fe49ab9454c]
+[node01:2290367] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fe49ab47d06]
+[node01:2290367] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fe49ab1b7f3]
+[node01:2290367] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fe49aef2c19]
+[node01:2290367] [ 5] /lib64/libc.so.6(+0x54db0)[0x7fef26ef1db0]
+[node01:2290360] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fef26f3e54c]
+[node01:2290360] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fef26ef1d06]
+[node01:2290360] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fef26ec57f3]
+[node01:2290360] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fef2729cc19]
+[node01:2290360] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fef272a809a]
+[node01:2290360] [ 6] /lib64/libc.so.6(+0x54db0)[0x7f2b81b7fdb0]
+[node01:2290346] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f2b81bcc54c]
+[node01:2290346] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f2b81b7fd06]
+[node01:2290346] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f2b81b537f3]
+[node01:2290346] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f2b81f2ac19]
+[node01:2290346] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f2b81f3609a]
+[node01:2290346] [ 6] /lib64/libc.so.6(+0x54db0)[0x7f7577df9db0]
+[node01:2290372] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f7577e4654c]
+[node01:2290372] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f7577df9d06]
+[node01:2290372] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f7577dcd7f3]
+[node01:2290372] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f75781a4c19]
+[node01:2290372] [ 5] /lib64/libc.so.6(+0xa154c)[0x7f3cd08d754c]
+[node01:2290355] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f3cd088ad06]
+[node01:2290355] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f3cd085e7f3]
+[node01:2290355] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f3cd0c35c19]
+[node01:2290355] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f3cd0c4109a]
+[node01:2290355] [ 6] /lib64/libc.so.6(+0xa154c)[0x7f7013f2a54c]
+[node01:2290371] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f7013eddd06]
+[node01:2290371] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f7013eb17f3]
+[node01:2290371] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f7014288c19]
+[node01:2290371] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f701429409a]
+[node01:2290371] [ 6] /lib64/libc.so.6(+0xa154c)[0x7fc51321b54c]
+[node01:2290357] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fc5131ced06]
+[node01:2290357] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fc5131a27f3]
+[node01:2290357] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fc513579c19]
+[node01:2290357] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fc51358509a]
+[node01:2290357] [ 6] /lib64/libc.so.6(+0xa154c)[0x7ff5a967954c]
+[node01:2290352] [ 2] /lib64/libc.so.6(raise+0x16)[0x7ff5a962cd06]
+[node01:2290352] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7ff5a96007f3]
+[node01:2290352] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7ff5a99d7c19]
+[node01:2290352] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7ff5a99e309a]
+[node01:2290352] [ 6] /lib64/libc.so.6(+0xa154c)[0x7fbe4eeb154c]
+[node01:2290376] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fbe4ee64d06]
+[node01:2290376] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fbe4ee387f3]
+[node01:2290376] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fbe4f20fc19]
+[node01:2290376] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fbe4f21b09a]
+[node01:2290376] [ 6] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f28962c2d06]
+[node01:2290362] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f28962967f3]
+[node01:2290362] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f289666dc19]
+[node01:2290362] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f289667909a]
+[node01:2290362] [ 6] /lib64/libc.so.6(+0xa154c)[0x7f2523bf054c]
+[node01:2290347] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f2523ba3d06]
+[node01:2290347] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f2523b777f3]
+[node01:2290347] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f2523f4ec19]
+[node01:2290347] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f2523f5a09a]
+[node01:2290347] [ 6] /lib64/libc.so.6(raise+0x16)[0x7f329fbe6d06]
+[node01:2290344] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f329fbba7f3]
+[node01:2290344] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f329ff91c19]
+[node01:2290344] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f329ff9d09a]
+[node01:2290344] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f329ff9d105]
+[node01:2290344] [ 7] /lib64/libc.so.6(raise+0x16)[0x7faf19d2ed06]
+[node01:2290364] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7faf19d027f3]
+[node01:2290364] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7faf1a0d9c19]
+[node01:2290364] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7faf1a0e509a]
+[node01:2290364] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7faf1a0e5105]
+[node01:2290364] [ 7] /lib64/libc.so.6(raise+0x16)[0x7f87d3babd06]
+[node01:2290354] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f87d3b7f7f3]
+[node01:2290354] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f87d3f56c19]
+[node01:2290354] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f87d3f6209a]
+[node01:2290354] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f87d3f62105]
+[node01:2290354] [ 7] /lib64/libc.so.6(raise+0x16)[0x7f8129fc9d06]
+[node01:2290356] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f8129f9d7f3]
+[node01:2290356] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f812a374c19]
+[node01:2290356] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f812a38009a]
+[node01:2290356] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f812a380105]
+[node01:2290356] [ 7] /lib64/libc.so.6(abort+0xd3)[0x7f0f684527f3]
+[node01:2290369] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f0f68829c19]
+[node01:2290369] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f0f6883509a]
+[node01:2290369] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f0f68835105]
+[node01:2290369] [ 7] /lib64/libc.so.6(abort+0xd3)[0x7fef7949e7f3]
+[node01:2290368] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fef79875c19]
+[node01:2290368] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fef7988109a]
+[node01:2290368] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fef79881105]
+[node01:2290368] [ 7] /lib64/libc.so.6(abort+0xd3)[0x7ff4703737f3]
+[node01:2290361] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7ff47074ac19]
+[node01:2290361] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7ff47075609a]
+[node01:2290361] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7ff470756105]
+[node01:2290361] [ 7] /lib64/libc.so.6(abort+0xd3)[0x7f899c4177f3]
+[node01:2290378] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f899c7eec19]
+[node01:2290378] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f899c7fa09a]
+[node01:2290378] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f899c7fa105]
+[node01:2290378] [ 7] /lib64/libc.so.6(abort+0xd3)[0x7fef29f177f3]
+[node01:2290345] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fef2a2eec19]
+[node01:2290345] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fef2a2fa09a]
+[node01:2290345] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fef2a2fa105]
+[node01:2290345] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f669f4dac19]
+[node01:2290374] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f669f4e609a]
+[node01:2290374] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f669f4e6105]
+[node01:2290374] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f669f4e6358]
+[node01:2290374] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f5bcb6b309a]
+[node01:2290370] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f5bcb6b3105]
+[node01:2290370] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f5bcb6b3358]
+[node01:2290370] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f5bcb6aa492]
+[node01:2290370] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290370] [10] ./UTWMPIOMP[0x402803]
+[node01:2290370] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f45020e909a]
+[node01:2290373] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f45020e9105]
+[node01:2290373] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f45020e9358]
+[node01:2290373] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f45020e0492]
+[node01:2290373] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290373] [10] ./UTWMPIOMP[0x402803]
+[node01:2290373] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa71a5bc09a]
+[node01:2290366] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa71a5bc105]
+[node01:2290366] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa71a5bc358]
+[node01:2290366] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa71a5b3492]
+[node01:2290366] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290366] [10] ./UTWMPIOMP[0x402803]
+[node01:2290366] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f8a5395609a]
+[node01:2290348] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f8a53956105]
+[node01:2290348] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f8a53956358]
+[node01:2290348] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f8a5394d492]
+[node01:2290348] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290348] [10] ./UTWMPIOMP[0x402803]
+[node01:2290348] [11] /lib64/libc.so.6(+0x3feb0)[0x7f8a5358aeb0]
+[node01:2290348] [12] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fba6e3da09a]
+[node01:2290375] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fba6e3da105]
+[node01:2290375] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fba6e3da358]
+[node01:2290375] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fba6e3d1492]
+[node01:2290375] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290375] [10] ./UTWMPIOMP[0x402803]
+[node01:2290375] [11] /lib64/libc.so.6(+0x3feb0)[0x7fba6e00eeb0]
+[node01:2290375] [12] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f6b6653809a]
+[node01:2290379] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f6b66538105]
+[node01:2290379] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f6b66538358]
+[node01:2290379] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f6b6652f492]
+[node01:2290379] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290379] [10] ./UTWMPIOMP[0x402803]
+[node01:2290379] [11] /lib64/libc.so.6(+0x3feb0)[0x7f6b6616ceb0]
+[node01:2290379] [12] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fdbd80e809a]
+[node01:2290351] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fdbd80e8105]
+[node01:2290351] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fdbd80e8358]
+[node01:2290351] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fdbd80df492]
+[node01:2290351] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290351] [10] ./UTWMPIOMP[0x402803]
+[node01:2290351] [11] /lib64/libc.so.6(+0x3feb0)[0x7fdbd7d1ceb0]
+[node01:2290351] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fdbd7d1cf60]
+[node01:2290351] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fab91779c19]
+[node01:2290359] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fab9178509a]
+[node01:2290359] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fab91785105]
+[node01:2290359] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fab91785358]
+[node01:2290359] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fab9177c492]
+[node01:2290359] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290359] [10] ./UTWMPIOMP[0x402803]
+[node01:2290359] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fe49aefe09a]
+[node01:2290367] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fe49aefe105]
+[node01:2290367] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fe49aefe358]
+[node01:2290367] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fe49aef5492]
+[node01:2290367] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290367] [10] ./UTWMPIOMP[0x402803]
+[node01:2290367] [11] /lib64/libc.so.6(+0x3feb0)[0x7fe49ab32eb0]
+[node01:2290367] [12] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f9d998f2492]
+[node01:2290377] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290377] [10] ./UTWMPIOMP[0x402803]
+[node01:2290377] [11] /lib64/libc.so.6(+0x3feb0)[0x7f9d9952feb0]
+[node01:2290377] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f9d9952ff60]
+[node01:2290377] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290377] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f75781b009a]
+[node01:2290372] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f75781b0105]
+[node01:2290372] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f75781b0358]
+[node01:2290372] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f75781a7492]
+[node01:2290372] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290372] [10] ./UTWMPIOMP[0x402803]
+[node01:2290372] [11] /lib64/libc.so.6(+0x3feb0)[0x7f7577de4eb0]
+[node01:2290372] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f7577de4f60]
+[node01:2290372] [13] ./UTWMPIOMP[0x402ac5]
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fef272a8105]
+[node01:2290360] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fef272a8358]
+[node01:2290360] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fef2729f492]
+[node01:2290360] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290360] [10] ./UTWMPIOMP[0x402803]
+[node01:2290360] [11] /lib64/libc.so.6(+0x3feb0)[0x7fef26edceb0]
+[node01:2290360] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fef26edcf60]
+[node01:2290360] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290360] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f3cd0c41105]
+[node01:2290355] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f3cd0c41358]
+[node01:2290355] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f3cd0c38492]
+[node01:2290355] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290355] [10] ./UTWMPIOMP[0x402803]
+[node01:2290355] [11] /lib64/libc.so.6(+0x3feb0)[0x7f3cd0875eb0]
+[node01:2290355] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f3cd0875f60]
+[node01:2290355] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290355] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f7014294105]
+[node01:2290371] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f7014294358]
+[node01:2290371] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f701428b492]
+[node01:2290371] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290371] [10] ./UTWMPIOMP[0x402803]
+[node01:2290371] [11] /lib64/libc.so.6(+0x3feb0)[0x7f7013ec8eb0]
+[node01:2290371] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f7013ec8f60]
+[node01:2290371] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290371] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f2b81f36105]
+[node01:2290346] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f2b81f36358]
+[node01:2290346] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f2b81f2d492]
+[node01:2290346] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290346] [10] ./UTWMPIOMP[0x402803]
+[node01:2290346] [11] /lib64/libc.so.6(+0x3feb0)[0x7f2b81b6aeb0]
+[node01:2290346] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f2b81b6af60]
+[node01:2290346] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290346] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fc513585105]
+[node01:2290357] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fc513585358]
+[node01:2290357] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fc51357c492]
+[node01:2290357] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290357] [10] ./UTWMPIOMP[0x402803]
+[node01:2290357] [11] /lib64/libc.so.6(+0x3feb0)[0x7fc5131b9eb0]
+[node01:2290357] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fc5131b9f60]
+[node01:2290357] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290357] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7ff5a99e3105]
+[node01:2290352] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7ff5a99e3358]
+[node01:2290352] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7ff5a99da492]
+[node01:2290352] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290352] [10] ./UTWMPIOMP[0x402803]
+[node01:2290352] [11] /lib64/libc.so.6(+0x3feb0)[0x7ff5a9617eb0]
+[node01:2290352] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7ff5a9617f60]
+[node01:2290352] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290352] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f2896679105]
+[node01:2290362] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f2896679358]
+[node01:2290362] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f2896670492]
+[node01:2290362] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290362] [10] ./UTWMPIOMP[0x402803]
+[node01:2290362] [11] /lib64/libc.so.6(+0x3feb0)[0x7f28962adeb0]
+[node01:2290362] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f28962adf60]
+[node01:2290362] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290362] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fbe4f21b105]
+[node01:2290376] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fbe4f21b358]
+[node01:2290376] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fbe4f212492]
+[node01:2290376] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290376] [10] ./UTWMPIOMP[0x402803]
+[node01:2290376] [11] /lib64/libc.so.6(+0x3feb0)[0x7fbe4ee4feb0]
+[node01:2290376] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fbe4ee4ff60]
+[node01:2290376] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290376] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f2523f5a105]
+[node01:2290347] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f2523f5a358]
+[node01:2290347] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f2523f51492]
+[node01:2290347] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290347] [10] ./UTWMPIOMP[0x402803]
+[node01:2290347] [11] /lib64/libc.so.6(+0x3feb0)[0x7f2523b8eeb0]
+[node01:2290347] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f2523b8ef60]
+[node01:2290347] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290347] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f329ff9d358]
+[node01:2290344] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f329ff94492]
+[node01:2290344] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290344] [10] ./UTWMPIOMP[0x402803]
+[node01:2290344] [11] /lib64/libc.so.6(+0x3feb0)[0x7f329fbd1eb0]
+[node01:2290344] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f329fbd1f60]
+[node01:2290344] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290344] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f0f68835358]
+[node01:2290369] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f0f6882c492]
+[node01:2290369] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290369] [10] ./UTWMPIOMP[0x402803]
+[node01:2290369] [11] /lib64/libc.so.6(+0x3feb0)[0x7f0f68469eb0]
+[node01:2290369] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f0f68469f60]
+[node01:2290369] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290369] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7faf1a0e5358]
+[node01:2290364] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7faf1a0dc492]
+[node01:2290364] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290364] [10] ./UTWMPIOMP[0x402803]
+[node01:2290364] [11] /lib64/libc.so.6(+0x3feb0)[0x7faf19d19eb0]
+[node01:2290364] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7faf19d19f60]
+[node01:2290364] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290364] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f87d3f62358]
+[node01:2290354] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f87d3f59492]
+[node01:2290354] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290354] [10] ./UTWMPIOMP[0x402803]
+[node01:2290354] [11] /lib64/libc.so.6(+0x3feb0)[0x7f87d3b96eb0]
+[node01:2290354] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f87d3b96f60]
+[node01:2290354] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290354] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fef79881358]
+[node01:2290368] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fef79878492]
+[node01:2290368] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290368] [10] ./UTWMPIOMP[0x402803]
+[node01:2290368] [11] /lib64/libc.so.6(+0x3feb0)[0x7fef794b5eb0]
+[node01:2290368] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fef794b5f60]
+[node01:2290368] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290368] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7ff470756358]
+[node01:2290361] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7ff47074d492]
+[node01:2290361] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290361] [10] ./UTWMPIOMP[0x402803]
+[node01:2290361] [11] /lib64/libc.so.6(+0x3feb0)[0x7ff47038aeb0]
+[node01:2290361] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7ff47038af60]
+[node01:2290361] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290361] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f899c7fa358]
+[node01:2290378] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f899c7f1492]
+[node01:2290378] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290378] [10] ./UTWMPIOMP[0x402803]
+[node01:2290378] [11] /lib64/libc.so.6(+0x3feb0)[0x7f899c42eeb0]
+[node01:2290378] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f899c42ef60]
+[node01:2290378] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290378] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fef2a2fa358]
+[node01:2290345] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fef2a2f1492]
+[node01:2290345] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290345] [10] ./UTWMPIOMP[0x402803]
+[node01:2290345] [11] /lib64/libc.so.6(+0x3feb0)[0x7fef29f2eeb0]
+[node01:2290345] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fef29f2ef60]
+[node01:2290345] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290345] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f812a380358]
+[node01:2290356] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f812a377492]
+[node01:2290356] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290356] [10] ./UTWMPIOMP[0x402803]
+[node01:2290356] [11] /lib64/libc.so.6(+0x3feb0)[0x7f8129fb4eb0]
+[node01:2290356] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f8129fb4f60]
+[node01:2290356] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290356] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f669f4dd492]
+[node01:2290374] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290374] [10] ./UTWMPIOMP[0x402803]
+[node01:2290374] [11] /lib64/libc.so.6(+0x3feb0)[0x7f669f11aeb0]
+[node01:2290374] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f669f11af60]
+[node01:2290374] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290374] *** End of error message ***
+/lib64/libc.so.6(+0x3feb0)[0x7f5bcb2e7eb0]
+[node01:2290370] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f5bcb2e7f60]
+[node01:2290370] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290370] *** End of error message ***
+/lib64/libc.so.6(+0x3feb0)[0x7fa71a1f0eb0]
+[node01:2290366] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa71a1f0f60]
+[node01:2290366] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290366] *** End of error message ***
+/lib64/libc.so.6(+0x3feb0)[0x7f4501d1deb0]
+[node01:2290373] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f4501d1df60]
+[node01:2290373] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290373] *** End of error message ***
+terminate called after throwing an instance of 'std::invalid_argument'
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7f8a5358af60]
+[node01:2290348] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290348] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7fba6e00ef60]
+[node01:2290375] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290375] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7f6b6616cf60]
+[node01:2290379] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290379] *** End of error message ***
+[13] ./UTWMPIOMP[0x402ac5]
+[node01:2290351] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7fe49ab32f60]
+[node01:2290367] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290367] *** End of error message ***
+/lib64/libc.so.6(+0x3feb0)[0x7fab913b9eb0]
+[node01:2290359] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fab913b9f60]
+[node01:2290359] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290359] *** End of error message ***
+[node01:2290372] *** End of error message ***
+[node01:2290349] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fc7c8958db0]
+[node01:2290349] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fc7c89a554c]
+[node01:2290349] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fc7c8958d06]
+[node01:2290349] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fc7c892c7f3]
+[node01:2290349] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fc7c8d03c19]
+[node01:2290349] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fc7c8d0f09a]
+[node01:2290349] [ 6] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node01:2290358] *** Process received signal ***
+[node01:2290358] Signal: Aborted (6)
+[node01:2290358] Signal code:  (-6)
+[node01:2290358] [ 0] /lib64/libc.so.6(+0x54db0)[0x7feb3d504db0]
+[node01:2290358] [ 1] /lib64/libc.so.6(+0xa154c)[0x7feb3d55154c]
+[node01:2290358] [ 2] /lib64/libc.so.6(raise+0x16)[0x7feb3d504d06]
+[node01:2290358] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7feb3d4d87f3]
+[node01:2290358] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974010] *** Process received signal ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fc7c8d0f105]
+[node01:2290349] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7feb3d8afc19]
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fc7c8d0f358]
+[node01:2290349] [ 8] [node01:2290358] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fc7c8d06492]
+[node01:2290349] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290349] [10] ./UTWMPIOMP[0x402803]
+[node01:2290349] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7feb3d8bb09a]
+[node01:2290358] [ 6] /lib64/libc.so.6(+0x3feb0)[0x7fc7c8943eb0]
+[node01:2290349] [12] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974015] *** Process received signal ***
+[node02:3974015] Signal: Aborted (6)
+[node02:3974015] Signal code:  (-6)
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7feb3d8bb105]
+[node01:2290358] [ 7] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fc7c8943f60]
+[node01:2290349] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290349] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7feb3d8bb358]
+[node01:2290358] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7feb3d8b2492]
+[node01:2290358] [ 9] ./UTWMPIOMP[0x4036d5]
+[node01:2290358] [10] ./UTWMPIOMP[0x402803]
+[node01:2290358] [11] /lib64/libc.so.6(+0x3feb0)[0x7feb3d4efeb0]
+[node01:2290358] [12] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973997] *** Process received signal ***
+[node02:3973997] Signal: Aborted (6)
+[node02:3973997] Signal code:  (-6)
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7feb3d4eff60]
+[node01:2290358] [13] ./UTWMPIOMP[0x402ac5]
+[node01:2290358] *** End of error message ***
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973995] *** Process received signal ***
+[node02:3973995] Signal: Aborted (6)
+[node02:3973995] Signal code:  (-6)
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974013] *** Process received signal ***
+[node02:3974013] Signal: Aborted (6)
+[node02:3974013] Signal code:  (-6)
+[node02:3974013] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974006] *** Process received signal ***
+[node02:3974006] Signal: Aborted (6)
+[node02:3974006] Signal code:  (-6)
+[node02:3974006] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974012] *** Process received signal ***
+[node02:3974012] Signal: Aborted (6)
+[node02:3974012] Signal code:  (-6)
+[node02:3974012] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974007] *** Process received signal ***
+[node02:3974007] Signal: Aborted (6)
+[node02:3974007] Signal code:  (-6)
+[node02:3974007] [ 0] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973994] *** Process received signal ***
+[node02:3973994] Signal: Aborted (6)
+[node02:3973994] Signal code:  (-6)
+[node02:3973994] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f896f5e8db0]
+[node02:3973994] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974023] *** Process received signal ***
+[node02:3974023] Signal: Aborted (6)
+[node02:3974023] Signal code:  (-6)
+[node02:3974023] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f45d8057db0]
+[node02:3974023] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974016] *** Process received signal ***
+[node02:3974016] Signal: Aborted (6)
+[node02:3974016] Signal code:  (-6)
+[node02:3974016] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fab4c3cedb0]
+[node02:3974016] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974011] *** Process received signal ***
+[node02:3974011] Signal: Aborted (6)
+[node02:3974011] Signal code:  (-6)
+[node02:3974011] [ 0] /lib64/libc.so.6(+0x54db0)[0x7ff5d7e45db0]
+[node02:3974011] [ 1]   what():  stol
+[node02:3974024] *** Process received signal ***
+[node02:3974024] Signal: Aborted (6)
+[node02:3974024] Signal code:  (-6)
+[node02:3974024] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f31f7fb9db0]
+[node02:3974024] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973991] *** Process received signal ***
+[node02:3973991] Signal: Aborted (6)
+[node02:3973991] Signal code:  (-6)
+[node02:3973991] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f1f95eeedb0]
+[node02:3973991] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f1f95f3b54c]
+[node02:3973991] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974009] *** Process received signal ***
+[node02:3974009] Signal: Aborted (6)
+[node02:3974009] Signal code:  (-6)
+[node02:3974009] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f631f83ddb0]
+[node02:3974009] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f631f88a54c]
+[node02:3974009] [ 2] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974020] *** Process received signal ***
+[node02:3974020] Signal: Aborted (6)
+[node02:3974020] Signal code:  (-6)
+[node02:3974020] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f2ab5c1ddb0]
+[node02:3974020] [ 1] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973996] *** Process received signal ***
+[node02:3973996] Signal: Aborted (6)
+[node02:3973996] Signal code:  (-6)
+[node02:3973996] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fab924c2db0]
+[node02:3973996] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fab9250f54c]
+[node02:3973996] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fab924c2d06]
+[node02:3973996] [node02:3974010] Signal: Aborted (6)
+[node02:3974010] Signal code:  (-6)
+[node02:3974010] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fbb71379db0]
+[node02:3974010] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fbb713c654c]
+[node02:3974010] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fbb71379d06]
+[node02:3974010] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974017] *** Process received signal ***
+[node02:3974017] Signal: Aborted (6)
+[node02:3974017] Signal code:  (-6)
+[node02:3974017] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f53b8655db0]
+[node02:3974017] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f53b86a254c]
+[node02:3974017] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f53b8655d06]
+[node02:3974017] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974014] *** Process received signal ***
+[node02:3974014] Signal: Aborted (6)
+[node02:3974014] Signal code:  (-6)
+[node02:3974014] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f096ccf2db0]
+[node02:3974014] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f096cd3f54c]
+[node02:3974014] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f096ccf2d06]
+[node02:3974014] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f096ccc67f3]
+[node02:3974014] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974000] *** Process received signal ***
+[node02:3974000] Signal: Aborted (6)
+[node02:3974000] Signal code:  (-6)
+[node02:3974000] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f0254684db0]
+[node02:3974000] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f02546d154c]
+[node02:3974000] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f0254684d06]
+[node02:3974000] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f02546587f3]
+[node02:3974000] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f0254a2fc19]
+[node02:3974000] [ 5] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974008] *** Process received signal ***
+[node02:3974008] Signal: Aborted (6)
+[node02:3974008] Signal code:  (-6)
+[node02:3974008] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f2e6ad6bdb0]
+[node02:3974008] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f2e6adb854c]
+[node02:3974008] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f2e6ad6bd06]
+[node02:3974008] [ 3] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973998] *** Process received signal ***
+[node02:3973998] Signal: Aborted (6)
+[node02:3973998] Signal code:  (-6)
+[node02:3973998] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f3d1166cdb0]
+[node02:3973998] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f3d116b954c]
+[node02:3973998] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f3d1166cd06]
+[node02:3973998] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f3d116407f3]
+[node02:3973998] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974026] *** Process received signal ***
+[node02:3974026] Signal: Aborted (6)
+[node02:3974026] Signal code:  (-6)
+[node02:3974026] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f3692942db0]
+[node02:3974026] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f369298f54c]
+[node02:3974026] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f3692942d06]
+[node02:3974026] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f36929167f3]
+[node02:3974026] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974001] *** Process received signal ***
+[node02:3974001] Signal: Aborted (6)
+[node02:3974001] Signal code:  (-6)
+[node02:3974001] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fb81d495db0]
+[node02:3974001] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fb81d4e254c]
+[node02:3974001] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fb81d495d06]
+[node02:3974001] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fb81d4697f3]
+[node02:3974001] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974019] *** Process received signal ***
+[node02:3974019] Signal: Aborted (6)
+[node02:3974019] Signal code:  (-6)
+[node02:3974019] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fa21b2d3db0]
+[node02:3974019] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa21b32054c]
+[node02:3974019] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fa21b2d3d06]
+[node02:3974019] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fa21b2a77f3]
+[node02:3974019] [ 4] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973992] *** Process received signal ***
+[node02:3973992] Signal: Aborted (6)
+[node02:3973992] Signal code:  (-6)
+[node02:3973992] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f386c16edb0]
+[node02:3973992] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f386c1bb54c]
+[node02:3973992] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f386c16ed06]
+[node02:3973992] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f386c1427f3]
+[node02:3973992] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f386c519c19]
+[node02:3973992] [ 5] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974003] *** Process received signal ***
+[node02:3974003] Signal: Aborted (6)
+[node02:3974003] Signal code:  (-6)
+[node02:3974003] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f1d40f2fdb0]
+[node02:3974003] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f1d40f7c54c]
+[node02:3974003] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f1d40f2fd06]
+[node02:3974003] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f1d40f037f3]
+[node02:3974003] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f1d412dac19]
+[node02:3974003] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f1d412e609a]
+[node02:3974003] [ 6] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974005] *** Process received signal ***
+[node02:3974005] Signal: Aborted (6)
+[node02:3974005] Signal code:  (-6)
+[node02:3974005] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fc866b06db0]
+[node02:3974005] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fc866b5354c]
+[node02:3974005] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fc866b06d06]
+[node02:3974005] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fc866ada7f3]
+[node02:3974005] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fc866eb1c19]
+[node02:3974005] [ 5] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3973993] *** Process received signal ***
+[node02:3973993] Signal: Aborted (6)
+[node02:3973993] Signal code:  (-6)
+[node02:3973993] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f519578ddb0]
+[node02:3973993] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f51957da54c]
+[node02:3973993] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f519578dd06]
+[node02:3973993] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f51957617f3]
+[node02:3973993] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f5195b38c19]
+[node02:3973993] [ 5] [node02:3973997] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f58a5847db0]
+[node02:3973997] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f58a589454c]
+[node02:3973997] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f58a5847d06]
+[node02:3973997] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f58a581b7f3]
+[node02:3973997] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f58a5bf2c19]
+[node02:3973997] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f58a5bfe09a]
+[node02:3973997] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f58a5bfe105]
+[node02:3973997] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f58a5bfe358]
+[node02:3973997] [node02:3974015] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f6f80000db0]
+[node02:3974015] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f6f8004d54c]
+[node02:3974015] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f6f80000d06]
+[node02:3974015] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f6f7ffd47f3]
+[node02:3974015] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f6f803abc19]
+[node02:3974015] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f6f803b709a]
+[node02:3974015] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f6f803b7105]
+[node02:3974015] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f6f803b7358]
+[node02:3974015] [ 8] [node02:3973995] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f85ef0a1db0]
+[node02:3973995] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f85ef0ee54c]
+[node02:3973995] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f85ef0a1d06]
+[node02:3973995] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f85ef0757f3]
+[node02:3973995] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f85ef44cc19]
+[node02:3973995] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f85ef45809a]
+[node02:3973995] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f85ef458105]
+[node02:3973995] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f85ef458358]
+[node02:3973995] [ 8] /lib64/libc.so.6(+0x54db0)[0x7f76859b9db0]
+[node02:3974013] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f7685a0654c]
+[node02:3974013] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f76859b9d06]
+[node02:3974013] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f768598d7f3]
+[node02:3974013] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f7685d64c19]
+[node02:3974013] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f7685d7009a]
+[node02:3974013] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f7685d70105]
+[node02:3974013] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f7685d70358]
+[node02:3974013] [ 8] /lib64/libc.so.6(+0x54db0)[0x7fa0f217cdb0]
+[node02:3974012] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fa0f21c954c]
+[node02:3974012] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fa0f217cd06]
+[node02:3974012] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fa0f21507f3]
+[node02:3974012] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa0f2527c19]
+[node02:3974012] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa0f253309a]
+[node02:3974012] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa0f2533105]
+[node02:3974012] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa0f2533358]
+[node02:3974012] [ 8] /lib64/libc.so.6(+0x54db0)[0x7fc2d6188db0]
+[node02:3974006] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fc2d61d554c]
+[node02:3974006] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fc2d6188d06]
+[node02:3974006] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fc2d615c7f3]
+[node02:3974006] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fc2d6533c19]
+[node02:3974006] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fc2d653f09a]
+[node02:3974006] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fc2d653f105]
+[node02:3974006] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fc2d653f358]
+[node02:3974006] [ 8] /lib64/libc.so.6(+0x54db0)[0x7fb14c413db0]
+[node02:3974007] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fb14c46054c]
+[node02:3974007] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fb14c413d06]
+[node02:3974007] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fb14c3e77f3]
+[node02:3974007] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fb14c7bec19]
+[node02:3974007] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fb14c7ca09a]
+[node02:3974007] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fb14c7ca105]
+[node02:3974007] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fb14c7ca358]
+[node02:3974007] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fb14c7c1492]
+[node02:3974007] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974007] [10] ./UTWMPIOMP[0x402803]
+[node02:3974007] /lib64/libc.so.6(+0xa154c)[0x7fab4c41b54c]
+[node02:3974016] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fab4c3ced06]
+[node02:3974016] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fab4c3a27f3]
+[node02:3974016] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fab4c779c19]
+[node02:3974016] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fab4c78509a]
+[node02:3974016] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fab4c785105]
+[node02:3974016] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fab4c785358]
+[node02:3974016] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fab4c77c492]
+[node02:3974016] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974016] [10] ./UTWMPIOMP[0x402803]
+[node02:3974016] [11] /lib64/libc.so.6(+0xa154c)[0x7f896f63554c]
+[node02:3973994] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f896f5e8d06]
+[node02:3973994] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f896f5bc7f3]
+[node02:3973994] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f896f993c19]
+[node02:3973994] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f896f99f09a]
+[node02:3973994] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f896f99f105]
+[node02:3973994] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f896f99f358]
+[node02:3973994] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f896f996492]
+[node02:3973994] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973994] [10] ./UTWMPIOMP[0x402803]
+[node02:3973994] [11] /lib64/libc.so.6(+0x3feb0)[0x7f896f5d3eb0]
+[node02:3973994] [12] /lib64/libc.so.6(+0xa154c)[0x7f45d80a454c]
+[node02:3974023] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f45d8057d06]
+[node02:3974023] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f45d802b7f3]
+[node02:3974023] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f45d8402c19]
+[node02:3974023] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f45d840e09a]
+[node02:3974023] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f45d840e105]
+[node02:3974023] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f45d840e358]
+[node02:3974023] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f45d8405492]
+[node02:3974023] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974023] [10] ./UTWMPIOMP[0x402803]
+[node02:3974023] [11] /lib64/libc.so.6(+0x3feb0)[0x7f45d8042eb0]
+[node02:3974023] [12] /lib64/libc.so.6(+0xa154c)[0x7f31f800654c]
+[node02:3974024] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f31f7fb9d06]
+[node02:3974024] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f31f7f8d7f3]
+[node02:3974024] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f31f8364c19]
+[node02:3974024] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f31f837009a]
+[node02:3974024] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f31f8370105]
+[node02:3974024] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f31f8370358]
+[node02:3974024] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f31f8367492]
+[node02:3974024] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974024] [10] ./UTWMPIOMP[0x402803]
+[node02:3974024] [11] /lib64/libc.so.6(+0x3feb0)[0x7f31f7fa4eb0]
+[node02:3974024] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f31f7fa4f60]
+[node02:3974024] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974024] *** End of error message ***
+/lib64/libc.so.6(+0xa154c)[0x7ff5d7e9254c]
+[node02:3974011] [ 2] /lib64/libc.so.6(raise+0x16)[0x7ff5d7e45d06]
+[node02:3974011] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7ff5d7e197f3]
+[node02:3974011] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7ff5d81f0c19]
+[node02:3974011] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7ff5d81fc09a]
+[node02:3974011] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7ff5d81fc105]
+[node02:3974011] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7ff5d81fc358]
+[node02:3974011] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7ff5d81f3492]
+[node02:3974011] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974011] [10] ./UTWMPIOMP[0x402803]
+[node02:3974011] [11] /lib64/libc.so.6(+0x3feb0)[0x7ff5d7e30eb0]
+[node02:3974011] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7ff5d7e30f60]
+[node02:3974011] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974011] *** End of error message ***
+/lib64/libc.so.6(raise+0x16)[0x7f631f83dd06]
+[node02:3974009] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f631f8117f3]
+[node02:3974009] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f631fbe8c19]
+[node02:3974009] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f631fbf409a]
+[node02:3974009] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f631fbf4105]
+[node02:3974009] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f631fbf4358]
+[node02:3974009] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f631fbeb492]
+[node02:3974009] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974009] [10] ./UTWMPIOMP[0x402803]
+[node02:3974009] [11] /lib64/libc.so.6(+0x3feb0)[0x7f631f828eb0]
+[node02:3974009] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f631f828f60]
+[node02:3974009] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974009] *** End of error message ***
+/lib64/libc.so.6(raise+0x16)[0x7f1f95eeed06]
+[node02:3973991] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f1f95ec27f3]
+[node02:3973991] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f1f96299c19]
+[node02:3973991] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f1f962a509a]
+[node02:3973991] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f1f962a5105]
+[node02:3973991] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f1f962a5358]
+[node02:3973991] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f1f9629c492]
+[node02:3973991] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973991] [10] ./UTWMPIOMP[0x402803]
+[node02:3973991] [11] /lib64/libc.so.6(+0x3feb0)[0x7f1f95ed9eb0]
+[node02:3973991] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f1f95ed9f60]
+[node02:3973991] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973991] *** End of error message ***
+/lib64/libc.so.6(+0xa154c)[0x7f2ab5c6a54c]
+[node02:3974020] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f2ab5c1dd06]
+[node02:3974020] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f2ab5bf17f3]
+[node02:3974020] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f2ab5fc8c19]
+[node02:3974020] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f2ab5fd409a]
+[node02:3974020] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f2ab5fd4105]
+[node02:3974020] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f2ab5fd4358]
+[node02:3974020] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f2ab5fcb492]
+[node02:3974020] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974020] [10] ./UTWMPIOMP[0x402803]
+[node02:3974020] [11] /lib64/libc.so.6(+0x3feb0)[0x7f2ab5c08eb0]
+[node02:3974020] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f2ab5c08f60]
+[node02:3974020] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974020] *** End of error message ***
+[ 3] /lib64/libc.so.6(abort+0xd3)[0x7fab924967f3]
+[node02:3973996] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fab9286dc19]
+[node02:3973996] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fab9287909a]
+[node02:3973996] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fab92879105]
+[node02:3973996] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fab92879358]
+[node02:3973996] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fab92870492]
+[node02:3973996] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973996] [10] ./UTWMPIOMP[0x402803]
+[node02:3973996] [11] /lib64/libc.so.6(+0x3feb0)[0x7fab924adeb0]
+[node02:3973996] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fab924adf60]
+[node02:3973996] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973996] *** End of error message ***
+/lib64/libc.so.6(abort+0xd3)[0x7fbb7134d7f3]
+[node02:3974010] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fbb71724c19]
+[node02:3974010] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fbb7173009a]
+[node02:3974010] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fbb71730105]
+[node02:3974010] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fbb71730358]
+[node02:3974010] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fbb71727492]
+[node02:3974010] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974010] [10] ./UTWMPIOMP[0x402803]
+[node02:3974010] [11] /lib64/libc.so.6(+0x3feb0)[0x7fbb71364eb0]
+[node02:3974010] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fbb71364f60]
+[node02:3974010] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974010] *** End of error message ***
+/lib64/libc.so.6(abort+0xd3)[0x7f53b86297f3]
+[node02:3974017] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f53b8a00c19]
+[node02:3974017] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f53b8a0c09a]
+[node02:3974017] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f53b8a0c105]
+[node02:3974017] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f53b8a0c358]
+[node02:3974017] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f53b8a03492]
+[node02:3974017] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974017] [10] ./UTWMPIOMP[0x402803]
+[node02:3974017] [11] /lib64/libc.so.6(+0x3feb0)[0x7f53b8640eb0]
+[node02:3974017] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f53b8640f60]
+[node02:3974017] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974017] *** End of error message ***
+[ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f096d09dc19]
+[node02:3974014] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f096d0a909a]
+[node02:3974014] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f096d0a9105]
+[node02:3974014] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f096d0a9358]
+[node02:3974014] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f096d0a0492]
+[node02:3974014] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974014] [10] ./UTWMPIOMP[0x402803]
+[node02:3974014] [11] /lib64/libc.so.6(+0x3feb0)[0x7f096ccddeb0]
+[node02:3974014] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f096ccddf60]
+[node02:3974014] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974014] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f0254a3b09a]
+[node02:3974000] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f0254a3b105]
+[node02:3974000] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f0254a3b358]
+[node02:3974000] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f0254a32492]
+[node02:3974000] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974000] [10] ./UTWMPIOMP[0x402803]
+[node02:3974000] [11] /lib64/libc.so.6(+0x3feb0)[0x7f025466feb0]
+[node02:3974000] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f025466ff60]
+[node02:3974000] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974000] *** End of error message ***
+/lib64/libc.so.6(abort+0xd3)[0x7f2e6ad3f7f3]
+[node02:3974008] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f2e6b116c19]
+[node02:3974008] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f2e6b12209a]
+[node02:3974008] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f2e6b122105]
+[node02:3974008] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f2e6b122358]
+[node02:3974008] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f2e6b119492]
+[node02:3974008] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974008] [10] ./UTWMPIOMP[0x402803]
+[node02:3974008] [11] /lib64/libc.so.6(+0x3feb0)[0x7f2e6ad56eb0]
+[node02:3974008] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f2e6ad56f60]
+[node02:3974008] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974008] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f3d11a17c19]
+[node02:3973998] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f3d11a2309a]
+[node02:3973998] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f3d11a23105]
+[node02:3973998] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f3d11a23358]
+[node02:3973998] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f3d11a1a492]
+[node02:3973998] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973998] [10] ./UTWMPIOMP[0x402803]
+[node02:3973998] [11] /lib64/libc.so.6(+0x3feb0)[0x7f3d11657eb0]
+[node02:3973998] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f3d11657f60]
+[node02:3973998] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973998] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fa21b67ec19]
+[node02:3974019] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fa21b68a09a]
+[node02:3974019] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fa21b68a105]
+[node02:3974019] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fa21b68a358]
+[node02:3974019] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa21b681492]
+[node02:3974019] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974019] [10] ./UTWMPIOMP[0x402803]
+[node02:3974019] [11] /lib64/libc.so.6(+0x3feb0)[0x7fa21b2beeb0]
+[node02:3974019] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa21b2bef60]
+[node02:3974019] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974019] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fb81d840c19]
+[node02:3974001] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fb81d84c09a]
+[node02:3974001] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fb81d84c105]
+[node02:3974001] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fb81d84c358]
+[node02:3974001] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fb81d843492]
+[node02:3974001] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974001] [10] ./UTWMPIOMP[0x402803]
+[node02:3974001] [11] /lib64/libc.so.6(+0x3feb0)[0x7fb81d480eb0]
+[node02:3974001] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fb81d480f60]
+[node02:3974001] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974001] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f3692cedc19]
+[node02:3974026] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f3692cf909a]
+[node02:3974026] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f3692cf9105]
+[node02:3974026] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f3692cf9358]
+[node02:3974026] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f3692cf0492]
+[node02:3974026] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974026] [10] ./UTWMPIOMP[0x402803]
+[node02:3974026] [11] /lib64/libc.so.6(+0x3feb0)[0x7f369292deb0]
+[node02:3974026] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f369292df60]
+[node02:3974026] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974026] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f1d412e6105]
+[node02:3974003] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f1d412e6358]
+[node02:3974003] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f1d412dd492]
+[node02:3974003] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974003] [10] ./UTWMPIOMP[0x402803]
+[node02:3974003] [11] /lib64/libc.so.6(+0x3feb0)[0x7f1d40f1aeb0]
+[node02:3974003] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f1d40f1af60]
+[node02:3974003] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974003] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f386c52509a]
+[node02:3973992] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f386c525105]
+[node02:3973992] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f386c525358]
+[node02:3973992] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f386c51c492]
+[node02:3973992] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973992] [10] ./UTWMPIOMP[0x402803]
+[node02:3973992] [11] /lib64/libc.so.6(+0x3feb0)[0x7f386c159eb0]
+[node02:3973992] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f386c159f60]
+[node02:3973992] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973992] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f5195b4409a]
+[node02:3973993] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f5195b44105]
+[node02:3973993] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f5195b44358]
+[node02:3973993] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f5195b3b492]
+[node02:3973993] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973993] [10] ./UTWMPIOMP[0x402803]
+[node02:3973993] [11] /lib64/libc.so.6(+0x3feb0)[0x7f5195778eb0]
+[node02:3973993] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f5195778f60]
+[node02:3973993] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973993] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fc866ebd09a]
+[node02:3974005] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fc866ebd105]
+[node02:3974005] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fc866ebd358]
+[node02:3974005] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fc866eb4492]
+[node02:3974005] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974005] [10] ./UTWMPIOMP[0x402803]
+[node02:3974005] [11] /lib64/libc.so.6(+0x3feb0)[0x7fc866af1eb0]
+[node02:3974005] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fc866af1f60]
+[node02:3974005] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974005] *** End of error message ***
+[ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f58a5bf5492]
+[node02:3973997] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973997] [10] ./UTWMPIOMP[0x402803]
+[node02:3973997] [11] /lib64/libc.so.6(+0x3feb0)[0x7f58a5832eb0]
+[node02:3973997] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f58a5832f60]
+[node02:3973997] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973997] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f7685d67492]
+[node02:3974013] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974013] [10] ./UTWMPIOMP[0x402803]
+[node02:3974013] [11] /lib64/libc.so.6(+0x3feb0)[0x7f76859a4eb0]
+[node02:3974013] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f76859a4f60]
+[node02:3974013] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974013] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fa0f252a492]
+[node02:3974012] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974012] [10] ./UTWMPIOMP[0x402803]
+[node02:3974012] [11] /lib64/libc.so.6(+0x3feb0)[0x7fa0f2167eb0]
+[node02:3974012] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fa0f2167f60]
+[node02:3974012] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974012] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f85ef44f492]
+[node02:3973995] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3973995] [10] ./UTWMPIOMP[0x402803]
+[node02:3973995] [11] /lib64/libc.so.6(+0x3feb0)[0x7f85ef08ceb0]
+[node02:3973995] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f85ef08cf60]
+[node02:3973995] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973995] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f6f803ae492]
+[node02:3974015] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974015] [10] ./UTWMPIOMP[0x402803]
+[node02:3974015] [11] /lib64/libc.so.6(+0x3feb0)[0x7f6f7ffebeb0]
+[node02:3974015] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f6f7ffebf60]
+[node02:3974015] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974015] *** End of error message ***
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974021] *** Process received signal ***
+[node02:3974021] Signal: Aborted (6)
+[node02:3974021] Signal code:  (-6)
+[node02:3974021] [ 0] /lib64/libc.so.6(+0x54db0)[0x7fc268a44db0]
+[node02:3974021] [ 1] /lib64/libc.so.6(+0xa154c)[0x7fc268a9154c]
+[node02:3974021] [ 2] /lib64/libc.so.6(raise+0x16)[0x7fc268a44d06]
+[node02:3974021] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7fc268a187f3]
+[node02:3974021] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7fc268defc19]
+[node02:3974021] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7fc268dfb09a]
+[node02:3974021] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7fc268dfb105]
+[node02:3974021] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7fc268dfb358]
+[node02:3974021] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fc268df2492]
+[node02:3974021] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974021] [10] ./UTWMPIOMP[0x402803]
+[node02:3974021] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7fc2d6536492]
+[node02:3974006] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974006] [10] ./UTWMPIOMP[0x402803]
+[node02:3974006] [11] /lib64/libc.so.6(+0x3feb0)[0x7fc2d6173eb0]
+[node02:3974006] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fc2d6173f60]
+[node02:3974006] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974006] *** End of error message ***
+[11] /lib64/libc.so.6(+0x3feb0)[0x7fb14c3feeb0]
+[node02:3974007] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fb14c3fef60]
+[node02:3974007] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974007] *** End of error message ***
+/lib64/libc.so.6(+0x3feb0)[0x7fab4c3b9eb0]
+[node02:3974016] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fab4c3b9f60]
+[node02:3974016] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974016] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7f896f5d3f60]
+[node02:3973994] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3973994] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7f45d8042f60]
+[node02:3974023] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974023] *** End of error message ***
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974025] *** Process received signal ***
+[node02:3974025] Signal: Aborted (6)
+[node02:3974025] Signal code:  (-6)
+[node02:3974025] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f1c99f21db0]
+[node02:3974025] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f1c99f6e54c]
+[node02:3974025] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f1c99f21d06]
+[node02:3974025] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f1c99ef57f3]
+[node02:3974025] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f1c9a2ccc19]
+[node02:3974025] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f1c9a2d809a]
+[node02:3974025] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f1c9a2d8105]
+[node02:3974025] [ 7] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f1c9a2d8358]
+[node02:3974025] [ 8] terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stol
+[node02:3974018] *** Process received signal ***
+[node02:3974018] Signal: Aborted (6)
+[node02:3974018] Signal code:  (-6)
+[node02:3974018] [ 0] /lib64/libc.so.6(+0x54db0)[0x7f576bb53db0]
+[node02:3974018] [ 1] /lib64/libc.so.6(+0xa154c)[0x7f576bba054c]
+[node02:3974018] [ 2] /lib64/libc.so.6(raise+0x16)[0x7f576bb53d06]
+[node02:3974018] [ 3] /lib64/libc.so.6(abort+0xd3)[0x7f576bb277f3]
+[node02:3974018] [ 4] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xaac19)[0x7f576befec19]
+[node02:3974018] [ 5] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb609a)[0x7f576bf0a09a]
+[node02:3974018] [ 6] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6105)[0x7f576bf0a105]
+[node02:3974018] [ 7] /lib64/libc.so.6(+0x3feb0)[0x7fc268a2feb0]
+[node02:3974021] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7fc268a2ff60]
+[node02:3974021] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974021] *** End of error message ***
+/opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(+0xb6358)[0x7f576bf0a358]
+[node02:3974018] [ 8] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f576bf01492]
+[node02:3974018] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974018] [10] ./UTWMPIOMP[0x402803]
+[node02:3974018] [11] /opt/ohpc/pub/compiler/gcc/12.2.0/lib64/libstdc++.so.6(_ZSt24__throw_invalid_argumentPKc+0x40)[0x7f1c9a2cf492]
+[node02:3974025] [ 9] ./UTWMPIOMP[0x4036d5]
+[node02:3974025] [10] ./UTWMPIOMP[0x402803]
+[node02:3974025] [11] /lib64/libc.so.6(+0x3feb0)[0x7f1c99f0ceb0]
+[node02:3974025] [12] /lib64/libc.so.6(+0x3feb0)[0x7f576bb3eeb0]
+[node02:3974018] [12] /lib64/libc.so.6(__libc_start_main+0x80)[0x7f576bb3ef60]
+[node02:3974018] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974018] *** End of error message ***
+/lib64/libc.so.6(__libc_start_main+0x80)[0x7f1c99f0cf60]
+[node02:3974025] [13] ./UTWMPIOMP[0x402ac5]
+[node02:3974025] *** End of error message ***
 --------------------------------------------------------------------------
-prterun noticed that process rank 14 with PID 2287852 on node node01 exited on
+prterun noticed that process rank 2 with PID 2290346 on node node01 exited on
 signal 6 (Aborted).
 --------------------------------------------------------------------------

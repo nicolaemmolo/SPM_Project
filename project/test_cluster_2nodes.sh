@@ -7,7 +7,7 @@
 
 
 # Test parameters
-REPETITIONS=3
+REPETITIONS=10
 
 
 mpi_execution() {
@@ -40,8 +40,8 @@ mpi_omp_dynamic_execution() {
 
 
 # MPI execution
-#mpi_execution
+mpi_execution
 
 # MPI + OpenMP execution
 #mpi_omp_static_execution
-mpi_omp_dynamic_execution
+#mpi_omp_dynamic_execution

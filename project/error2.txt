@@ -1,0 +1,12 @@
+slurmstepd-node01: error: *** JOB 30505 ON node01 CANCELLED AT 2024-09-06T08:27:54 DUE TO TIME LIMIT ***
+--------------------------------------------------------------------------
+PRTE has lost communication with a remote daemon.
+
+  HNP daemon   : [prterun-node01-2471355@0,0] on node node01
+  Remote daemon: [prterun-node01-2471355@0,1] on node node02
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
