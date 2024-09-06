@@ -1,2 +1,0 @@
-slurmstepd-node01: error: *** JOB 30498 ON node01 CANCELLED AT 2024-09-06T02:29:54 DUE TO TIME LIMIT ***
-slurmstepd-node08: error: *** JOB 30503 ON node08 CANCELLED AT 2024-09-06T02:30:24 DUE TO TIME LIMIT ***

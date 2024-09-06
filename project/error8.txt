@@ -1,1 +1,0 @@
-slurmstepd-node01: error: *** JOB 30508 ON node01 CANCELLED AT 2024-09-06T09:41:38 ***
