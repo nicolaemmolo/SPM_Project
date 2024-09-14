@@ -7,7 +7,7 @@
 
 
 # Test parameters
-REPETITIONS=3
+REPETITIONS=10
 
 
 mpi_execution() {

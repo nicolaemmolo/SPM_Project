@@ -77,8 +77,8 @@ par_static_openmp_execution() {
 
 # Testing OpenMP Parallel Dynamic Execution
 par_dynamic_openmp_execution() {
-    for T in 1 $(seq 2 $THREADS_STEP $MAX_THREADS); do
-        for N in 128 256 512 1024 2048 4096; do
+    for T in $(seq 12 $THREADS_STEP $MAX_THREADS); do
+        for N in 128; do
             echo "N=$N T=$T pd results_UTWOMP_dynamic.csv"
             for rep in $(seq 1 $REPETITIONS); do
                 ./UTWOMP $N $T pd results_UTWOMP_dynamic.csv
@@ -89,14 +89,14 @@ par_dynamic_openmp_execution() {
 
 
 # C++ Thread Execution
-seq_execution
-par_static_execution
-par_dynamic_execution
+#seq_execution
+#par_static_execution
+#par_dynamic_execution
 
 # FastFlow Execution
-par_static_fastflow_execution
-par_dynamic_fastflow_execution
+#par_static_fastflow_execution
+#par_dynamic_fastflow_execution
 
 # OpenMP Execution
-par_static_openmp_execution
-par_dynamic_openmp_execution
+#par_static_openmp_execution
+#par_dynamic_openmp_execution
