@@ -16,6 +16,7 @@
 #include <iomanip>
 #include <hpc_helpers.hpp>
 #include <threadPool.hpp>
+#include <random>
 
 
 #ifndef PRINT_MESSAGE
@@ -23,11 +24,11 @@
 #endif
 
 #ifndef PRINT_MATRIX
-	#define PRINT_MATRIX 1
+	#define PRINT_MATRIX 0
 #endif
 
 #ifndef PRINT_LAST_ELEMENT
-	#define PRINT_LAST_ELEMENT 0
+	#define PRINT_LAST_ELEMENT 1
 #endif
 
 #define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
@@ -53,12 +54,14 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
 
 	// Calculate the dot product
     for (uint64_t j = 0; j < k; ++j) {
-        result += M[INDEX(i, j, N)] * M[INDEX(k-j, j, N)];
+        result += M[INDEX(i, j, N)] * M[INDEX(k+i-j, j, N)];
+
     }
 
-    // Update the element for the diagonal (i, k)
-    M[INDEX(i, k, N)] = result;
+    M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
+
 }
+
 
 /* Print matrix
  * @param M: matrix
@@ -261,7 +264,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	if (PRINT_MATRIX) print_matrix(M,N);
-	//if (PRINT_MATRIX) print_M(M,total_elements);
+	if (PRINT_MATRIX) print_M(M,total_elements);
 	if (PRINT_LAST_ELEMENT) print_last_element(M,total_elements);
 	
 	// Write the execution times to a file
