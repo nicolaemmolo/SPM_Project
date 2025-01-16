@@ -31,6 +31,7 @@
 	#define PRINT_LAST_ELEMENT 1
 #endif
 
+
 #define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2	// Default number of threads
 #define DEFAULT_MODE "s" 	// Default execution mode
@@ -62,7 +63,6 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
 
 }
 
-
 /* Print matrix
  * @param M: matrix
  * @param N: size of the matrix
@@ -81,7 +81,7 @@ void print_matrix(const std::vector<double> &M, uint64_t N) {
     }
 }
 
-/* Print M
+/* Print M as a 1D array
  * @param M: matrix
  * @param total_elements: total number of elements in the upper triangular matrix
  */
@@ -186,6 +186,8 @@ void wavefront_parallel_dynamic(std::vector<double> &M, const uint64_t &N, const
 }
 
 
+/* ---------------------- Main function ---------------------- */
+
 
 /* Main function
  * @param argc: number of arguments
@@ -233,7 +235,6 @@ int main(int argc, char *argv[]) {
 				M[i] = static_cast<double>(i+1) / static_cast<double>(N);
 			}
 	};
-
 
 	init();
 

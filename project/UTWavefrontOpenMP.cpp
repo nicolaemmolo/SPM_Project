@@ -14,6 +14,7 @@
 #include <iomanip>
 #include <omp.h>
 #include <hpc_helpers.hpp>
+#include <random>
 
 
 #ifndef PRINT_MESSAGE
@@ -24,55 +25,82 @@
 	#define PRINT_MATRIX 0
 #endif
 
+#ifndef PRINT_LAST_ELEMENT
+	#define PRINT_LAST_ELEMENT 1
+#endif
+
 
 #define DEFAULT_DIM 3 		// Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2	// Default number of threads
 #define DEFAULT_MODE "ps" 	// Default execution mode
 #define DEFAULT_LOG_FILE "wavefront_results.csv"	// Default log file name
 
+// Macro to calculate the index of the trinagular matrix element (element, diagonal, size)
+#define INDEX(i,k,N) ((k)==0 ? (i) : ((N)*k - ((k)*(k-1))/2 + (i)))
 
-/* Calculate dot product of two vectors
- * @param v1: first vector
- * @param v2: second vector
- * @return: dot product of the two vectors
- */
-double dot_product(const std::vector<double>& v1, const std::vector<double>& v2) {
-    return std::inner_product(v1.begin(), v1.end(), v2.begin(), 0.0);
-}
 
-/* Calculate and update a matrix element using the dot product of two vectors
+// ---------------------- General functions ---------------------- //
+
+
+/* Calculate and update a matrix element using the dot product
  * @param M: matrix
  * @param N: size of the matrix
- * @param m: row index
- * @param k: column index
+ * @param i: element of the diagonal
+ * @param k: diagonal index
  */
-void compute_diagonal_element(std::vector<std::vector<double>> &M, const uint64_t &N, const uint64_t &m, const uint64_t &k) {
-    std::vector<double> row_vector(k);
-    std::vector<double> col_vector(k);
-    
-    // Fill vectors with the corresponding elements from row m and column m+k
-    for (uint64_t i=0; i<k; ++i) {
-        row_vector[i] = M[m][m+i];
-        col_vector[i] = M[m+i+1][m+k];
+void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const uint64_t &i, const uint64_t &k) {
+    double result = 0.0;
+
+	// Calculate the dot product
+    for (uint64_t j = 0; j < k; ++j) {
+        result += M[INDEX(i, j, N)] * M[INDEX(k+i-j, j, N)];
+
     }
-    
-    // Compute the dot product
-    M[m][m+k] = dot_product(row_vector, col_vector);
+
+    M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
+
 }
 
 /* Print matrix
  * @param M: matrix
  * @param N: size of the matrix
  */
-void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
+void print_matrix(const std::vector<double> &M, uint64_t N) {
     std::cout << std::fixed << std::setprecision(2);
-    for (uint64_t i=0; i<N; ++i) {
-        for (uint64_t j=0; j<N; ++j) {
-            std::cout << M[i][j] << " ";
-        }
+
+    for(uint64_t i = 0; i < N; ++i) {
+		for (uint64_t j = 0; j < i; ++j) {
+			std::cout << 0.00 << " ";  // Lower triangular part
+		}
+        for(uint64_t k = 0; k < N-i; ++k) {
+            std::cout << M[INDEX(i,k,N)] << " ";  // Upper triangular part
+		}
         std::cout << std::endl;
     }
 }
+
+/* Print M as a 1D array
+ * @param M: matrix
+ * @param total_elements: total number of elements in the upper triangular matrix
+ */
+void print_M(const std::vector<double> &M, uint64_t total_elements) {
+	for (uint64_t i = 0; i < total_elements; ++i) {
+		std::cout << M[i] << " ";
+	}
+	std::cout << std::endl;
+}
+
+/*
+ * Print last element of the matrix (last diagonal element)
+ * @param M: matrix
+ * @param total_elements: total number of elements in the upper triangular matrix
+ */
+void print_last_element(const std::vector<double> &M, uint64_t total_elements) {
+	std::cout << M[total_elements-1] << std::endl;
+}
+
+
+// ---------------------- Wavefront ---------------------- //
 
 
 /* Wavefront (parallel version with static scheduling using OpenMP)
@@ -80,11 +108,11 @@ void print_matrix(const std::vector<std::vector<double>> &M, uint64_t N) {
  * @param N: size of the matrix
  * @param T: number of threads
  */
-void wavefront_parallel_static_omp(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
-    #pragma omp parallel for num_threads(T) schedule(static)
+void wavefront_parallel_static_omp(std::vector<double> &M, const uint64_t &N, const uint32_t &T) {
     for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
-        for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
-            compute_diagonal_element(M, N, m, k);
+        #pragma omp parallel for num_threads(T) schedule(static)
+        for (uint64_t i=0; i<(N-k); ++i) { // For each element in the diagonal
+            compute_diagonal_element(M, N, i, k);
         }
     }
 }
@@ -95,14 +123,17 @@ void wavefront_parallel_static_omp(std::vector<std::vector<double>> &M, const ui
  * @param N: size of the matrix
  * @param T: number of threads
  */
-void wavefront_parallel_dynamic_omp(std::vector<std::vector<double>> &M, const uint64_t &N, const uint32_t &T) {
-    #pragma omp parallel for num_threads(T) schedule(dynamic)
+void wavefront_parallel_dynamic_omp(std::vector<double> &M, const uint64_t &N, const uint32_t &T) {
     for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
-        for (uint64_t m=0; m<(N-k); ++m) { // For each element in the diagonal
-            compute_diagonal_element(M, N, m, k);
+        #pragma omp parallel for num_threads(T) schedule(dynamic)
+        for (uint64_t i=0; i<(N-k); ++i) { // For each element in the diagonal
+            compute_diagonal_element(M, N, i, k);
         }
     }
 }
+
+
+/* ---------------------- Main function ---------------------- */
 
 
 /* Main function
@@ -140,15 +171,17 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Allocate the matrix
-    std::vector<std::vector<double>> M(N, std::vector<double>(N, 0.0));
 
-    // Init function
-    auto init=[&]() {
-        for (uint64_t m=0; m<N; ++m) {
-            M[m][m] = static_cast<double>(m+1) / static_cast<double>(N);
-        }
-    };
+    // Allocate the matrix as a 1D array
+    uint64_t total_elements = (N*(N+1))/2; // Total number of elements in the upper triangular matrix
+    std::vector<double> M(total_elements, 0.0);
+
+    // Init function (initialize the diagonal elements)
+	auto init=[&]() {
+		for (uint64_t i = 0; i < N; ++i) {
+				M[i] = static_cast<double>(i+1) / static_cast<double>(N);
+			}
+	};
     
     init();
 
@@ -171,7 +204,8 @@ int main(int argc, char *argv[]) {
 	}
 
 	if (PRINT_MATRIX) print_matrix(M,N);
-
+    if (PRINT_MATRIX) print_M(M,total_elements);
+	if (PRINT_LAST_ELEMENT) print_last_element(M,total_elements);
 
     // Write the execution times to a file
     std::ofstream file;
