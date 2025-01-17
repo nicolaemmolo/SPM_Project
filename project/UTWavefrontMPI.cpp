@@ -110,20 +110,6 @@ void wavefront_parallel_mpi(std::vector<double> &M, const uint64_t &N) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     
-    for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
-        for (uint64_t i=0; i<(N-k); ++i) { // For each element in the diagonal
-            if (i % size == rank) { // Assign work based on rank
-                compute_diagonal_element(M, N, i, k);
-            }
-        }
-        MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes
-    }
-}
-void wavefront_parallel_mpi(std::vector<double> &M, const uint64_t &N) {
-    int rank, size;
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-    
     for (uint64_t k = 1; k < N; ++k) { // For each upper diagonal
         for (uint64_t i = 0; i < (N-k); ++i) { // For each element in the diagonal
             if (i % size == rank) { // Assign work based on rank

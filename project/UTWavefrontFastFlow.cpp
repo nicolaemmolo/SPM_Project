@@ -11,12 +11,16 @@
 #include <vector>
 #include <ff/ff.hpp>
 #include <ff/parallel_for.hpp>
+#include <ff/farm.hpp>
 #include <fstream>
 #include <numeric>
 #include <iomanip>
 #include <hpc_helpers.hpp>
 #include <random>
-
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
 
 using namespace ff;
 
@@ -25,7 +29,7 @@ using namespace ff;
 #endif
 
 #ifndef PRINT_MATRIX
-	#define PRINT_MATRIX 0
+	#define PRINT_MATRIX 1
 #endif
 
 #ifndef PRINT_LAST_ELEMENT
@@ -61,7 +65,6 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
     }
 
     M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
-
 }
 
 /* Print matrix
@@ -105,72 +108,62 @@ void print_last_element(const std::vector<double> &M, uint64_t total_elements) {
 
 // ---------------------- Wavefront ---------------------- //
 
-/*
- * Class for the Wavefront computation using FastFlow
- */
-class WavefrontFastFlow {
-    // Emitter node: emits the diagonal index
-    struct Emitter : ff_node_t<int> {
-        uint64_t N;
-        uint64_t current_diag;
 
-        Emitter(uint64_t N) : N(N), current_diag(1) {}
+struct ComputeNode : public ff::ff_node<void> {
+    ComputeNode(std::vector<double> &M, const uint64_t N, uint64_t i, uint64_t k)
+        : M(M), N(N), i(i), k(k) {}
 
-        int* svc(int*) {
-            if (current_diag >= N) return EOS; // Fine del lavoro
-            auto diag = new int(current_diag); // Invio il numero della diagonale
-            ++current_diag;
-            return diag;
-        }
-    };
-
-    // Worker node: computes the elements of the diagonal
-    struct Worker : ff_node_t<int, std::pair<int, std::vector<double>>> {
-        uint64_t N;
-        std::vector<double>& M;
-
-        Worker(uint64_t N, std::vector<double>& M) : N(N), M(M) {}
-
-        std::pair<int, std::vector<double>>* svc(int* diag_ptr) {
-            int diag = *diag_ptr;
-            delete diag_ptr;
-
-            uint64_t start = 0;
-            uint64_t end = N - diag;
-            std::vector<double> results(end - start);
-
-            // Calcolo degli elementi della diagonale
-            for (uint64_t i = start; i < end; ++i) {
-                double result = 0.0;
-                for (uint64_t j = 0; j < diag; ++j) {
-                    result += M[INDEX(i, j, N)] * M[INDEX(diag + i - j, j, N)];
-                }
-                results[i - start] = std::cbrt(result); // Calcolo del risultato
-            }
-            return new std::pair<int, std::vector<double>>(diag, results);
-        }
-    };
-
-    // Collector node: collects the results and updates the matrix
-    struct Collector : ff_node_t<std::pair<int, std::vector<double>>> {
-        uint64_t N;
-        std::vector<double>& M;
-
-        Collector(uint64_t N, std::vector<double>& M) : N(N), M(M) {}
-
-        int* svc(std::pair<int, std::vector<double>>* result) {
-            int diag = result->first;
-            const std::vector<double>& values = result->second;
-
-            for (size_t i = 0; i < values.size(); ++i) {
-                M[INDEX(i, diag, N)] = values[i];
-            }
-
-            delete result;
+    // Implementazione del metodo virtuale puro
+    void* svc(void* task) override {
+        if (!task) {
+            std::cerr << "Task nullo ricevuto\n";
             return GO_ON;
         }
-    };
+
+        compute_diagonal_element(M, N, i, k);  // Funzione che calcola l'elemento diagonale
+        return GO_ON;
+    }
+
+private:
+    std::vector<double> &M;
+    const uint64_t N;
+    uint64_t i, k;
 };
+
+
+// Funzione principale
+void wavefront_farm(std::vector<double> &M, const uint64_t &N, const uint64_t &T) {
+    // Invia i task ai Worker
+    for (uint64_t k = 1; k < N; ++k) {        
+        for (uint64_t i = 0; i < N-k; ++i) {
+            std::vector<std::unique_ptr<ff_node>> workers;
+
+            T = std::min(T, N-k);
+            for (uint32_t t = 0; t < T; ++t) {
+                workers.push_back(std::make_unique<ComputeNode>(M, N, i, k));
+            }
+
+            ff_Farm<> farm(std::move(workers));
+
+            if (farm.run() < 0) {
+                std::cerr << "Errore nell'avvio della Farm\n";
+                return;
+            } 
+
+            // Creazione del task con semplice int, se possibile
+            uint64_t* task = new uint64_t[2]{i, k};
+            if (!farm.offload(task)) {
+                std::cerr << "Errore nell'offload del task\n";
+                delete[] task; // Libera la memoria in caso di errore
+            }
+
+            if (farm.wait() < 0) {
+                std::cerr << "Errore nell'attesa dei Worker\n";
+            }
+        }
+    }
+}
+
 
 
 /* Wavefront (parallel version with static scheduling using FastFlow)
@@ -185,24 +178,6 @@ void wavefront_parallel_static_ff(std::vector<double> &M, const uint64_t &N, con
         pf.parallel_for(0, N-k, 1, 0, [&](const long i) {
             compute_diagonal_element(M, N, i, k);
         });
-    }
-    Emitter emitter(N);
-    Worker worker(N, M);
-    Collector collector(N, M);
-
-    ff_Farm<> farm;
-    farm.add_emitter(emitter);
-    farm.add_workers([&]() {
-        std::vector<ff_node*> workers;
-        for (uint32_t i = 0; i < T; ++i) {
-            workers.push_back(new Worker(N, M));
-        }
-        return workers;
-    }());
-    farm.add_collector(collector);
-
-    if (farm.run_and_wait_end() < 0) {
-        std::cerr << "error during the execution (static)" << std::endl;
     }
 }
 
@@ -230,7 +205,7 @@ void wavefront_parallel_dynamic_ff(std::vector<double> &M, const uint64_t &N, co
  */
 int main(int argc, char *argv[]) {
     uint64_t N                = DEFAULT_DIM;
-    uint32_t T                = DEFAULT_NTHREADS;
+    uint64_t T                = DEFAULT_NTHREADS;
     std::string mode          = DEFAULT_MODE;
     std::string log_file_name = DEFAULT_LOG_FILE;
 
@@ -273,6 +248,14 @@ int main(int argc, char *argv[]) {
     init();
 
     double execution_time=-1;
+
+    // Parallel farm
+    if (mode == "f") {
+        if (PRINT_MESSAGE) std::printf("------ Farm Execution ------\n");
+        TIMERSTART(wavefront_farm);
+        wavefront_farm(M, N, T);
+        TIMERSTOP(wavefront_farm, execution_time);
+    }
 
     // Parallel static
 	if (mode == "ps") {
