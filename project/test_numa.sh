@@ -29,11 +29,23 @@ par_static_execution() {
 
 # Testing Parallel Dynamic Execution
 par_dynamic_execution() {
-    for T in $(seq 2 $THREADS_STEP $MAX_THREADS); do
+    for T in 1 $(seq 2 $THREADS_STEP $MAX_THREADS); do
         for N in 128 256 512 1024 2048 4096; do
             echo "N=$N T=$T pd results_UTW_dynamic.csv"
             for rep in $(seq 1 $REPETITIONS); do
                 ./UTW $N $T pd results_UTW_dynamic.csv
+            done
+        done
+    done
+}
+
+# Testing FastFlow Parallel Farm Execution
+farm_fastflow_execution() {
+    for T in $(seq 2 $THREADS_STEP $MAX_THREADS); do
+        for N in 128 256 512 1024 2048 4096; do
+            echo "N=$N T=$T f results_UTWFF_farm.csv"
+            for rep in $(seq 1 $REPETITIONS); do
+                ./UTWFF $N $T f results_UTWFF_farm.csv
             done
         done
     done
@@ -89,11 +101,12 @@ par_dynamic_openmp_execution() {
 
 
 # C++ Thread Execution
-seq_execution
+#seq_execution
 #par_static_execution
 #par_dynamic_execution
 
 # FastFlow Execution
+farm_fastflow_execution
 #par_static_fastflow_execution
 #par_dynamic_fastflow_execution
 

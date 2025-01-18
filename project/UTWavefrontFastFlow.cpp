@@ -21,6 +21,8 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <barrier>
+
 
 using namespace ff;
 
@@ -29,7 +31,7 @@ using namespace ff;
 #endif
 
 #ifndef PRINT_MATRIX
-	#define PRINT_MATRIX 1
+	#define PRINT_MATRIX 0
 #endif
 
 #ifndef PRINT_LAST_ELEMENT
@@ -39,7 +41,7 @@ using namespace ff;
 
 #define DEFAULT_DIM 3       // Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2  // Default number of threads
-#define DEFAULT_MODE "ps"   // Default execution mode
+#define DEFAULT_MODE "f"   // Default execution mode
 #define DEFAULT_LOG_FILE "wavefront_results.csv"    // Default log file name
 
 // Macro to calculate the index of the trinagular matrix element (element, diagonal, size)
@@ -109,61 +111,95 @@ void print_last_element(const std::vector<double> &M, uint64_t total_elements) {
 // ---------------------- Wavefront ---------------------- //
 
 
-struct ComputeNode : public ff::ff_node<void> {
-    ComputeNode(std::vector<double> &M, const uint64_t N, uint64_t i, uint64_t k)
-        : M(M), N(N), i(i), k(k) {}
+// Define a struct to represent a task that each worker will execute
+struct Task {
+    uint64_t start, end, N, T, rank;
+    std::vector<double>* M;
+};
 
-    // Implementazione del metodo virtuale puro
-    void* svc(void* task) override {
-        if (!task) {
-            std::cerr << "Task nullo ricevuto\n";
-            return GO_ON;
+// Define a worker class that inherits from ff_node_t and processes tasks
+struct Worker : ff_node_t<Task> {
+    Worker(std::barrier<> &barrier) : barrier(barrier) {}
+
+    Task* svc(Task* task) {
+        auto& M = *task->M; // Matrix on which computation takes
+        auto N = task->N; // Size of the matrix
+        auto T = task->T; // Number of threads
+        auto start = task->start; // Start index of the diagonal
+        auto end = task->end; // End index of the diagonal
+
+        // Process each upper diagonal
+        for (uint64_t k = 1; k < N; ++k) {
+            // Recompute variable for k-th diagonal
+            uint64_t chunk_size = (N-k) / T;
+            uint64_t remainder = (N-k) % T;
+
+            // Recompute the interval for each worker
+            start = task->rank * chunk_size + (task->rank < remainder ? task->rank : remainder);
+            end = (task->rank + 1) * chunk_size + (task->rank < remainder ? (task->rank + 1) : remainder);
+
+            // Process elements in the k-th diagonal assigned to this worker
+            for (uint64_t i = start; i < end; ++i) {
+                compute_diagonal_element(M, N, i, k);
+            }
+            barrier.arrive_and_wait(); // Synchronize after processing each diagonal
         }
-
-        compute_diagonal_element(M, N, i, k);  // Funzione che calcola l'elemento diagonale
+        delete task; // Clean up task after processing
         return GO_ON;
     }
 
-private:
-    std::vector<double> &M;
-    const uint64_t N;
-    uint64_t i, k;
+    std::barrier<> &barrier;
 };
 
+// Define an emitter class that inherits from ff_monode_t and generates tasks
+struct Emitter : ff_monode_t<Task> {
+    Emitter(const std::vector<Task>& tasks) : tasks(tasks), task_index(0) {}
 
-// Funzione principale
+    Task* svc(Task*) {
+        if (task_index >= tasks.size())
+            return EOS;
+        return new Task(tasks[task_index++]);
+    }
+
+    std::vector<Task> tasks;
+    size_t task_index;
+};
+
+// Function to perform wavefront computation on matrix M of size N with num_workers
 void wavefront_farm(std::vector<double> &M, const uint64_t &N, const uint64_t &T) {
-    // Invia i task ai Worker
-    for (uint64_t k = 1; k < N; ++k) {        
-        for (uint64_t i = 0; i < N-k; ++i) {
-            std::vector<std::unique_ptr<ff_node>> workers;
+    std::vector<Task> tasks;
 
-            T = std::min(T, N-k);
-            for (uint32_t t = 0; t < T; ++t) {
-                workers.push_back(std::make_unique<ComputeNode>(M, N, i, k));
-            }
+    std::barrier barrier(T);
 
-            ff_Farm<> farm(std::move(workers));
+    // Compute interval values for the first upper diagonal
+    uint64_t chunk_size = (N-1) / T; // Compute chunk size
+    uint64_t remainder = (N-1) % T; // If N-1 is not divisible by T then there will be a remainder
+    uint64_t start = 0;
 
-            if (farm.run() < 0) {
-                std::cerr << "Errore nell'avvio della Farm\n";
-                return;
-            } 
+    // Create as many tasks as workers to use
+    for (uint64_t t = 0; t < T; ++t) {
+        uint64_t end = start + chunk_size + (t < remainder ? 1 : 0);
+        tasks.push_back(Task{start, end, N, T, t, &M});
+        start = end;
+    }
 
-            // Creazione del task con semplice int, se possibile
-            uint64_t* task = new uint64_t[2]{i, k};
-            if (!farm.offload(task)) {
-                std::cerr << "Errore nell'offload del task\n";
-                delete[] task; // Libera la memoria in caso di errore
-            }
+    // Pass tasks to emitter
+    Emitter emitter(tasks);
+    std::vector<std::unique_ptr<ff_node>> workers;
+    for (uint64_t i = 0; i < T; ++i) {
+        workers.push_back(make_unique<Worker>(barrier));
+    }
 
-            if (farm.wait() < 0) {
-                std::cerr << "Errore nell'attesa dei Worker\n";
-            }
-        }
+    // Create Farm
+    ff_Farm<Task> farm(std::move(workers), emitter);
+    farm.remove_collector();    // Remove collector as we don't need to collect results
+    farm.set_scheduling_ondemand(); // Set scheduling policy
+
+    // Run Farm
+    if (farm.run_and_wait_end() < 0) {
+        error("running farm");
     }
 }
-
 
 
 /* Wavefront (parallel version with static scheduling using FastFlow)
@@ -280,7 +316,7 @@ int main(int argc, char *argv[]) {
     // Write the execution times to a file
     std::ofstream file;
     file.open(log_file_name, std::ios_base::app);
-    file << N << "," << T << "," << mode << "," << execution_time << "\n";
+    file << N << "," << T << "," << mode << "," << execution_time << print_last_element(M,total_elements) << "\n";
     file.close();
 
     return 0;
