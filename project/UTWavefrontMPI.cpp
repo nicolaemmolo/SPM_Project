@@ -52,7 +52,6 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
 	// Calculate the dot product
     for (uint64_t j = 0; j < k; ++j) {
         result += M[INDEX(i, j, N)] * M[INDEX(k+i-j, j, N)];
-
     }
 
     M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
@@ -105,22 +104,44 @@ void print_last_element(const std::vector<double> &M, uint64_t total_elements) {
  * @param M: matrix
  * @param N: size of the matrix
  */
-void wavefront_parallel_mpi(std::vector<double> &M, const uint64_t &N) {
-    int rank, size;
-    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-    
-    for (uint64_t k = 1; k < N; ++k) { // For each upper diagonal
-        for (uint64_t i = 0; i < (N-k); ++i) { // For each element in the diagonal
-            if (i % size == rank) { // Assign work based on rank
-                compute_diagonal_element(M, N, i, k);
-            }
+void wavefront_parallel_mpi(std::vector<double> &M, const uint64_t &N, const int rank, const int size) {
+    for(int k = 1; k < N; ++k) {    // for each upper diagonal
+        std::vector<int> counts(size);
+        std::vector<int> displs(size);
+     
+        // Compute chunk_size and remainder given the k-th diagonal
+        int chunk_size = (N-k) / size;
+        int remainder = (N-k) % size;
+        // Recompute the interval for each worker
+        for (int i = 0; i < size; ++i){
+            auto start = i * chunk_size + (i < remainder ? i : remainder);
+            auto end = (i + 1) * chunk_size + (i < remainder ? (i + 1) : remainder);
+            // Compute offsets and displacements
+            counts[i] = end - start;
+            displs[i] = start;
         }
-        
-        // Synchronize calculations using AllGather
-        MPI_Allgather(MPI_IN_PLACE, 0, MPI_DATATYPE_NULL, M.data() + INDEX(0, k, N), (N-k), MPI_DOUBLE, MPI_COMM_WORLD);
+
+        std::vector<double> buffer; // Buffer to hold the computed results
+        std::vector<double> collect((N-k)); // Vector to collect all results from all processes
+
+        // Process elements in the k-th diagonal, subdivided between workers
+        for (int i = displs[rank]; i < (displs[rank] + counts[rank]); ++i) {
+            compute_diagonal_element(M, N, i, k);
+            buffer.push_back(M[INDEX(i, k, N)]);
+        }
+
+        // Gather results from all processes
+        MPI_Allgatherv(buffer.data(), counts[rank], MPI_DOUBLE, collect.data(), counts.data(), displs.data(), MPI_DOUBLE, MPI_COMM_WORLD);
+   
+        // Update diagonal elements
+        for(int i = 0; i < (N-k); ++i){
+            if (i >= displs[rank] && i < (displs[rank] + counts[rank]))
+                continue;
+            M[INDEX(i, k, N)] = collect[i];
+        }
     }
 }
+
 
 
 
@@ -141,8 +162,9 @@ int main(int argc, char *argv[]) {
     // Initialize MPI
     MPI_Init(&argc, &argv);
 
-    int rank;
+    int rank, size;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
     
     // Verify the correct number of args
     if (argc != 1 && argc != 2 && argc != 3 && argc != 4) {
@@ -192,7 +214,7 @@ int main(int argc, char *argv[]) {
     if (rank == 0 && PRINT_MESSAGE) std::printf("------ Parallel MPI Execution ------\n");
     MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes before timing
     double start_time = MPI_Wtime();
-    wavefront_parallel_mpi(M, N);
+    wavefront_parallel_mpi(M, N, rank, size);
     double end_time = MPI_Wtime();
     execution_time = end_time - start_time;
 

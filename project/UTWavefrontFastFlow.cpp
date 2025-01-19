@@ -316,7 +316,7 @@ int main(int argc, char *argv[]) {
     // Write the execution times to a file
     std::ofstream file;
     file.open(log_file_name, std::ios_base::app);
-    file << N << "," << T << "," << mode << "," << execution_time << print_last_element(M,total_elements) << "\n";
+    file << N << "," << T << "," << mode << "," << execution_time << "\n";
     file.close();
 
     return 0;
