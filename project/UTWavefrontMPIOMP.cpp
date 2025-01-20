@@ -185,9 +185,9 @@ int main(int argc, char *argv[]) {
 
     
     // Verify the correct number of args
-    if (argc != 1 && argc != 2 && argc != 3 && argc != 4) {
+    if (argc != 1 && argc != 2 && argc != 3 && argc != 4 && argc != 5) {
         if (rank == 0) {
-            std::printf("use: %s [N] [log_file_name] [nodes]\n", argv[0]);
+            std::printf("use: %s [N] [log_file_name] [nodes] [T]\n", argv[0]);
             std::printf("     N    : size of the square matrix\n");
             std::printf("     log_file_name : name of the log file\n");
             std::printf("     nodes: number of nodes\n");
