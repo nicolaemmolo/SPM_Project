@@ -56,11 +56,9 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
 	// Calculate the dot product
     for (uint64_t j = 0; j < k; ++j) {
         result += M[INDEX(i, j, N)] * M[INDEX(k+i-j, j, N)];
-
     }
 
     M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
-
 }
 
 /* Print matrix
@@ -126,6 +124,7 @@ void wavefront_sequential(std::vector<double> &M, const uint64_t &N) {
 void wavefront_parallel_static(std::vector<double> &M, const uint64_t &N, const uint64_t &T) {
     std::barrier barrier(T);
 
+    // Task function
     auto task = [&] (const uint64_t id) -> void {
         for (uint64_t k = 1; k < N; ++k) { // For each upper diagonal
             if (id >= N-k) { // If the thread is not needed
@@ -139,11 +138,13 @@ void wavefront_parallel_static(std::vector<double> &M, const uint64_t &N, const 
         }
     };
 
+    // Create threads
     std::vector<std::thread> threads;
     for (uint64_t id = 0; id < T; ++id) {
         threads.emplace_back(task, id);
     }
 
+    // Join threads
     for (auto &thread : threads) {
         thread.join();
     }
@@ -158,19 +159,20 @@ void wavefront_parallel_static(std::vector<double> &M, const uint64_t &N, const 
 void wavefront_parallel_dynamic(std::vector<double> &M, const uint64_t &N, const uint64_t &T) {
     std::barrier bar(T);
 
-    auto task = [&](uint64_t index, bool block) {
-        uint64_t i = index / N;          // Row index
-        uint64_t k = index % N - i;      // Diagonal offset
+    // Task function
+    auto task = [&](uint64_t i, uint64_t k, bool block) {
         compute_diagonal_element(M, N, i, k);
         if (block) { // If the thread should wait
             bar.arrive_and_wait();
         }
     };
 
+    // Wait function
     auto wait = [&] () {
         bar.arrive_and_wait();
     };
 
+    // Create thread pool
     ThreadPool TP(T);
     for (uint64_t k = 1; k < N; ++k) { // For each upper diagonal
         if ((N-k) < T) { // If the diagonal is smaller than the number of threads
@@ -180,7 +182,7 @@ void wavefront_parallel_dynamic(std::vector<double> &M, const uint64_t &N, const
         }
         for (uint64_t i = 0; i < (N-k); ++i) { // For each element in the diagonal
             bool block = (i >= (N-k-T) || (N-k) < T) ? true : false;
-            TP.enqueue(task, i*N+(i+k), block);
+            TP.enqueue(task, i, k, block); // Enqueue the task
         }
     }
 }

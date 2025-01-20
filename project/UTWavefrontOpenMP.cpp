@@ -54,11 +54,9 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
 	// Calculate the dot product
     for (uint64_t j = 0; j < k; ++j) {
         result += M[INDEX(i, j, N)] * M[INDEX(k+i-j, j, N)];
-
     }
 
     M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
-
 }
 
 /* Print matrix

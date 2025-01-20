@@ -55,7 +55,6 @@ void compute_diagonal_element(std::vector<double> &M, const uint64_t &N, const u
     }
 
     M[INDEX(i, k, N)] = std::cbrt(result); // Update the element i for the diagonal k
-
 }
 
 /* Print matrix
@@ -141,9 +140,6 @@ void wavefront_parallel_mpi(std::vector<double> &M, const uint64_t &N, const int
         }
     }
 }
-
-
-
 
 
 /* ---------------------- Main function ---------------------- */

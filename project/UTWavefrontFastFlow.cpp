@@ -111,22 +111,23 @@ void print_last_element(const std::vector<double> &M, uint64_t total_elements) {
 // ---------------------- Wavefront ---------------------- //
 
 
-// Define a struct to represent a task that each worker will execute
+/* Task struct */
 struct Task {
     uint64_t start, end, N, T, rank;
     std::vector<double>* M;
 };
 
-// Define a worker class that inherits from ff_node_t and processes tasks
+/* Worker class (inherits from ff_node_t)) */
 struct Worker : ff_node_t<Task> {
     Worker(std::barrier<> &barrier) : barrier(barrier) {}
 
     Task* svc(Task* task) {
-        auto& M = *task->M; // Matrix on which computation takes
-        auto N = task->N; // Size of the matrix
-        auto T = task->T; // Number of threads
-        auto start = task->start; // Start index of the diagonal
-        auto end = task->end; // End index of the diagonal
+        auto& M = *task->M;         // Matrix on which computation takes
+        auto N = task->N;           // Size of the matrix
+        auto T = task->T;           // Number of threads
+        auto start = task->start;   // Start index of the diagonal
+        auto end = task->end;       // End index of the diagonal
+        auto rank = task->rank;     // Rank of the worker
 
         // Process each upper diagonal
         for (uint64_t k = 1; k < N; ++k) {
@@ -135,8 +136,8 @@ struct Worker : ff_node_t<Task> {
             uint64_t remainder = (N-k) % T;
 
             // Recompute the interval for each worker
-            start = task->rank * chunk_size + (task->rank < remainder ? task->rank : remainder);
-            end = (task->rank + 1) * chunk_size + (task->rank < remainder ? (task->rank + 1) : remainder);
+            start = rank * chunk_size + (rank < remainder ? rank : remainder);
+            end = (rank+1) * chunk_size + (rank < remainder ? (rank+1) : remainder);
 
             // Process elements in the k-th diagonal assigned to this worker
             for (uint64_t i = start; i < end; ++i) {
@@ -151,48 +152,49 @@ struct Worker : ff_node_t<Task> {
     std::barrier<> &barrier;
 };
 
-// Define an emitter class that inherits from ff_monode_t and generates tasks
+/* Emitter class (inherits from ff_monode_t) */
 struct Emitter : ff_monode_t<Task> {
-    Emitter(const std::vector<Task>& tasks) : tasks(tasks), task_index(0) {}
+    Emitter(const std::vector<Task>& tasks) : tasks(tasks), task_index(0) {} // Initialize tasks and task index
 
+    // Service function
     Task* svc(Task*) {
         if (task_index >= tasks.size())
             return EOS;
         return new Task(tasks[task_index++]);
     }
 
-    std::vector<Task> tasks;
-    size_t task_index;
+    std::vector<Task> tasks; // Vector of tasks
+    size_t task_index; // Index of the current task
 };
 
 // Function to perform wavefront computation on matrix M of size N with num_workers
 void wavefront_farm(std::vector<double> &M, const uint64_t &N, const uint64_t &T) {
-    std::vector<Task> tasks;
+    std::vector<Task> tasks; // Vector of tasks
 
-    std::barrier barrier(T);
+    std::barrier barrier(T); // Barrier to synchronize workers
 
-    // Compute interval values for the first upper diagonal
-    uint64_t chunk_size = (N-1) / T; // Compute chunk size
+    // Compute values for the first upper diagonal
+    uint64_t chunk_size = (N-1) / T; 
     uint64_t remainder = (N-1) % T; // If N-1 is not divisible by T then there will be a remainder
-    uint64_t start = 0;
+    uint64_t start = 0; // Starto from the first element
 
-    // Create as many tasks as workers to use
+    // Create tasks
     for (uint64_t t = 0; t < T; ++t) {
-        uint64_t end = start + chunk_size + (t < remainder ? 1 : 0);
-        tasks.push_back(Task{start, end, N, T, t, &M});
+        uint64_t end = start + chunk_size + (t < remainder ? 1 : 0); // Compute the end index for the diagonal
+        tasks.push_back(Task{start, end, N, T, t, &M}); // Create a task for the diagonal
         start = end;
     }
 
-    // Pass tasks to emitter
-    Emitter emitter(tasks);
-    std::vector<std::unique_ptr<ff_node>> workers;
+    // Create emitter and workers
+    Emitter emitter(tasks); // Create emitter and pass tasks
+    std::vector<std::unique_ptr<ff_node>> workers; // Vector of workers
     for (uint64_t i = 0; i < T; ++i) {
         workers.push_back(make_unique<Worker>(barrier));
     }
 
     // Create Farm
-    ff_Farm<Task> farm(std::move(workers), emitter);
-    farm.remove_collector();    // Remove collector as we don't need to collect results
+    ff_Farm<Task> farm(std::move(workers), emitter); // Create farm with workers and emitter
+    farm.remove_collector(); // Remove collector
     farm.set_scheduling_ondemand(); // Set scheduling policy
 
     // Run Farm
@@ -211,7 +213,7 @@ void wavefront_parallel_static_ff(std::vector<double> &M, const uint64_t &N, con
     ParallelFor pf(T);
     
 	for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
-        pf.parallel_for(0, N-k, 1, 0, [&](const long i) {
+        pf.parallel_for(0, N-k, 1, 0, [&](const long i) { // Static scheduling
             compute_diagonal_element(M, N, i, k);
         });
     }
@@ -227,7 +229,7 @@ void wavefront_parallel_dynamic_ff(std::vector<double> &M, const uint64_t &N, co
     ParallelFor pf(T);
     
 	for (uint64_t k=1; k<N; ++k) { // For each upper diagonal
-        pf.parallel_for(0, N-k, 1, 1, [&](const long i) {
+        pf.parallel_for(0, N-k, 1, 1, [&](const long i) { // Dynamic scheduling
             compute_diagonal_element(M, N, i, k);
         });
     }
