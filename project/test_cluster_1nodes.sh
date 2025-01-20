@@ -8,7 +8,8 @@
 
 # Test parameters
 REPETITIONS=10
-
+THREADS_STEP=2
+MAX_THREADS=40
 
 mpi_execution() {
     for N in 128 256 512 1024 2048 4096; do
@@ -18,6 +19,17 @@ mpi_execution() {
     done
 }
 
+mpi_omp_execution() {
+    for T in 1 2 4 8 16 32; do
+        for N in 128 256 512 1024 2048 4096; do
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun ./UTWMPI $N results_UTWMPIOMP_1.csv 1 $T
+            done
+        done
+    done
+}
+
 
 # MPI execution
 mpi_execution
+mpi_omp_execution
