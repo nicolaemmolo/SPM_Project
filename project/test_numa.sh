@@ -112,4 +112,4 @@ par_dynamic_openmp_execution() {
 
 # OpenMP Execution
 #par_static_openmp_execution
-par_dynamic_openmp_execution
+#par_dynamic_openmp_execution
