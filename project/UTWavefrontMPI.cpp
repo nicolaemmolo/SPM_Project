@@ -207,7 +207,6 @@ int main(int argc, char *argv[]) {
     double execution_time = -1;
 
     // Parallel MPI
-    if (rank == 0 && PRINT_MESSAGE) std::printf("------ Parallel MPI Execution ------\n");
     MPI_Barrier(MPI_COMM_WORLD); // Synchronize processes before timing
     double start_time = MPI_Wtime();
     wavefront_parallel_mpi(M, N, rank, size);
@@ -222,7 +221,7 @@ int main(int argc, char *argv[]) {
         // Write the execution times to a file
         std::ofstream file;
         file.open(log_file_name, std::ios_base::app);
-        file << N << "," << nodes <<"," << execution_time << "\n";
+        file << N << "," << nodes << "," << execution_time << "\n";
         file.close();
         std::printf("Execution time: %f\n", execution_time);
     }

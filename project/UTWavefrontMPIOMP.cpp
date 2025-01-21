@@ -250,7 +250,7 @@ int main(int argc, char *argv[]) {
         // Write the execution times to a file
         std::ofstream file;
         file.open(log_file_name, std::ios_base::app);
-        file << N << "," << nodes << T << "," << execution_time << "\n";
+        file << N << "," << nodes << "," << T << "," << execution_time << "\n";
         file.close();
         std::printf("Execution time: %f\n", execution_time);
     }
