@@ -103,7 +103,7 @@ par_dynamic_openmp_execution() {
 # C++ Thread Execution
 #seq_execution
 #par_static_execution
-par_dynamic_execution
+#par_dynamic_execution
 
 # FastFlow Execution
 #farm_fastflow_execution
@@ -112,4 +112,4 @@ par_dynamic_execution
 
 # OpenMP Execution
 #par_static_openmp_execution
-#par_dynamic_openmp_execution
+par_dynamic_openmp_execution
