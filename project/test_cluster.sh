@@ -14,7 +14,7 @@ REPETITIONS=10
 mpi_execution_1() {
     for N in 128 256 512 1024 2048 4096; do
         for rep in $(seq 1 $REPETITIONS); do
-            mpirun -n 1 ./UTWMPI $N results_UTWMPI_1.csv 1
+            mpirun ./UTWMPI $N results_UTWMPI_1.csv 1
         done
     done
 }
@@ -23,7 +23,7 @@ mpi_execution_1() {
 mpi_execution_2() {
     for N in 128 256 512 1024 2048 4096; do
         for rep in $(seq 1 $REPETITIONS); do
-            mpirun -n 2 ./UTWMPI $N results_UTWMPI_2.csv 2
+            mpirun ./UTWMPI $N results_UTWMPI_2.csv 2
         done
     done
 }
@@ -32,7 +32,7 @@ mpi_execution_2() {
 mpi_execution_4() {
     for N in 128 256 512 1024 2048 4096; do
         for rep in $(seq 1 $REPETITIONS); do
-            mpirun -n 4 ./UTWMPI $N results_UTWMPI_4.csv 4
+            mpirun ./UTWMPI $N results_UTWMPI_4.csv 4
         done
     done
 }
@@ -41,7 +41,7 @@ mpi_execution_4() {
 mpi_execution_6() {
     for N in 128 256 512 1024 2048 4096; do
         for rep in $(seq 1 $REPETITIONS); do
-            mpirun -n 6 ./UTWMPI $N results_UTWMPI_6.csv 6
+            mpirun ./UTWMPI $N results_UTWMPI_6.csv 6
         done
     done
 }
@@ -50,7 +50,7 @@ mpi_execution_6() {
 mpi_execution_8() {
     for N in 128 256 512 1024 2048 4096; do
         for rep in $(seq 1 $REPETITIONS); do
-            mpirun -n 8 ./UTWMPI $N results_UTWMPI_8.csv 8
+            mpirun ./UTWMPI $N results_UTWMPI_8.csv 8
         done
     done
 }
@@ -60,7 +60,7 @@ mpi_omp_execution_1_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 1 ./UTWMPIOMP $N results_UTWMPIOMP_1_static.csv 1 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_1_static.csv 1 $T
             done
         done
     done
@@ -71,7 +71,7 @@ mpi_omp_execution_2_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 2 ./UTWMPIOMP $N results_UTWMPIOMP_2_static.csv 2 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_2_static.csv 2 $T
             done
         done
     done
@@ -82,7 +82,7 @@ mpi_omp_execution_4_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 4 ./UTWMPIOMP $N results_UTWMPIOMP_4_static.csv 4 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_4_static.csv 4 $T
             done
         done
     done
@@ -93,7 +93,7 @@ mpi_omp_execution_6_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 6 ./UTWMPIOMP $N results_UTWMPIOMP_6_static.csv 6 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_6_static.csv 6 $T
             done
         done
     done
@@ -104,7 +104,7 @@ mpi_omp_execution_8_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 8 ./UTWMPIOMP $N results_UTWMPIOMP_8_static.csv 8 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_8_static.csv 8 $T
             done
         done
     done
@@ -115,7 +115,7 @@ mpi_omp_execution_1_dynamic() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 1 ./UTWMPIOMP $N results_UTWMPIOMP_1_dynamic.csv 1 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_1_dynamic.csv 1 $T
             done
         done
     done
@@ -126,7 +126,7 @@ mpi_omp_execution_2_dynamic() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 2 ./UTWMPIOMP $N results_UTWMPIOMP_2_dynamic.csv 2 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_2_dynamic.csv 2 $T
             done
         done
     done
@@ -137,7 +137,7 @@ mpi_omp_execution_4_dynamic() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 4 ./UTWMPIOMP $N results_UTWMPIOMP_4_dynamic.csv 4 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_4_dynamic.csv 4 $T
             done
         done
     done
@@ -148,7 +148,7 @@ mpi_omp_execution_6_dynamic() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 6 ./UTWMPIOMP $N results_UTWMPIOMP_6_dynamic.csv 6 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_6_dynamic.csv 6 $T
             done
         done
     done
@@ -159,7 +159,7 @@ mpi_omp_execution_8_dynamic() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 8 ./UTWMPIOMP $N results_UTWMPIOMP_8_dynamic.csv 8 $T
+                mpirun ./UTWMPIOMP $N results_UTWMPIOMP_8_dynamic.csv 8 $T
             done
         done
     done
@@ -174,7 +174,7 @@ mpi_omp_execution_8_dynamic() {
 #mpi_execution_8
 
 # MPI+OMP execution (static scheduling)
-mpi_omp_execution_1_static
+#mpi_omp_execution_1_static
 #mpi_omp_execution_2_static
 #mpi_omp_execution_4_static
 #mpi_omp_execution_6_static
