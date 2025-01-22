@@ -174,10 +174,10 @@ mpi_omp_execution_8_dynamic() {
 #mpi_execution_8
 
 # MPI+OMP execution (static scheduling)
-#mpi_omp_execution_1_static
+mpi_omp_execution_1_static
 #mpi_omp_execution_2_static
 #mpi_omp_execution_4_static
-mpi_omp_execution_6_static
+#mpi_omp_execution_6_static
 #mpi_omp_execution_8_static
 
 # MPI+OMP execution (dynamic scheduling)
