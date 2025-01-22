@@ -55,56 +55,111 @@ mpi_execution_8() {
     done
 }
 
-# Testing MPI+OMP Execution (with 1 node)
-mpi_omp_execution_1() {
+# Testing MPI+OMP Execution (with 1 node, and static scheduling)
+mpi_omp_execution_1_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 1 ./UTWMPIOMP $N results_UTWMPIOMP_1.csv 1 $T
+                mpirun -n 1 ./UTWMPIOMP $N results_UTWMPIOMP_1_static.csv 1 $T
             done
         done
     done
 }
 
-# Testing MPI+OMP Execution (with 2 nodes)
-mpi_omp_execution_2() {
+# Testing MPI+OMP Execution (with 2 nodes, and static scheduling)
+mpi_omp_execution_2_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 2 ./UTWMPIOMP $N results_UTWMPIOMP_2.csv 2 $T
+                mpirun -n 2 ./UTWMPIOMP $N results_UTWMPIOMP_2_static.csv 2 $T
             done
         done
     done
 }
 
-# Testing MPI+OMP Execution (with 4 nodes)
-mpi_omp_execution_4() {
+# Testing MPI+OMP Execution (with 4 nodes, and static scheduling)
+mpi_omp_execution_4_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 4 ./UTWMPIOMP $N results_UTWMPIOMP_4.csv 4 $T
+                mpirun -n 4 ./UTWMPIOMP $N results_UTWMPIOMP_4_static.csv 4 $T
             done
         done
     done
 }
 
-# Testing MPI+OMP Execution (with 6 nodes)
-mpi_omp_execution_6() {
+# Testing MPI+OMP Execution (with 6 nodes, and static scheduling)
+mpi_omp_execution_6_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 6 ./UTWMPIOMP $N results_UTWMPIOMP_6.csv 6 $T
+                mpirun -n 6 ./UTWMPIOMP $N results_UTWMPIOMP_6_static.csv 6 $T
             done
         done
     done
 }
 
-# Testing MPI+OMP Execution (with 8 nodes)
-mpi_omp_execution_8() {
+# Testing MPI+OMP Execution (with 8 nodes, and static scheduling)
+mpi_omp_execution_8_static() {
     for T in 1 2 4 8 16 32; do
         for N in 128 256 512 1024 2048 4096; do
             for rep in $(seq 1 $REPETITIONS); do
-                mpirun -n 8 ./UTWMPIOMP $N results_UTWMPIOMP_8.csv 8 $T
+                mpirun -n 8 ./UTWMPIOMP $N results_UTWMPIOMP_8_static.csv 8 $T
+            done
+        done
+    done
+}
+
+# Testing MPI+OMP Execution (with 1 node, and dynamic scheduling)
+mpi_omp_execution_1_dynamic() {
+    for T in 1 2 4 8 16 32; do
+        for N in 128 256 512 1024 2048 4096; do
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun -n 1 ./UTWMPIOMP $N results_UTWMPIOMP_1_dynamic.csv 1 $T
+            done
+        done
+    done
+}
+
+# Testing MPI+OMP Execution (with 2 nodes, and dynamic scheduling)
+mpi_omp_execution_2_dynamic() {
+    for T in 1 2 4 8 16 32; do
+        for N in 128 256 512 1024 2048 4096; do
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun -n 2 ./UTWMPIOMP $N results_UTWMPIOMP_2_dynamic.csv 2 $T
+            done
+        done
+    done
+}
+
+# Testing MPI+OMP Execution (with 4 nodes, and dynamic scheduling)
+mpi_omp_execution_4_dynamic() {
+    for T in 1 2 4 8 16 32; do
+        for N in 128 256 512 1024 2048 4096; do
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun -n 4 ./UTWMPIOMP $N results_UTWMPIOMP_4_dynamic.csv 4 $T
+            done
+        done
+    done
+}
+
+# Testing MPI+OMP Execution (with 6 nodes, and dynamic scheduling)
+mpi_omp_execution_6_dynamic() {
+    for T in 1 2 4 8 16 32; do
+        for N in 128 256 512 1024 2048 4096; do
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun -n 6 ./UTWMPIOMP $N results_UTWMPIOMP_6_dynamic.csv 6 $T
+            done
+        done
+    done
+}
+
+# Testing MPI+OMP Execution (with 8 nodes, and dynamic scheduling)
+mpi_omp_execution_8_dynamic() {
+    for T in 1 2 4 8 16 32; do
+        for N in 128 256 512 1024 2048 4096; do
+            for rep in $(seq 1 $REPETITIONS); do
+                mpirun -n 8 ./UTWMPIOMP $N results_UTWMPIOMP_8_dynamic.csv 8 $T
             done
         done
     done
@@ -118,9 +173,16 @@ mpi_omp_execution_8() {
 #mpi_execution_6
 #mpi_execution_8
 
-# MPI+OMP execution
-#mpi_omp_execution_1
-#mpi_omp_execution_2
-#mpi_omp_execution_4
-#mpi_omp_execution_6
-#mpi_omp_execution_8
+# MPI+OMP execution (static scheduling)
+#mpi_omp_execution_1_static
+#mpi_omp_execution_2_static
+#mpi_omp_execution_4_static
+mpi_omp_execution_6_static
+#mpi_omp_execution_8_static
+
+# MPI+OMP execution (dynamic scheduling)
+#mpi_omp_execution_1_dynamic
+#mpi_omp_execution_2_dynamic
+#mpi_omp_execution_4_dynamic
+#mpi_omp_execution_6_dynamic
+#mpi_omp_execution_8_dynamic

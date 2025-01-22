@@ -129,7 +129,7 @@ void wavefront_parallel_mpi_omp(std::vector<double> &M, const uint64_t &N, const
         #pragma omp parallel
         {
             std::vector<double> local_buffer; // Local buffer to hold the computed results
-            #pragma omp for schedule(dynamic)
+            #pragma omp for schedule(static) // or 'dinamic'
             for (int i = displs[rank]; i < (displs[rank] + counts[rank]); ++i) {
                 compute_diagonal_element(M, N, i, k);
                 local_buffer.push_back(M[INDEX(i, k, N)]);
