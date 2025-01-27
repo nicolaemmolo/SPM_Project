@@ -41,7 +41,7 @@ using namespace ff;
 
 #define DEFAULT_DIM 3       // Default size of the matrix (NxN)
 #define DEFAULT_NTHREADS 2  // Default number of threads
-#define DEFAULT_MODE "f"   // Default execution mode
+#define DEFAULT_MODE "f"    // Default execution mode
 #define DEFAULT_LOG_FILE "wavefront_results.csv"    // Default log file name
 
 // Macro to calculate the index of the trinagular matrix element (element, diagonal, size)
@@ -176,7 +176,7 @@ void wavefront_farm(std::vector<double> &M, const uint64_t &N, const uint64_t &T
     // Compute values for the first upper diagonal
     uint64_t chunk_size = (N-1) / T; 
     uint64_t remainder = (N-1) % T; // If N-1 is not divisible by T then there will be a remainder
-    uint64_t start = 0; // Starto from the first element
+    uint64_t start = 0; // Start from the first element
 
     // Create tasks
     for (uint64_t t = 0; t < T; ++t) {
