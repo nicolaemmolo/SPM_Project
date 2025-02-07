@@ -18,7 +18,7 @@ This project implements various parallelisation techniques for a wavefront algor
 * **UTWavefrontFastFlow.cpp**: Implementation of the UTWavefront algorithm using the FastFlow library for parallelisation.
 * **UTWavefrontOpenMP.cpp**: Implementation of the UTWavefront algorithm using OpenMP for parallelisation.
 * **UTWavefrontMPI.cpp**: Implementation of the UTWavefront algorithm using MPI for parallelisation on a cluster of machines.
-* **UTWavefrontMPI.cpp**: Implementation of the UTWavefront algorithm using MPI and OMP for parallelisation on a cluster of machines.
+* **UTWavefrontMPIOMP.cpp**: Implementation of the UTWavefront algorithm using MPI and OMP for parallelisation on a cluster of machines.
 * **UTW**: Executable generated for the basic implementation.
 * **UTWFF**: Executable generated for the implementation with FastFlow.
 * **UTWOMP**: Executable generated for the implementation with OpenMP.
